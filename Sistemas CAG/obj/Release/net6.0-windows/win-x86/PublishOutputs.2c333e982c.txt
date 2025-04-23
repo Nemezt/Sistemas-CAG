@@ -1,0 +1,13 @@
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.exe
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\bd_lanzador.db
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.deps.json
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.runtimeconfig.json
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.pdb
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\sni.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\SQLite.Interop.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\EntityFramework.SqlServer.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\EntityFramework.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\System.Data.SQLite.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\System.Data.SqlClient.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\System.Data.SQLite.EF6.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.dll

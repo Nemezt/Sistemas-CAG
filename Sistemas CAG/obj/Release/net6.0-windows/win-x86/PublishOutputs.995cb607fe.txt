@@ -1,0 +1,13 @@
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.exe
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\bd_lanzador.db
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.deps.json
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.runtimeconfig.json
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.pdb
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\sni.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\SQLite.Interop.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\EntityFramework.SqlServer.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\EntityFramework.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\System.Data.SQLite.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\System.Data.SqlClient.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\System.Data.SQLite.EF6.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.dll

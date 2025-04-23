@@ -1,0 +1,18 @@
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\Sistemas CAG.exe
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\Sistemas CAG.deps.json
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\Sistemas CAG.runtimeconfig.json
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\Sistemas CAG.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\Sistemas CAG.pdb
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.csproj.AssemblyReference.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas_CAG.LanzadorFrm.resources
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas_CAG.Properties.Resources.resources
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.csproj.GenerateResource.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.GeneratedMSBuildEditorConfig.editorconfig
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.AssemblyInfoInputs.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.AssemblyInfo.cs
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.csproj.CoreCompileInputs.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\refint\Sistemas CAG.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.pdb
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\Sistemas CAG.genruntimeconfig.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\ref\Sistemas CAG.dll

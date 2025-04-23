@@ -1,0 +1,2 @@
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.pdb
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\win-x86\Lanzador de Sistemas.exe

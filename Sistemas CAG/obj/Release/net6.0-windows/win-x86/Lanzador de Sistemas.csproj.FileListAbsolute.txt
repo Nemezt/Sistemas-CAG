@@ -1,0 +1,102 @@
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.exe
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.deps.json
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.runtimeconfig.json
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.AssemblyReference.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.LanzadorFrm.resources
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.Properties.Resources.resources
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.GenerateResource.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfoInputs.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfo.cs
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\refint\Lanzador de Sistemas.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\ref\Lanzador de Sistemas.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.exe
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.deps.json
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.runtimeconfig.json
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.LanzadorFrm.resources
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.Properties.Resources.resources
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.GenerateResource.cache
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfoInputs.cache
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfo.cs
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\refint\Lanzador de Sistemas.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\ref\Lanzador de Sistemas.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.CopyComplete
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\EntityFramework.SqlServer.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\EntityFramework.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SQLite.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SqlClient.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SQLite.EF6.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\sni.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\SQLite.Interop.dll
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.AssemblyReference.cache
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.ParametrosFrm.resources
+C:\Users\yarias\Desktop\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\bd_lanzador.db
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\bd_lanzador.db
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.exe
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.deps.json
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.runtimeconfig.json
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\EntityFramework.SqlServer.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\EntityFramework.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SQLite.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SqlClient.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SQLite.EF6.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\sni.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\SQLite.Interop.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.AssemblyReference.cache
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.LanzadorFrm.resources
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.ParametrosFrm.resources
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.Properties.Resources.resources
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.GenerateResource.cache
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfoInputs.cache
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfo.cs
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.CopyComplete
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\refint\Lanzador de Sistemas.dll
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
+C:\Respaldo Yedier\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\ref\Lanzador de Sistemas.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\bd_lanzador.db
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.exe
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.deps.json
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.runtimeconfig.json
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\EntityFramework.SqlServer.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\EntityFramework.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SQLite.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SqlClient.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\System.Data.SQLite.EF6.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\sni.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\win-x86\SQLite.Interop.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.AssemblyReference.cache
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.LanzadorFrm.resources
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.ParametrosFrm.resources
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Sistemas_CAG.Properties.Resources.resources
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.GenerateResource.cache
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfoInputs.cache
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfo.cs
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\refint\Lanzador de Sistemas.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\ref\Lanzador de Sistemas.dll
+D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador.BC9B32AB.Up2Date

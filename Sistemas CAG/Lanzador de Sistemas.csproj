@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Sistemas_CAG</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>CA_G.ico</ApplicationIcon>
+    <Company>CoopeAgri R.L.</Company>
+    <Product>Lanzador</Product>
+    <Authors>Yedier Arias Picado</Authors>
+    <Title>Lanzador de sistemas</Title>
+    <Copyright>CoopeAgri R.L.</Copyright>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageIcon>CA_W2.png</PackageIcon>
+    <NeutralLanguage>es-CR</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bd_lanzador.db" />
+    <None Remove="CA.ico" />
+    <None Remove="Resources\6i.png" />
+    <None Remove="Resources\agri-cli.png" />
+    <None Remove="Resources\agros.png" />
+    <None Remove="Resources\agros1.png" />
+    <None Remove="Resources\desazu.png" />
+    <None Remove="Resources\E-CO.png" />
+    <None Remove="Resources\E-CO1.png" />
+    <None Remove="Resources\entrega.png" />
+    <None Remove="Resources\entrega1.png" />
+    <None Remove="Resources\entrega2.png" />
+    <None Remove="Resources\entrega3.png" />
+    <None Remove="Resources\fondo.jpg" />
+    <None Remove="Resources\fondo1.jpg" />
+    <None Remove="Resources\fondo2.jpg" />
+    <None Remove="Resources\indicadores.png" />
+    <None Remove="Resources\indicadores1.png" />
+    <None Remove="Resources\mcr.png" />
+    <None Remove="Resources\Notificaciones.png" />
+    <None Remove="Resources\Notificaciones1.png" />
+    <None Remove="Resources\Openpos.png" />
+    <None Remove="Resources\Openside.png" />
+    <None Remove="Resources\parqueo.png" />
+    <None Remove="Resources\parqueo1.png" />
+    <None Remove="Resources\password.png" />
+    <None Remove="Resources\pw.png" />
+    <None Remove="Resources\recibidor.png" />
+    <None Remove="Resources\recibidor1.png" />
+    <None Remove="Resources\recibidor2.png" />
+    <None Remove="Resources\saac.png" />
+    <None Remove="Resources\scre.png" />
+    <None Remove="Resources\scre1.png" />
+    <None Remove="Resources\seem.png" />
+    <None Remove="Resources\seem1.png" />
+    <None Remove="Resources\sica.png" />
+    <None Remove="Resources\sica1.png" />
+    <None Remove="Resources\sica2.png" />
+    <None Remove="Resources\sicagen.png" />
+    <None Remove="Resources\siceca.png" />
+    <None Remove="Resources\sicofe.png" />
+    <None Remove="Resources\sicofe1.png" />
+    <None Remove="Resources\sirpe.png" />
+    <None Remove="Resources\sirpe1.png" />
+    <None Remove="Resources\sitra.png" />
+    <None Remove="Resources\sitra1.png" />
+    <None Remove="Resources\sitra2.png" />
+    <None Remove="Resources\SRM.png" />
+    <None Remove="Resources\SRM1.png" />
+    <None Remove="Resources\SRM2.png" />
+    <None Remove="Resources\SRM3.png" />
+    <None Remove="Resources\touch.png" />
+    <None Remove="Resources\touch1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bd_lanzador.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CA_G.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\CA_W2.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+  </ItemGroup>
+
+</Project>

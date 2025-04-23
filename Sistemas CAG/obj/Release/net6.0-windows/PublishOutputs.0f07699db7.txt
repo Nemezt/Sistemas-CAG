@@ -1,0 +1,5 @@
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\Sistemas CAG.exe
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\Sistemas CAG.dll
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\Sistemas CAG.deps.json
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\Sistemas CAG.runtimeconfig.json
+X:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\bin\Release\net6.0-windows\publish\Sistemas CAG.pdb
