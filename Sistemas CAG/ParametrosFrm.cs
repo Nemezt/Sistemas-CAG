@@ -1,5 +1,5 @@
-﻿using Sistemas_CAG.Entidad;
-using Sistemas_CAG.Logica;
+﻿using Sistemas_CAG.Modelos.Entidad;
+using Sistemas_CAG.Modelos.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +19,8 @@ namespace Sistemas_CAG
 
         SistemaParam ParametrosSis = new SistemaParam();
         ParametroGen ParametrosGen = new ParametroGen();
-        NegocioPos NegocioPos = new NegocioPos();
+        NegocioDTO NegocioPos = new NegocioDTO();
+        NegocioRepository negocioRepository = new NegocioRepository();
         public ParametrosFrm()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace Sistemas_CAG
         private void ParametrosFrm_Load(object sender, EventArgs e)
         {
             dgvSistemas.DataSource = ParametrosSis.consultaSistemas();
-            dgvNegociosPos.DataSource = NegocioPos.consultaNegocios();
+            dgvNegociosPos.DataSource = negocioRepository.consultaNegocios();
             cargaParmetrosGen();
 
         }

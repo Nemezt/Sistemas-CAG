@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace Sistemas_CAG.Logica
+namespace Sistemas_CAG.Utils
 {
     internal class FuncionesDir
     {

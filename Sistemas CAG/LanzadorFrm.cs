@@ -1,6 +1,6 @@
-﻿
-using Sistemas_CAG.Entidad;
-using Sistemas_CAG.Logica;
+﻿using Sistemas_CAG.Controlador;
+using Sistemas_CAG.Modelos.Entidad;
+using Sistemas_CAG.Modelos.Servicios;
 
 namespace Sistemas_CAG
 {
@@ -15,7 +15,8 @@ namespace Sistemas_CAG
         }
         SistemaParam sistema = new SistemaParam();
         LanzadorControl lanzar = new LanzadorControl();
-        NegocioPos negocio = new NegocioPos();
+        NegocioDTO negocio = new NegocioDTO();
+        NegocioRepository negocioRepository = new NegocioRepository();
 
         private void LanzadorFrm_Load(object sender, EventArgs e)
         {
@@ -32,7 +33,7 @@ namespace Sistemas_CAG
             lblNotificacion.Text = "v" + sistema.Version;
 
             //Carga de los negocios Openpos
-            cb_OPos.DataSource = negocio.consultaNegocios();
+            cb_OPos.DataSource = negocioRepository.consultaNegocios();
             cb_OPos.DisplayMember = "Negocio";
             cb_OPos.ValueMember = "Negocio";
             cb_OPos.SelectedIndex = -1;

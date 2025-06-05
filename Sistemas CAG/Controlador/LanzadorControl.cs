@@ -1,15 +1,18 @@
-﻿using Sistemas_CAG.Entidad;
+﻿using Sistemas_CAG.Modelos.Entidad;
+using Sistemas_CAG.Utils;
+using Sistemas_CAG.Modelos.Servicios;
 
-namespace Sistemas_CAG.Logica
+namespace Sistemas_CAG.Controlador
 {
     internal class LanzadorControl
     {
         FuncionesDir funcDir = new FuncionesDir();
         ParametroGen parametros = new ParametroGen();
-        NegocioPos negocioParam = new NegocioPos();
+        NegocioDTO negocioParam = new NegocioDTO();
+        NegocioRepository negocioRepository = new NegocioRepository();
         public LanzadorControl()
         {
-            this.parametros = parametros.consultaParametros();
+            parametros = parametros.consultaParametros();
 
 
         }
@@ -155,23 +158,23 @@ namespace Sistemas_CAG.Logica
                    
                 }
                 //Se carga parametro para kisco de OpenPos
-                if ((sistema.NombreSistema == "kiosco"))
+                if (sistema.NombreSistema == "kiosco")
                 {
-                    sistema.Parametro2 = negocioParam.consultaConfigKinf(negocioParam.Negocio);
+                    sistema.Parametro2 = negocioRepository.consultaConfigKinf(negocioParam.Negocio);
                     crearConfigKInf(negocioParam);
                 }
 
                 //Se carga parametro para facturacion de OpenPos
-                if ((sistema.NombreSistema == "facturacion"))
+                if (sistema.NombreSistema == "facturacion")
                 {
-                    sistema.Parametro2 = negocioParam.consultaConfig(negocioParam.Negocio);
+                    sistema.Parametro2 = negocioRepository.consultaConfig(negocioParam.Negocio);
                     crearConfigCaj(negocioParam);
                 }
 
                 //Se carga parametro para preventa de OpenPos
-                if ((sistema.NombreSistema == "preventa"))
+                if (sistema.NombreSistema == "preventa")
                 {
-                    sistema.Parametro2 = negocioParam.consultaConfig(negocioParam.Negocio);
+                    sistema.Parametro2 = negocioRepository.consultaConfig(negocioParam.Negocio);
                     crearConfigVen(negocioParam);
                 }
 
@@ -298,7 +301,7 @@ namespace Sistemas_CAG.Logica
             {
                 
                 
-                if((sistema.NombreSistema == "openpos60") || (sistema.NombreSistema == "facturacion")  || (sistema.NombreSistema ==  "preventa") || (sistema.NombreSistema == "kiosco"))
+                if(sistema.NombreSistema == "openpos60" || sistema.NombreSistema == "facturacion"  || sistema.NombreSistema ==  "preventa" || sistema.NombreSistema == "kiosco")
                 {
                     actualizaPosFu(sistema.IniciarEn);
                 }
@@ -350,12 +353,12 @@ namespace Sistemas_CAG.Logica
         /// </summary>
         /// <param name="nNegocio"></param>
         /// <returns></returns>
-        private NegocioPos conexionNegocioOpenPos(string nNegocio)
+        private NegocioDTO conexionNegocioOpenPos(string nNegocio)
         {
 
             negocioParam.Negocio = nNegocio;
 
-            negocioParam = negocioParam.consultaNegocio(negocioParam);
+            negocioParam = negocioRepository.consultaNegocio(negocioParam);
             return negocioParam;
         }
 
@@ -364,7 +367,7 @@ namespace Sistemas_CAG.Logica
         /// Crea el archivo de configuraciones para el kiosco del OpenPos
         /// </summary>
         /// <param name="sistema"></param>        
-        private void crearConfigKInf(NegocioPos negocio)
+        private void crearConfigKInf(NegocioDTO negocio)
         {
 
             var file = new IniFile(configKInf + "ConfigKInf-" + negocioParam.Inventario + ".acc");
@@ -380,7 +383,7 @@ namespace Sistemas_CAG.Logica
             file.Write("TIEMPO_MENSAJE", "2", "Mensajes");
         }
 
-        private void crearConfigVen(NegocioPos negocio)
+        private void crearConfigVen(NegocioDTO negocio)
         {
             
             var file = new IniFile(configVen + "ConfigVen.acc");
@@ -394,7 +397,7 @@ namespace Sistemas_CAG.Logica
 
         }
 
-        private void crearConfigCaj(NegocioPos negocio)
+        private void crearConfigCaj(NegocioDTO negocio)
         {
                          
             var file = new IniFile(configCaj + "ConfigCaj.acc");

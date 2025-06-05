@@ -1,18 +1,19 @@
-﻿using Sistemas_CAG.Logica;
+﻿using Sistemas_CAG.Modelos.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sistemas_CAG.Modelos.DataAccess;
 
-namespace Sistemas_CAG.Entidad
+namespace Sistemas_CAG.Modelos.Entidad
 {
     internal class ParametroGen
     {
         #region Propiedades y atributos
 
-        DAOSistemaParam DAOSP = new DAOSistemaParam();
+        DAOSistema DAOSP = new DAOSistema();
 
         private string oracleForms;
 
@@ -44,7 +45,7 @@ namespace Sistemas_CAG.Entidad
         public string COD_CIA { get => cod_cia; set => cod_cia = value; }
         public DataTable DatosParametros { get => datosParametros; set => datosParametros = value; }
         public string LogSistema { get => logSistema; set => logSistema = value; }
-        public string Sistema { get => sistema; set => sistema = value; }
+        public string Sistema { get => sistema; set => sistema = "Lanzador"; }
         public string Actualiza { get => actualiza; set => actualiza = value; }
         public string DefOracle { get => defOracle; set => defOracle = value; }
         public string DefJava { get => defJava; set => defJava = value; }
@@ -67,7 +68,7 @@ namespace Sistemas_CAG.Entidad
             consulta = "SELECT * FROM tb_parametros WHERE Sistema = 'Lanzador';";
             try
             {
-                param.DatosParametros = DAOSP.consultaDatos(consulta);
+                param.DatosParametros = DAOSP.ConsultaDatos(consulta);
 
                 foreach (DataRow row in param.DatosParametros.Rows)
                 {
@@ -101,39 +102,48 @@ namespace Sistemas_CAG.Entidad
         /// <summary>
         /// Update de parametros actualizables.
         /// </summary>
-        /// <param name="param"></param>
+        /// <parametos name="parametos"></parametos>
         /// <returns></returns>
-        public bool actualizaParametros(ParametroGen param)
+        public bool actualizaParametros(ParametroGen parametos)
         {
-            string consulta = "UPDATE tb_parametros SET " +
-                "Oracle=" + "'" + param.OracleForms + "' ," +
-                "Java=" + "'" + param.JavaHome + "' ," +
-                "Servidor=" + "'" + param.ServidorActualizacion + "' ," +
-                "Navegador=" + "'" + param.NavegadorWeb + "' ," +
-                "Log=" + "'" + param.LogSistema + "' ," +
-                "Actualiza=" + "'" + param.Actualiza + "' ," +
-                "DefOracle=" + "'" + param.DefOracle + "' ," +
-                "DefJava=" + "'" + param.DefJava + "' ," +
-                "DefNavegador=" + "'" + param.DefNavegador + "'" +                
-                "WHERE Sistema = 'Lanzador'";
+            bool respuesta = false;
+            string consulta = null;
 
-            bool respuesta;
-            try {
-                if(DAOSP.ejecutaConsulta(consulta))
-                {
-                    respuesta = true;
-                }
-                else
-                {
-                    respuesta = false;
-                }
-                
+            consulta = "UPDATE tb_parametros SET " +
+                "Oracle = @oracle, " +
+                "Java = @java, " +
+                "Servidor = @servidor, " +
+                "Navegador= @navegador, " +
+                "Log= @log, " +
+                "DefOracle= @defOracle, " +
+                "DefJava= @defJava, " +
+                "DefNavegador= @defNavegador " +
+                "WHERE Sistema = @sistema";
+
+            var parametros = new Dictionary<string, object>
+            {
+                { "@sistema", parametos.Sistema },
+                { "@oracle", parametos.OracleForms },
+                { "@java", parametos.JavaHome },
+                { "@servidor", parametos.ServidorActualizacion },
+                { "@navegador", parametos.NavegadorWeb },
+                { "@log", parametos.LogSistema },
+                { "@actualiza", parametos.Actualiza },
+                { "@defOracle", parametos.DefOracle },
+                { "@defJava", parametos.DefJava },
+                { "@defNavegador", parametos.DefNavegador }
+
+            };
+
+            try
+            {
+                respuesta = DAOSP.EjecutaSQL(consulta, parametros);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al actualizar la información: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                respuesta = false;
+                throw new Exception("Error al actualizar el servicio", ex);
             }
 
             return respuesta;

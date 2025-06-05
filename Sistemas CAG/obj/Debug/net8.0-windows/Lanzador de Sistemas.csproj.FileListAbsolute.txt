@@ -33,3 +33,4 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\refint\Lanzador de 
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.pdb
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.genruntimeconfig.cache
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\ref\Lanzador de Sistemas.dll
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.sourcelink.json

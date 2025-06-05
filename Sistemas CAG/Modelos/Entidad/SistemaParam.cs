@@ -1,4 +1,5 @@
-﻿using Sistemas_CAG.Logica;
+﻿using Sistemas_CAG.Modelos.DataAccess;
+using Sistemas_CAG.Modelos.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,14 +9,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sistemas_CAG.Entidad
+namespace Sistemas_CAG.Modelos.Entidad
 {
     /// <summary>
     /// 
     /// </summary>
     internal class SistemaParam
     {
-        DAOSistemaParam DAOSP = new DAOSistemaParam();
+        DAOSistema DAOSP = new DAOSistema();
 
         #region Atributos y Propiedades
         //Nombre de sistema
@@ -80,7 +81,7 @@ namespace Sistemas_CAG.Entidad
             {              
                 string consulta = @"SELECT * FROM tb_sistemas WHERE Nombre = " + "'" + nombreSistema + "'";
 
-                sistema.DatosSistemas = DAOSP.consultaDatos(consulta);
+                sistema.DatosSistemas = DAOSP.ConsultaDatos(consulta);
                 foreach (DataRow row in sistema.DatosSistemas.Rows)
                 {
                     sistema.NombreSistema = row["Nombre"].ToString();
@@ -117,7 +118,7 @@ namespace Sistemas_CAG.Entidad
             consulta = "SELECT * FROM tb_sistemas";
             try
             {
-                datosSistemas = DAOSP.consultaDatos(consulta);
+                datosSistemas = DAOSP.ConsultaDatos(consulta);
 
             }
             catch (Exception ex)
@@ -137,7 +138,7 @@ namespace Sistemas_CAG.Entidad
             string consulta = @"SELECT * FROM tb_sistemas WHERE Tipo = " + "'" + tipoSistema + "'";
             try
             {
-                datosSistemas = DAOSP.consultaDatos(consulta);
+                datosSistemas = DAOSP.ConsultaDatos(consulta);
 
             }
             catch (Exception ex)

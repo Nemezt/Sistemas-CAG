@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 
 
-namespace Sistemas_CAG.Logica
+namespace Sistemas_CAG.Utils
 {
     class IniFile   // revision 11
     {
