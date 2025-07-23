@@ -1,11 +1,7 @@
-﻿using Sistemas_CAG.Modelos.Entidad;
-using System;
-using System.Collections.Generic;
+﻿using Sistemas_CAG.Modelos.DataAccess;
+using Sistemas_CAG.Modelos.Entidad;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sistemas_CAG.Modelos.DataAccess;
+
 
 namespace Sistemas_CAG.Modelos.Servicios
 {
@@ -19,128 +15,118 @@ namespace Sistemas_CAG.Modelos.Servicios
         /// </summary>
         /// <param name="negocio"></param>
         /// <returns></returns>
-        public NegocioDTO consultaNegocio(NegocioDTO negocio)
+        public NegocioDTO ConsultaNegocio(NegocioDTO negocio)
         {
             try
             {
-                string consulta = @"SELECT * FROM tb_negocios_pos WHERE Negocio = " + "'" + negocio.Negocio + "'";
+                string consulta = @"SELECT ConfigKinf, Usuario, PalPaso, Servidor, Inventario, Estacion 
+                            FROM tb_negocios_pos 
+                            WHERE Negocio = @Negocio";
 
-                negocio.DatosNegocios = DAOSP.ConsultaDatos(consulta);
-                foreach (DataRow row in negocio.DatosNegocios.Rows)
+                // Preparar los parámetros de forma segura
+                var parametros = new Dictionary<string, object>
                 {
-                    negocio.ConfigKinf = row["ConfigKinf"].ToString();
-                    negocio.Usuario = row["Usuario"].ToString();
-                    negocio.PalPaso = row["PalPaso"].ToString();
-                    negocio.Servidor = row["Servidor"].ToString();
-                    negocio.Inventario = row["Inventario"].ToString();
-                    negocio.Estacion = row["Estacion"].ToString();
-                }
+                    { "@Negocio", negocio.Negocio }
+                };
 
+                DataTable datosNegocios = DAOSP.ConsultaDatos(consulta, parametros);
+
+                foreach (DataRow row in datosNegocios.Rows)
+                {
+                    negocio.ConfigKinf = row["ConfigKinf"]?.ToString();
+                    negocio.Usuario = row["Usuario"]?.ToString();
+                    negocio.PalPaso = row["PalPaso"]?.ToString();
+                    negocio.Servidor = row["Servidor"]?.ToString();
+                    negocio.Inventario = row["Inventario"]?.ToString();
+                    negocio.Estacion = row["Estacion"]?.ToString();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al consultar negocio: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-
+                // Aquí podrías registrar el error con un logger si tienes uno disponible
+                throw new Exception("Error al consultar negocio: ", ex);
             }
 
             return negocio;
         }
 
         /// <summary>
-        /// Select para cargar el nombte del archivo de Kiosco
+        /// Select para cargar el nombre del archivo de Kiosco (ConfigKinf)
         /// </summary>
-        /// <param name="negocio"></param>
-        /// <returns></returns>
-        public string consultaConfigKinf(string negocio)
+        /// <param name="negocio">Código del negocio</param>
+        /// <returns>Valor de ConfigKinf</returns>
+        public string ConsultaConfigKinf(string negocio)
         {
-            NegocioDTO negocioPos = new NegocioDTO();
             try
             {
-
-                string consulta = @"SELECT ConfigKinf FROM tb_negocios_pos WHERE Negocio = " + "'" + negocio + "'";
-
-                negocioPos.DatosNegocios = DAOSP.ConsultaDatos(consulta);
-                foreach (DataRow row in negocioPos.DatosNegocios.Rows)
+                string consulta = @"SELECT ConfigKinf FROM tb_negocios_pos WHERE Negocio = @Negocio";
+                var parametros = new Dictionary<string, object>
                 {
-                    negocioPos.ConfigKinf = row["ConfigKinf"].ToString();
+                    { "@Negocio", negocio }
+                };
 
+                DataTable datos = DAOSP.ConsultaDatos(consulta, parametros);
+                if (datos.Rows.Count > 0)
+                {
+                    return datos.Rows[0]["ConfigKinf"]?.ToString();
                 }
 
+                return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al consultar archivo de configuraciones: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Error al consultar configuraciones", ex);
             }
-            finally
-            {
-
-            }
-
-            return negocioPos.ConfigKinf;
         }
 
         /// <summary>
-        /// Select para cargar el nombte del archivo de Kiosco
+        /// Select para cargar Usuario/PalPaso@Servidor del negocio
         /// </summary>
-        /// <param name="negocio"></param>
-        /// <returns></returns>
-        public string consultaConfig(string negocio)
+        /// <param name="negocio">Código del negocio</param>
+        /// <returns>Cadena combinada de configuración</returns>
+        public string ConsultaConfig(string negocio)
         {
-            NegocioDTO negocioPos = new NegocioDTO();
             try
             {
-
-                string consulta = @"SELECT Usuario, PalPaso, Servidor FROM tb_negocios_pos WHERE Negocio = " + "'" + negocio + "'";
-
-                negocioPos.DatosNegocios = DAOSP.ConsultaDatos(consulta);
-                foreach (DataRow row in negocioPos.DatosNegocios.Rows)
+                string consulta = @"SELECT Usuario, PalPaso, Servidor FROM tb_negocios_pos WHERE Negocio = @Negocio";
+                var parametros = new Dictionary<string, object>
                 {
-                    negocioPos.Usuario = row["Usuario"].ToString();
-                    negocioPos.PalPaso = row["PalPaso"].ToString();
-                    negocioPos.Servidor = row["Servidor"].ToString();
+                    { "@Negocio", negocio }
+                };
 
+                DataTable datos = DAOSP.ConsultaDatos(consulta, parametros);
+                if (datos.Rows.Count > 0)
+                {
+                    var row = datos.Rows[0];
+                    string usuario = row["Usuario"]?.ToString();
+                    string palPaso = row["PalPaso"]?.ToString();
+                    string servidor = row["Servidor"]?.ToString();
+
+                    return $"{usuario}/{palPaso}@{servidor}";
                 }
 
+                return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al consultar archivo de configuraciones: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Error al consultar configuraciones", ex);
             }
-            finally
-            {
-
-            }
-
-            return negocioPos.Usuario + @"/" + negocioPos.PalPaso + @"@" + negocioPos.Servidor;
         }
         /// <summary>
-        /// Consuta de todos los negocios de la tabla de negocios
+        /// Consulta todos los negocios registrados
         /// </summary>
-        /// <returns></returns>
-        public DataTable consultaNegocios()
+        /// <returns>DataTable con los negocios</returns>
+        public DataTable ConsultaNegocios()
         {
-            string consulta = null;
-            DataTable DatosNegocios = new DataTable();
-
-            consulta = "SELECT * FROM tb_negocios_pos";
             try
             {
-                DatosNegocios = DAOSP.ConsultaDatos(consulta);
-
+                string consulta = "SELECT * FROM tb_negocios_pos";
+                return DAOSP.ConsultaDatos(consulta);
             }
             catch (Exception ex)
             {
-                DatosNegocios = null;
-                MessageBox.Show("Error al cargar los negocios: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Error al cargar los negocios", ex);
             }
-            finally
-            {
-
-            }
-            return DatosNegocios;
         }
 
     }

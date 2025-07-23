@@ -67,7 +67,25 @@
             navegadortxt = new TextBox();
             oracletxt = new TextBox();
             tabSistema = new TabPage();
+            label15 = new Label();
+            carpetaTxt = new TextBox();
+            label14 = new Label();
+            inicioEnTxt = new TextBox();
+            label13 = new Label();
+            tipoTxt = new TextBox();
+            label12 = new Label();
+            param2Txt = new TextBox();
+            label11 = new Label();
+            param1Txt = new TextBox();
+            label10 = new Label();
+            nombreTxt = new TextBox();
+            label9 = new Label();
+            idTxt = new TextBox();
             tabNegPos = new TabPage();
+            label16 = new Label();
+            textBox1 = new TextBox();
+            label17 = new Label();
+            textBox2 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSistemas).BeginInit();
             panelMenu.SuspendLayout();
@@ -97,7 +115,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(5, 5);
             label1.Name = "label1";
@@ -110,7 +128,7 @@
             // 
             btn_ayuda.FlatAppearance.BorderSize = 0;
             btn_ayuda.FlatStyle = FlatStyle.Flat;
-            btn_ayuda.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_ayuda.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             btn_ayuda.ForeColor = Color.Transparent;
             btn_ayuda.Location = new Point(521, 1);
             btn_ayuda.Name = "btn_ayuda";
@@ -124,7 +142,7 @@
             // 
             btn_minimizar.FlatAppearance.BorderSize = 0;
             btn_minimizar.FlatStyle = FlatStyle.Flat;
-            btn_minimizar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_minimizar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold);
             btn_minimizar.ForeColor = Color.Transparent;
             btn_minimizar.Location = new Point(558, 1);
             btn_minimizar.Name = "btn_minimizar";
@@ -138,7 +156,7 @@
             // 
             btn_salir.FlatAppearance.BorderSize = 0;
             btn_salir.FlatStyle = FlatStyle.Flat;
-            btn_salir.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_salir.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold);
             btn_salir.ForeColor = Color.Transparent;
             btn_salir.Location = new Point(595, 1);
             btn_salir.Name = "btn_salir";
@@ -160,7 +178,7 @@
             dgvSistemas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(10, 94, 42);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = Color.White;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(10, 94, 42);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
@@ -169,13 +187,13 @@
             dgvSistemas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSistemas.EnableHeadersVisualStyles = false;
             dgvSistemas.GridColor = Color.FromArgb(10, 94, 42);
-            dgvSistemas.Location = new Point(6, 6);
+            dgvSistemas.Location = new Point(6, 108);
             dgvSistemas.Name = "dgvSistemas";
             dgvSistemas.ReadOnly = true;
             dgvSistemas.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(166, 211, 12);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -183,14 +201,14 @@
             dgvSistemas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvSistemas.RowHeadersVisible = false;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(166, 211, 12);
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dgvSistemas.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvSistemas.RowTemplate.Height = 25;
             dgvSistemas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSistemas.Size = new Size(603, 301);
+            dgvSistemas.Size = new Size(603, 226);
             dgvSistemas.TabIndex = 0;
+            dgvSistemas.MouseClick += dgvSistemas_MouseClick;
             // 
             // panelMenu
             // 
@@ -208,7 +226,6 @@
             btnEliminar.BackgroundImage = Properties.Resources.eliminar;
             btnEliminar.BackgroundImageLayout = ImageLayout.Zoom;
             btnEliminar.Cursor = Cursors.Hand;
-            btnEliminar.Enabled = false;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Location = new Point(71, 2);
@@ -216,6 +233,7 @@
             btnEliminar.Size = new Size(30, 30);
             btnEliminar.TabIndex = 2;
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
@@ -238,7 +256,6 @@
             btnNuevo.BackgroundImage = Properties.Resources.nueva;
             btnNuevo.BackgroundImageLayout = ImageLayout.Zoom;
             btnNuevo.Cursor = Cursors.Hand;
-            btnNuevo.Enabled = false;
             btnNuevo.FlatAppearance.BorderSize = 0;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Location = new Point(3, 2);
@@ -260,7 +277,7 @@
             dgvNegociosPos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.FromArgb(10, 94, 42);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold);
             dataGridViewCellStyle4.ForeColor = Color.White;
             dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(10, 94, 42);
             dataGridViewCellStyle4.SelectionForeColor = Color.White;
@@ -275,7 +292,7 @@
             dgvNegociosPos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(166, 211, 12);
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
@@ -283,13 +300,12 @@
             dgvNegociosPos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvNegociosPos.RowHeadersVisible = false;
             dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(166, 211, 12);
             dataGridViewCellStyle6.SelectionForeColor = Color.White;
             dgvNegociosPos.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dgvNegociosPos.RowTemplate.Height = 25;
             dgvNegociosPos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvNegociosPos.Size = new Size(603, 301);
+            dgvNegociosPos.Size = new Size(603, 331);
             dgvNegociosPos.TabIndex = 8;
             // 
             // tabControl1
@@ -503,6 +519,20 @@
             // 
             // tabSistema
             // 
+            tabSistema.Controls.Add(label15);
+            tabSistema.Controls.Add(carpetaTxt);
+            tabSistema.Controls.Add(label14);
+            tabSistema.Controls.Add(inicioEnTxt);
+            tabSistema.Controls.Add(label13);
+            tabSistema.Controls.Add(tipoTxt);
+            tabSistema.Controls.Add(label12);
+            tabSistema.Controls.Add(param2Txt);
+            tabSistema.Controls.Add(label11);
+            tabSistema.Controls.Add(param1Txt);
+            tabSistema.Controls.Add(label10);
+            tabSistema.Controls.Add(nombreTxt);
+            tabSistema.Controls.Add(label9);
+            tabSistema.Controls.Add(idTxt);
             tabSistema.Controls.Add(dgvSistemas);
             tabSistema.Location = new Point(4, 24);
             tabSistema.Name = "tabSistema";
@@ -512,9 +542,126 @@
             tabSistema.Text = "Sistemas";
             tabSistema.UseVisualStyleBackColor = true;
             // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(367, 49);
+            label15.Name = "label15";
+            label15.Size = new Size(115, 15);
+            label15.TabIndex = 21;
+            label15.Text = "Carpeta de sistema *";
+            // 
+            // carpetaTxt
+            // 
+            carpetaTxt.Location = new Point(367, 67);
+            carpetaTxt.Name = "carpetaTxt";
+            carpetaTxt.Size = new Size(242, 23);
+            carpetaTxt.TabIndex = 20;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(122, 49);
+            label14.Name = "label14";
+            label14.Size = new Size(72, 15);
+            label14.TabIndex = 19;
+            label14.Text = "Iniciar en... *";
+            // 
+            // inicioEnTxt
+            // 
+            inicioEnTxt.Location = new Point(122, 67);
+            inicioEnTxt.Name = "inicioEnTxt";
+            inicioEnTxt.Size = new Size(239, 23);
+            inicioEnTxt.TabIndex = 18;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(6, 49);
+            label13.Name = "label13";
+            label13.Size = new Size(39, 15);
+            label13.TabIndex = 17;
+            label13.Text = "Tipo *";
+            // 
+            // tipoTxt
+            // 
+            tipoTxt.Location = new Point(6, 67);
+            tipoTxt.Name = "tipoTxt";
+            tipoTxt.Size = new Size(110, 23);
+            tipoTxt.TabIndex = 16;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(413, 3);
+            label12.Name = "label12";
+            label12.Size = new Size(71, 15);
+            label12.TabIndex = 15;
+            label12.Text = "Parámetro 2";
+            // 
+            // param2Txt
+            // 
+            param2Txt.Location = new Point(413, 21);
+            param2Txt.Name = "param2Txt";
+            param2Txt.Size = new Size(196, 23);
+            param2Txt.TabIndex = 14;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(201, 3);
+            label11.Name = "label11";
+            label11.Size = new Size(71, 15);
+            label11.TabIndex = 13;
+            label11.Text = "Parámetro 1";
+            // 
+            // param1Txt
+            // 
+            param1Txt.Location = new Point(201, 21);
+            param1Txt.Name = "param1Txt";
+            param1Txt.Size = new Size(206, 23);
+            param1Txt.TabIndex = 12;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(54, 3);
+            label10.Name = "label10";
+            label10.Size = new Size(59, 15);
+            label10.TabIndex = 11;
+            label10.Text = "Nombre *";
+            // 
+            // nombreTxt
+            // 
+            nombreTxt.Location = new Point(54, 21);
+            nombreTxt.Name = "nombreTxt";
+            nombreTxt.Size = new Size(141, 23);
+            nombreTxt.TabIndex = 10;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(6, 3);
+            label9.Name = "label9";
+            label9.Size = new Size(18, 15);
+            label9.TabIndex = 9;
+            label9.Text = "ID";
+            // 
+            // idTxt
+            // 
+            idTxt.Enabled = false;
+            idTxt.Location = new Point(6, 21);
+            idTxt.Name = "idTxt";
+            idTxt.Size = new Size(42, 23);
+            idTxt.TabIndex = 8;
+            // 
             // tabNegPos
             // 
             tabNegPos.Controls.Add(dgvNegociosPos);
+            tabNegPos.Controls.Add(label16);
+            tabNegPos.Controls.Add(textBox1);
+            tabNegPos.Controls.Add(label17);
+            tabNegPos.Controls.Add(textBox2);
             tabNegPos.Location = new Point(4, 24);
             tabNegPos.Name = "tabNegPos";
             tabNegPos.Padding = new Padding(3);
@@ -522,6 +669,38 @@
             tabNegPos.TabIndex = 1;
             tabNegPos.Text = "Negocios OpenPos";
             tabNegPos.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(53, 3);
+            label16.Name = "label16";
+            label16.Size = new Size(51, 15);
+            label16.TabIndex = 15;
+            label16.Text = "Nombre";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(53, 21);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(141, 23);
+            textBox1.TabIndex = 14;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(5, 3);
+            label17.Name = "label17";
+            label17.Size = new Size(18, 15);
+            label17.TabIndex = 13;
+            label17.Text = "ID";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(5, 21);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(42, 23);
+            textBox2.TabIndex = 12;
             // 
             // ParametrosFrm
             // 
@@ -554,7 +733,9 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             tabSistema.ResumeLayout(false);
+            tabSistema.PerformLayout();
             tabNegPos.ResumeLayout(false);
+            tabNegPos.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -595,5 +776,23 @@
         private CheckBox defnavcb;
         private CheckBox defjavcb;
         private CheckBox deforacb;
+        private Label label15;
+        private TextBox carpetaTxt;
+        private Label label14;
+        private TextBox inicioEnTxt;
+        private Label label13;
+        private TextBox tipoTxt;
+        private Label label12;
+        private TextBox param2Txt;
+        private Label label11;
+        private TextBox param1Txt;
+        private Label label10;
+        private TextBox nombreTxt;
+        private Label label9;
+        private TextBox idTxt;
+        private Label label16;
+        private TextBox textBox1;
+        private Label label17;
+        private TextBox textBox2;
     }
 }

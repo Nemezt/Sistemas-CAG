@@ -13,10 +13,11 @@ namespace Sistemas_CAG
             InitializeComponent();
 
         }
-        SistemaParam sistema = new SistemaParam();
+        SistemaDTO sistema = new SistemaDTO();
         LanzadorControl lanzar = new LanzadorControl();
         NegocioDTO negocio = new NegocioDTO();
         NegocioRepository negocioRepository = new NegocioRepository();
+        SistemaRepository sistemaRepository = new SistemaRepository();
 
         private void LanzadorFrm_Load(object sender, EventArgs e)
         {
@@ -30,27 +31,35 @@ namespace Sistemas_CAG
 
             this.Location = new Point(deskWidth - this.Width, deskHeight - this.Height);
 
-            lblNotificacion.Text = "v" + sistema.Version;
+            //lblNotificacion.Text = "v" + sistema.Version;
 
-            //Carga de los negocios Openpos
-            cb_OPos.DataSource = negocioRepository.consultaNegocios();
-            cb_OPos.DisplayMember = "Negocio";
-            cb_OPos.ValueMember = "Negocio";
-            cb_OPos.SelectedIndex = -1;
+            try
+            {
+                //Carga de los negocios Openpos
+                cb_OPos.DataSource = negocioRepository.ConsultaNegocios();
+                cb_OPos.DisplayMember = "Negocio";
+                cb_OPos.ValueMember = "Negocio";
+                cb_OPos.SelectedIndex = -1;
 
 
 
-            //Carga de los servidores 
-            cb_ServAdmin.DataSource = sistema.consultaTipoSistemas("servidor");
-            cb_ServAdmin.DisplayMember = "Nombre";
-            cb_ServAdmin.ValueMember = "Nombre";
-            cb_ServAdmin.SelectedIndex = -1;
+                //Carga de los servidores 
+                cb_ServAdmin.DataSource = sistemaRepository.ConsultaTipoSistemas("servidor");
+                cb_ServAdmin.DisplayMember = "Nombre";
+                cb_ServAdmin.ValueMember = "Nombre";
+                cb_ServAdmin.SelectedIndex = -1;
 
-            //Carga de los Sistemas Web 
-            cb_SistWeb.DataSource = sistema.consultaTipoSistemas("web");
-            cb_SistWeb.DisplayMember = "Nombre";
-            cb_SistWeb.ValueMember = "Nombre";
-            cb_SistWeb.SelectedIndex = -1;
+                //Carga de los Sistemas Web 
+                cb_SistWeb.DataSource = sistemaRepository.ConsultaTipoSistemas("web");
+                cb_SistWeb.DisplayMember = "Nombre";
+                cb_SistWeb.ValueMember = "Nombre";
+                cb_SistWeb.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         private void btn_srm_Click(object sender, EventArgs e)
         {
@@ -427,22 +436,6 @@ namespace Sistemas_CAG
         {
             ParametrosFrm frm = new ParametrosFrm();
             frm.ShowDialog();
-        }
-
-        public void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-
-
-        }
-
-        public void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void saacDesa_Click(object sender, EventArgs e)

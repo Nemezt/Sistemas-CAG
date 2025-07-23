@@ -100,3 +100,6 @@ D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-
 D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
 D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\ref\Lanzador de Sistemas.dll
 D:\Script\Sistemas CAG\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador.BC9B32AB.Up2Date
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.dll
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\refint\Lanzador de Sistemas.dll
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net6.0-windows\win-x86\Lanzador de Sistemas.pdb

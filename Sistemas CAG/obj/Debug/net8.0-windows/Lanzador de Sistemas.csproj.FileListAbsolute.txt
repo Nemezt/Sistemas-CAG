@@ -27,10 +27,10 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistema
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfoInputs.cache
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfo.cs
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.sourcelink.json
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador.BC9B32AB.Up2Date
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\refint\Lanzador de Sistemas.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.pdb
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.genruntimeconfig.cache
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\ref\Lanzador de Sistemas.dll
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.sourcelink.json

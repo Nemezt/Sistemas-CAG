@@ -1,14 +1,7 @@
-﻿using Sistemas_CAG.Modelos.Entidad;
+﻿using Sistemas_CAG.Controlador;
+using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Servicios;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace Sistemas_CAG
 {
@@ -17,19 +10,18 @@ namespace Sistemas_CAG
         int pX = 0;
         int pY = 0;
 
-        SistemaParam ParametrosSis = new SistemaParam();
-        ParametroGen ParametrosGen = new ParametroGen();
-        NegocioDTO NegocioPos = new NegocioDTO();
+
+        ParametrosDTO ParametrosGen = new ParametrosDTO();
         NegocioRepository negocioRepository = new NegocioRepository();
+        ParametrosControl parametrosControl = new ParametrosControl();
         public ParametrosFrm()
         {
             InitializeComponent();
         }
         private void ParametrosFrm_Load(object sender, EventArgs e)
         {
-            dgvSistemas.DataSource = ParametrosSis.consultaSistemas();
-            dgvNegociosPos.DataSource = negocioRepository.consultaNegocios();
-            cargaParmetrosGen();
+
+            cargaDatos();
 
         }
         private void panel_MouseMove(object sender, MouseEventArgs e)
@@ -64,76 +56,75 @@ namespace Sistemas_CAG
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            if (tabSistema.Focus() == true)
+            {
+                LimpiarSistema();
 
+            }
+            else if (tabNegPos.Focus() == true)
+            {
+                //LimpiarNegocio();
+            }
+            else if (tabParmGen.Focus() == true)
+            {
+                CargarParametrosGenerales();
+            }
         }
 
-        private void cargaParmetrosGen()
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (tabSistema.Focus() == true)
+            {
+                GuardarSistemas();
+            }
+            else if (tabNegPos.Focus() == true)
+            {
+                //guardarNegociosPos();
+            }
+            else if (tabParmGen.Focus() == true)
+            {
+                GuardarParametrosGenerales();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (tabSistema.Focus() == true)
+            {
+                EliminarSistemas();
+            }
+            else if (tabNegPos.Focus() == true)
+            {
+                //EliminarNegociosPos();
+            }
+            else if (tabParmGen.Focus() == true)
+            {
+                
+            }
+        }
+        private void cargaDatos()
         {
             try
             {
-                ParametrosGen = ParametrosGen.consultaParametros();
-                codciatxt.Text = ParametrosGen.COD_CIA;
-                sisttxt.Text = ParametrosGen.Sistema;
-                oracletxt.Text = ParametrosGen.OracleForms;
-                javatxt.Text = ParametrosGen.JavaHome;
-                navegadortxt.Text = ParametrosGen.NavegadorWeb;
-                servidortxt.Text = ParametrosGen.ServidorActualizacion;
-                logtxt.Text = ParametrosGen.LogSistema;
+                CargarTablaSistemas();
 
-                if (ParametrosGen.Actualiza == "S")
-                {
-                    ActuScb.Checked = true;
-                }
-                else
-                {
-                    ActuScb.Checked = false;
-                }
+                CargarParametrosGenerales();
 
-                if (ParametrosGen.DefOracle == "S")
-                {
-                    deforacb.Checked = true;
-                }
-                else
-                {
-                    deforacb.Checked = false;
-                }
+                dgvNegociosPos.DataSource = negocioRepository.ConsultaNegocios();
 
-                if (ParametrosGen.DefJava == "S")
-                {
-                    defjavcb.Checked = true;
-                }
-                else
-                {
-                    defjavcb.Checked = false;
-                }
 
-                if (ParametrosGen.DefNavegador == "S")
-                {
-                    defnavcb.Checked = true;
-                }
-                else
-                {
-                    defnavcb.Checked = false;
-                }
 
-                if (ActuScb.Checked == true)
-                {
-
-                    groupBox1.Enabled = true;
-                }
-                else
-                {
-                    groupBox1.Enabled = false;
-                }
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
 
         }
+
+        #region Parametros generales
 
         private void ActuScb_CheckedChanged(object sender, EventArgs e)
         {
@@ -185,23 +176,9 @@ namespace Sistemas_CAG
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (tabSistema.Focus() == true)
-            {
-                //guardarSistemas();
-            }
-            else if (tabNegPos.Focus() == true)
-            {
-                //guardarNegociosPos();
-            }
-            else if (tabParmGen.Focus() == true)
-            {
-                guardarParametrosGen();
-            }
-        }
 
-        private void guardarParametrosGen()
+
+        private void GuardarParametrosGenerales()
         {
 
             try
@@ -253,10 +230,10 @@ namespace Sistemas_CAG
                 }
 
 
-                if (ParametrosGen.actualizaParametros(ParametrosGen))
+                if (parametrosControl.ActualizaParametros(ParametrosGen))
                 {
                     MessageBox.Show("Se guardaron los parametros", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cargaParmetrosGen();
+                    cargaDatos();
                 }
 
             }
@@ -267,5 +244,210 @@ namespace Sistemas_CAG
 
 
         }
+
+
+        private void CargarParametrosGenerales()
+        {
+            ParametrosGen = parametrosControl.ConsultaParametros();
+            codciatxt.Text = ParametrosGen.COD_CIA;
+            sisttxt.Text = ParametrosGen.Sistema;
+            oracletxt.Text = ParametrosGen.OracleForms;
+            javatxt.Text = ParametrosGen.JavaHome;
+            navegadortxt.Text = ParametrosGen.NavegadorWeb;
+            servidortxt.Text = ParametrosGen.ServidorActualizacion;
+            logtxt.Text = ParametrosGen.LogSistema;
+
+            if (ParametrosGen.Actualiza == "S")
+            {
+                ActuScb.Checked = true;
+            }
+            else
+            {
+                ActuScb.Checked = false;
+            }
+
+            if (ParametrosGen.DefOracle == "S")
+            {
+                deforacb.Checked = true;
+            }
+            else
+            {
+                deforacb.Checked = false;
+            }
+
+            if (ParametrosGen.DefJava == "S")
+            {
+                defjavcb.Checked = true;
+            }
+            else
+            {
+                defjavcb.Checked = false;
+            }
+
+            if (ParametrosGen.DefNavegador == "S")
+            {
+                defnavcb.Checked = true;
+            }
+            else
+            {
+                defnavcb.Checked = false;
+            }
+
+            if (ActuScb.Checked == true)
+            {
+
+                groupBox1.Enabled = true;
+            }
+            else
+            {
+                groupBox1.Enabled = false;
+            }
+        }
+
+        #endregion
+
+        #region Sistemas
+
+        private void EliminarSistemas()
+        {
+
+
+                bool accion = false;
+                if (!string.IsNullOrEmpty(idTxt.Text))
+                {
+                    DialogResult resultado = MessageBox.Show(
+                        "¿Estás seguro de que deseas eliminar este registro?",
+                        "Confirmar eliminación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning,
+                        MessageBoxDefaultButton.Button2
+                        );
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            accion = parametrosControl.BorrarSistema(Convert.ToInt32(idTxt.Text));
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un sistema", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                if (accion)
+                {
+                    MessageBox.Show("Se eliminaron los datos", "ELiminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    LimpiarSistema();
+                }
+            
+        }
+
+        private void GuardarSistemas()
+        {
+            if (string.IsNullOrEmpty(nombreTxt.Text) || string.IsNullOrEmpty(tipoTxt.Text) || string.IsNullOrEmpty(inicioEnTxt.Text) || string.IsNullOrEmpty(carpetaTxt.Text))
+            {
+
+                MessageBox.Show("Ingrese los datos requeridos *", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+
+
+                SistemaDTO sistema = new SistemaDTO();
+
+                sistema.NombreSistema = nombreTxt.Text;
+                sistema.Parametro1 = param1Txt.Text;
+                sistema.Parametro2 = param2Txt.Text;
+                sistema.Tipo = tipoTxt.Text;
+                sistema.IniciarEn = inicioEnTxt.Text;
+                sistema.CarpetaSistema = carpetaTxt.Text;
+
+                bool accion = false;
+                if (string.IsNullOrEmpty(idTxt.Text))
+                {
+                    try
+                    {
+                        accion = parametrosControl.InsertaSistema(sistema);
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    sistema.Id = Convert.ToInt32(idTxt.Text);
+                    try
+                    {
+
+                        accion = parametrosControl.ActualizaSistema(sistema); ;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+
+                if (accion)
+                {
+                    MessageBox.Show("Se guardaron los datos del sistema", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                LimpiarSistema();
+            }
+        }
+
+
+        private void CargarTablaSistemas()
+        {
+            dgvSistemas.DataSource = parametrosControl.CargaTablaSistema();
+        }
+
+
+
+        private void dgvSistemas_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgvSistemas.CurrentRow != null && dgvSistemas.CurrentRow.Index >= 0)
+            {
+                DataGridViewRow row = dgvSistemas.CurrentRow;
+
+                idTxt.Text = dgvSistemas.CurrentRow.Cells["ID"].Value.ToString();
+                nombreTxt.Text = dgvSistemas.CurrentRow.Cells["NOMBRE"].Value.ToString();
+                param1Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO1"].Value.ToString();
+                param2Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO2"].Value.ToString();
+                tipoTxt.Text = dgvSistemas.CurrentRow.Cells["TIPO"].Value.ToString();
+                inicioEnTxt.Text = dgvSistemas.CurrentRow.Cells["INICIAREN"].Value.ToString();
+                carpetaTxt.Text = dgvSistemas.CurrentRow.Cells["CARPETASISTEMA"].Value.ToString();
+
+            }
+        }
+
+        private void LimpiarSistema()
+        {
+            idTxt.Clear();
+            nombreTxt.Clear();
+            param1Txt.Clear();
+            param2Txt.Clear();
+            tipoTxt.Clear();
+            inicioEnTxt.Clear();
+            carpetaTxt.Clear();
+            CargarTablaSistemas();
+
+        }
+
+        #endregion
+
     }
 }
