@@ -106,14 +106,15 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             groupBox5 = new GroupBox();
+            groupBox10 = new GroupBox();
+            btn_mcr = new Button();
+            btn_saac = new Button();
+            label26 = new Label();
+            label2 = new Label();
             groupBox9 = new GroupBox();
             cb_SistWeb = new ComboBox();
             btn_sisWeb = new Button();
             label32 = new Label();
-            label26 = new Label();
-            btn_mcr = new Button();
-            label2 = new Label();
-            btn_saac = new Button();
             tabPage4 = new TabPage();
             groupBox6 = new GroupBox();
             groupBox8 = new GroupBox();
@@ -129,7 +130,7 @@
             cb_ServAdmin = new ComboBox();
             servDesa = new Button();
             label29 = new Label();
-            groupBox10 = new GroupBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupbox4.SuspendLayout();
@@ -143,12 +144,12 @@
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             groupBox5.SuspendLayout();
+            groupBox10.SuspendLayout();
             groupBox9.SuspendLayout();
             tabPage4.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox8.SuspendLayout();
             groupBox7.SuspendLayout();
-            groupBox10.SuspendLayout();
             SuspendLayout();
             // 
             // btn_srm
@@ -161,7 +162,7 @@
             btn_srm.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_srm.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_srm.FlatStyle = FlatStyle.Flat;
-            btn_srm.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_srm.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_srm.ForeColor = Color.Black;
             btn_srm.Location = new Point(97, 10);
             btn_srm.Name = "btn_srm";
@@ -181,7 +182,7 @@
             btn_agricli.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_agricli.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_agricli.FlatStyle = FlatStyle.Flat;
-            btn_agricli.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_agricli.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_agricli.ForeColor = Color.Black;
             btn_agricli.Location = new Point(192, 32);
             btn_agricli.Name = "btn_agricli";
@@ -222,7 +223,7 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label27.Font = new Font("Microsoft Sans Serif", 8.25F);
             label27.Location = new Point(262, 83);
             label27.Name = "label27";
             label27.Size = new Size(81, 13);
@@ -239,7 +240,7 @@
             btn_admsis.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_admsis.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_admsis.FlatStyle = FlatStyle.Flat;
-            btn_admsis.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_admsis.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_admsis.ForeColor = Color.Black;
             btn_admsis.Location = new Point(276, 32);
             btn_admsis.Name = "btn_admsis";
@@ -252,7 +253,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Font = new Font("Microsoft Sans Serif", 8.25F);
             label10.Location = new Point(276, 249);
             label10.Name = "label10";
             label10.Size = new Size(53, 13);
@@ -262,7 +263,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Font = new Font("Microsoft Sans Serif", 8.25F);
             label9.Location = new Point(205, 168);
             label9.Name = "label9";
             label9.Size = new Size(28, 13);
@@ -272,7 +273,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Font = new Font("Microsoft Sans Serif", 8.25F);
             label8.Location = new Point(270, 168);
             label8.Name = "label8";
             label8.Size = new Size(56, 13);
@@ -282,7 +283,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Font = new Font("Microsoft Sans Serif", 8.25F);
             label7.Location = new Point(115, 249);
             label7.Name = "label7";
             label7.Size = new Size(39, 13);
@@ -292,7 +293,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Microsoft Sans Serif", 8.25F);
             label6.Location = new Point(193, 249);
             label6.Name = "label6";
             label6.Size = new Size(45, 13);
@@ -302,7 +303,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Microsoft Sans Serif", 8.25F);
             label5.Location = new Point(18, 249);
             label5.Name = "label5";
             label5.Size = new Size(51, 13);
@@ -312,7 +313,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 8.25F);
             label3.Location = new Point(196, 83);
             label3.Name = "label3";
             label3.Size = new Size(42, 13);
@@ -351,7 +352,7 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label25.Font = new Font("Microsoft Sans Serif", 5.25F);
             label25.Location = new Point(6, 148);
             label25.Name = "label25";
             label25.Size = new Size(93, 7);
@@ -361,7 +362,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Font = new Font("Microsoft Sans Serif", 8.25F);
             label11.Location = new Point(96, 61);
             label11.Name = "label11";
             label11.Size = new Size(51, 13);
@@ -434,7 +435,7 @@
             btn_opos.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_opos.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_opos.FlatStyle = FlatStyle.Flat;
-            btn_opos.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_opos.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_opos.ForeColor = Color.Black;
             btn_opos.Location = new Point(97, 10);
             btn_opos.Name = "btn_opos";
@@ -454,7 +455,7 @@
             btn_desazu.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_desazu.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_desazu.FlatStyle = FlatStyle.Flat;
-            btn_desazu.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_desazu.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_desazu.ForeColor = Color.Black;
             btn_desazu.Location = new Point(19, 196);
             btn_desazu.Name = "btn_desazu";
@@ -474,7 +475,7 @@
             btn_password.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_password.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_password.FlatStyle = FlatStyle.Flat;
-            btn_password.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_password.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_password.ForeColor = Color.Black;
             btn_password.Location = new Point(276, 116);
             btn_password.Name = "btn_password";
@@ -494,7 +495,7 @@
             btn_siceca.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_siceca.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_siceca.FlatStyle = FlatStyle.Flat;
-            btn_siceca.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_siceca.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_siceca.ForeColor = Color.Black;
             btn_siceca.Location = new Point(192, 196);
             btn_siceca.Name = "btn_siceca";
@@ -514,7 +515,7 @@
             btn_oside.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_oside.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_oside.FlatStyle = FlatStyle.Flat;
-            btn_oside.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_oside.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_oside.ForeColor = Color.Black;
             btn_oside.Location = new Point(195, 116);
             btn_oside.Name = "btn_oside";
@@ -534,7 +535,7 @@
             btn_sitra.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_sitra.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_sitra.FlatStyle = FlatStyle.Flat;
-            btn_sitra.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_sitra.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_sitra.ForeColor = Color.Black;
             btn_sitra.Location = new Point(110, 196);
             btn_sitra.Name = "btn_sitra";
@@ -554,7 +555,7 @@
             btn_AgrScr.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_AgrScr.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_AgrScr.FlatStyle = FlatStyle.Flat;
-            btn_AgrScr.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_AgrScr.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_AgrScr.ForeColor = Color.Black;
             btn_AgrScr.Location = new Point(276, 196);
             btn_AgrScr.Name = "btn_AgrScr";
@@ -585,7 +586,7 @@
             btn_entrega.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_entrega.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_entrega.FlatStyle = FlatStyle.Flat;
-            btn_entrega.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_entrega.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_entrega.ForeColor = Color.Black;
             btn_entrega.Location = new Point(110, 201);
             btn_entrega.Name = "btn_entrega";
@@ -605,7 +606,7 @@
             btn_notif.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_notif.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_notif.FlatStyle = FlatStyle.Flat;
-            btn_notif.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_notif.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_notif.ForeColor = Color.Black;
             btn_notif.Location = new Point(110, 280);
             btn_notif.Name = "btn_notif";
@@ -626,7 +627,7 @@
             btn_agros.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_agros.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_agros.FlatStyle = FlatStyle.Flat;
-            btn_agros.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_agros.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_agros.ForeColor = Color.Black;
             btn_agros.Location = new Point(195, 125);
             btn_agros.Name = "btn_agros";
@@ -646,7 +647,7 @@
             btn_eco.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_eco.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_eco.FlatStyle = FlatStyle.Flat;
-            btn_eco.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_eco.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_eco.ForeColor = Color.Black;
             btn_eco.Location = new Point(110, 125);
             btn_eco.Name = "btn_eco";
@@ -666,7 +667,7 @@
             btn_indicad.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_indicad.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_indicad.FlatStyle = FlatStyle.Flat;
-            btn_indicad.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_indicad.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_indicad.ForeColor = Color.Black;
             btn_indicad.Location = new Point(19, 280);
             btn_indicad.Name = "btn_indicad";
@@ -687,7 +688,7 @@
             btn_sicofe.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_sicofe.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_sicofe.FlatStyle = FlatStyle.Flat;
-            btn_sicofe.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_sicofe.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_sicofe.ForeColor = Color.Black;
             btn_sicofe.Location = new Point(276, 125);
             btn_sicofe.Name = "btn_sicofe";
@@ -707,7 +708,7 @@
             btn_sica.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_sica.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_sica.FlatStyle = FlatStyle.Flat;
-            btn_sica.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_sica.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_sica.ForeColor = Color.Black;
             btn_sica.Location = new Point(276, 201);
             btn_sica.Name = "btn_sica";
@@ -728,7 +729,7 @@
             btn_seem.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_seem.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_seem.FlatStyle = FlatStyle.Flat;
-            btn_seem.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_seem.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_seem.ForeColor = Color.Black;
             btn_seem.Location = new Point(192, 201);
             btn_seem.Name = "btn_seem";
@@ -749,7 +750,7 @@
             btn_recibidor.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_recibidor.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_recibidor.FlatStyle = FlatStyle.Flat;
-            btn_recibidor.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_recibidor.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_recibidor.ForeColor = Color.Black;
             btn_recibidor.Location = new Point(19, 201);
             btn_recibidor.Name = "btn_recibidor";
@@ -769,7 +770,7 @@
             btn_parqueo.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_parqueo.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_parqueo.FlatStyle = FlatStyle.Flat;
-            btn_parqueo.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_parqueo.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_parqueo.ForeColor = Color.Black;
             btn_parqueo.Location = new Point(194, 32);
             btn_parqueo.Name = "btn_parqueo";
@@ -789,7 +790,7 @@
             btn_otouch.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_otouch.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_otouch.FlatStyle = FlatStyle.Flat;
-            btn_otouch.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_otouch.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_otouch.ForeColor = Color.Black;
             errorProvider1.SetIconPadding(btn_otouch, 1);
             btn_otouch.Location = new Point(276, 32);
@@ -819,7 +820,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Font = new Font("Microsoft Sans Serif", 8.25F);
             label12.Location = new Point(106, 61);
             label12.Name = "label12";
             label12.Size = new Size(31, 13);
@@ -898,7 +899,7 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label24.Font = new Font("Microsoft Sans Serif", 8.25F);
             label24.Location = new Point(113, 252);
             label24.Name = "label24";
             label24.Size = new Size(44, 13);
@@ -908,7 +909,7 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label23.Font = new Font("Microsoft Sans Serif", 8.25F);
             label23.Location = new Point(195, 252);
             label23.Name = "label23";
             label23.Size = new Size(37, 13);
@@ -919,7 +920,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label22.Font = new Font("Microsoft Sans Serif", 8.25F);
             label22.Location = new Point(286, 252);
             label22.Name = "label22";
             label22.Size = new Size(31, 13);
@@ -930,7 +931,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label21.Font = new Font("Microsoft Sans Serif", 8.25F);
             label21.Location = new Point(119, 176);
             label21.Name = "label21";
             label21.Size = new Size(32, 13);
@@ -940,7 +941,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.Font = new Font("Microsoft Sans Serif", 8.25F);
             label20.Location = new Point(279, 176);
             label20.Name = "label20";
             label20.Size = new Size(45, 13);
@@ -950,7 +951,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label19.Font = new Font("Microsoft Sans Serif", 8.25F);
             label19.Location = new Point(196, 176);
             label19.Name = "label19";
             label19.Size = new Size(45, 13);
@@ -960,7 +961,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Font = new Font("Microsoft Sans Serif", 8.25F);
             label18.Location = new Point(98, 331);
             label18.Name = "label18";
             label18.Size = new Size(74, 13);
@@ -971,7 +972,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Font = new Font("Microsoft Sans Serif", 8.25F);
             label17.Location = new Point(12, 331);
             label17.Name = "label17";
             label17.Size = new Size(62, 13);
@@ -982,7 +983,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Font = new Font("Microsoft Sans Serif", 8.25F);
             label16.Location = new Point(17, 252);
             label16.Name = "label16";
             label16.Size = new Size(52, 13);
@@ -992,7 +993,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Font = new Font("Microsoft Sans Serif", 8.25F);
             label15.Location = new Point(6, 176);
             label15.Name = "label15";
             label15.Size = new Size(71, 13);
@@ -1002,7 +1003,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Font = new Font("Microsoft Sans Serif", 8.25F);
             label14.Location = new Point(267, 83);
             label14.Name = "label14";
             label14.Size = new Size(64, 13);
@@ -1012,7 +1013,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Font = new Font("Microsoft Sans Serif", 8.25F);
             label13.Location = new Point(193, 83);
             label13.Name = "label13";
             label13.Size = new Size(47, 13);
@@ -1029,7 +1030,7 @@
             btn_sirpe.FlatAppearance.MouseDownBackColor = Color.FromArgb(224, 224, 224);
             btn_sirpe.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_sirpe.FlatStyle = FlatStyle.Flat;
-            btn_sirpe.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_sirpe.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_sirpe.ForeColor = Color.Black;
             btn_sirpe.Location = new Point(19, 125);
             btn_sirpe.Name = "btn_sirpe";
@@ -1049,7 +1050,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(379, 31);
+            panel1.Size = new Size(831, 31);
             panel1.TabIndex = 5;
             panel1.MouseMove += panel_MouseMove;
             // 
@@ -1057,7 +1058,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(4, 5);
             label1.Name = "label1";
@@ -1070,7 +1071,7 @@
             // 
             btn_conf.FlatAppearance.BorderSize = 0;
             btn_conf.FlatStyle = FlatStyle.Flat;
-            btn_conf.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_conf.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             btn_conf.ForeColor = Color.Transparent;
             btn_conf.Location = new Point(270, 1);
             btn_conf.Name = "btn_conf";
@@ -1084,7 +1085,7 @@
             // 
             btn_minimizar.FlatAppearance.BorderSize = 0;
             btn_minimizar.FlatStyle = FlatStyle.Flat;
-            btn_minimizar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_minimizar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold);
             btn_minimizar.ForeColor = Color.Transparent;
             btn_minimizar.Location = new Point(307, 1);
             btn_minimizar.Name = "btn_minimizar";
@@ -1098,7 +1099,7 @@
             // 
             btn_salir.FlatAppearance.BorderSize = 0;
             btn_salir.FlatStyle = FlatStyle.Flat;
-            btn_salir.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_salir.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold);
             btn_salir.ForeColor = Color.Transparent;
             btn_salir.Location = new Point(344, 1);
             btn_salir.Name = "btn_salir";
@@ -1116,13 +1117,13 @@
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 468);
             panel2.Name = "panel2";
-            panel2.Size = new Size(379, 27);
+            panel2.Size = new Size(831, 27);
             panel2.TabIndex = 6;
             // 
             // lblNotificacion
             // 
             lblNotificacion.AutoSize = true;
-            lblNotificacion.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNotificacion.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
             lblNotificacion.ForeColor = Color.FromArgb(166, 211, 12);
             lblNotificacion.Location = new Point(3, 8);
             lblNotificacion.Name = "lblNotificacion";
@@ -1227,6 +1228,80 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Web";
             // 
+            // groupBox10
+            // 
+            groupBox10.Controls.Add(btn_mcr);
+            groupBox10.Controls.Add(btn_saac);
+            groupBox10.Controls.Add(label26);
+            groupBox10.Controls.Add(label2);
+            groupBox10.ForeColor = Color.FromArgb(10, 94, 42);
+            groupBox10.Location = new Point(164, 22);
+            groupBox10.Name = "groupBox10";
+            groupBox10.Size = new Size(175, 127);
+            groupBox10.TabIndex = 55;
+            groupBox10.TabStop = false;
+            groupBox10.Text = "Oracle 12c";
+            // 
+            // btn_mcr
+            // 
+            btn_mcr.BackColor = Color.Transparent;
+            btn_mcr.BackgroundImage = Properties.Resources.mcr;
+            btn_mcr.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_mcr.Cursor = Cursors.Hand;
+            btn_mcr.FlatAppearance.BorderSize = 0;
+            btn_mcr.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
+            btn_mcr.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+            btn_mcr.FlatStyle = FlatStyle.Flat;
+            btn_mcr.Font = new Font("Microsoft Sans Serif", 5.25F);
+            btn_mcr.ForeColor = Color.Black;
+            btn_mcr.Location = new Point(108, 22);
+            btn_mcr.Name = "btn_mcr";
+            btn_mcr.Size = new Size(48, 48);
+            btn_mcr.TabIndex = 25;
+            btn_mcr.TextAlign = ContentAlignment.BottomCenter;
+            btn_mcr.UseVisualStyleBackColor = false;
+            btn_mcr.Click += btn_mcr_Click;
+            // 
+            // btn_saac
+            // 
+            btn_saac.BackColor = Color.Transparent;
+            btn_saac.BackgroundImage = Properties.Resources.saac;
+            btn_saac.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_saac.Cursor = Cursors.Hand;
+            btn_saac.FlatAppearance.BorderSize = 0;
+            btn_saac.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
+            btn_saac.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+            btn_saac.FlatStyle = FlatStyle.Flat;
+            btn_saac.Font = new Font("Microsoft Sans Serif", 5.25F);
+            btn_saac.ForeColor = Color.Black;
+            btn_saac.Location = new Point(25, 22);
+            btn_saac.Name = "btn_saac";
+            btn_saac.Size = new Size(48, 48);
+            btn_saac.TabIndex = 7;
+            btn_saac.TextAlign = ContentAlignment.BottomCenter;
+            btn_saac.UseVisualStyleBackColor = false;
+            btn_saac.Click += btn_saac_Click;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label26.Location = new Point(118, 76);
+            label26.Name = "label26";
+            label26.Size = new Size(31, 13);
+            label26.TabIndex = 26;
+            label26.Text = "MCR";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label2.Location = new Point(30, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 13);
+            label2.TabIndex = 24;
+            label2.Text = "SAAC";
+            // 
             // groupBox9
             // 
             groupBox9.Controls.Add(cb_SistWeb);
@@ -1261,7 +1336,7 @@
             btn_sisWeb.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             btn_sisWeb.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             btn_sisWeb.FlatStyle = FlatStyle.Flat;
-            btn_sisWeb.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_sisWeb.Font = new Font("Microsoft Sans Serif", 5.25F);
             btn_sisWeb.ForeColor = Color.Black;
             btn_sisWeb.Location = new Point(45, 22);
             btn_sisWeb.Name = "btn_sisWeb";
@@ -1274,72 +1349,12 @@
             // label32
             // 
             label32.AutoSize = true;
-            label32.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label32.Font = new Font("Microsoft Sans Serif", 8.25F);
             label32.Location = new Point(16, 76);
             label32.Name = "label32";
             label32.Size = new Size(106, 13);
             label32.TabIndex = 52;
             label32.Text = "Sistemas Producción";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(118, 76);
-            label26.Name = "label26";
-            label26.Size = new Size(31, 13);
-            label26.TabIndex = 26;
-            label26.Text = "MCR";
-            // 
-            // btn_mcr
-            // 
-            btn_mcr.BackColor = Color.Transparent;
-            btn_mcr.BackgroundImage = Properties.Resources.mcr;
-            btn_mcr.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_mcr.Cursor = Cursors.Hand;
-            btn_mcr.FlatAppearance.BorderSize = 0;
-            btn_mcr.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
-            btn_mcr.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
-            btn_mcr.FlatStyle = FlatStyle.Flat;
-            btn_mcr.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_mcr.ForeColor = Color.Black;
-            btn_mcr.Location = new Point(108, 22);
-            btn_mcr.Name = "btn_mcr";
-            btn_mcr.Size = new Size(48, 48);
-            btn_mcr.TabIndex = 25;
-            btn_mcr.TextAlign = ContentAlignment.BottomCenter;
-            btn_mcr.UseVisualStyleBackColor = false;
-            btn_mcr.Click += btn_mcr_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(30, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(35, 13);
-            label2.TabIndex = 24;
-            label2.Text = "SAAC";
-            // 
-            // btn_saac
-            // 
-            btn_saac.BackColor = Color.Transparent;
-            btn_saac.BackgroundImage = Properties.Resources.saac;
-            btn_saac.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_saac.Cursor = Cursors.Hand;
-            btn_saac.FlatAppearance.BorderSize = 0;
-            btn_saac.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
-            btn_saac.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
-            btn_saac.FlatStyle = FlatStyle.Flat;
-            btn_saac.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_saac.ForeColor = Color.Black;
-            btn_saac.Location = new Point(25, 22);
-            btn_saac.Name = "btn_saac";
-            btn_saac.Size = new Size(48, 48);
-            btn_saac.TabIndex = 7;
-            btn_saac.TextAlign = ContentAlignment.BottomCenter;
-            btn_saac.UseVisualStyleBackColor = false;
-            btn_saac.Click += btn_saac_Click;
             // 
             // tabPage4
             // 
@@ -1391,7 +1406,7 @@
             mcrPre.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             mcrPre.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             mcrPre.FlatStyle = FlatStyle.Flat;
-            mcrPre.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            mcrPre.Font = new Font("Microsoft Sans Serif", 5.25F);
             mcrPre.ForeColor = Color.Black;
             mcrPre.Location = new Point(267, 22);
             mcrPre.Name = "mcrPre";
@@ -1411,7 +1426,7 @@
             saacPre.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             saacPre.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             saacPre.FlatStyle = FlatStyle.Flat;
-            saacPre.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            saacPre.Font = new Font("Microsoft Sans Serif", 5.25F);
             saacPre.ForeColor = Color.Black;
             saacPre.Location = new Point(184, 22);
             saacPre.Name = "saacPre";
@@ -1424,7 +1439,7 @@
             // label30
             // 
             label30.AutoSize = true;
-            label30.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label30.Font = new Font("Microsoft Sans Serif", 8.25F);
             label30.Location = new Point(96, 76);
             label30.Name = "label30";
             label30.Size = new Size(62, 13);
@@ -1434,7 +1449,7 @@
             // label34
             // 
             label34.AutoSize = true;
-            label34.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label34.Font = new Font("Microsoft Sans Serif", 8.25F);
             label34.Location = new Point(179, 76);
             label34.Name = "label34";
             label34.Size = new Size(57, 13);
@@ -1451,7 +1466,7 @@
             mcrDesa.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             mcrDesa.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             mcrDesa.FlatStyle = FlatStyle.Flat;
-            mcrDesa.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            mcrDesa.Font = new Font("Microsoft Sans Serif", 5.25F);
             mcrDesa.ForeColor = Color.Black;
             mcrDesa.Location = new Point(102, 22);
             mcrDesa.Name = "mcrDesa";
@@ -1464,7 +1479,7 @@
             // label31
             // 
             label31.AutoSize = true;
-            label31.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label31.Font = new Font("Microsoft Sans Serif", 8.25F);
             label31.Location = new Point(9, 76);
             label31.Name = "label31";
             label31.Size = new Size(66, 13);
@@ -1474,7 +1489,7 @@
             // label33
             // 
             label33.AutoSize = true;
-            label33.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label33.Font = new Font("Microsoft Sans Serif", 8.25F);
             label33.Location = new Point(265, 76);
             label33.Name = "label33";
             label33.Size = new Size(53, 13);
@@ -1491,7 +1506,7 @@
             saacDesa.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             saacDesa.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             saacDesa.FlatStyle = FlatStyle.Flat;
-            saacDesa.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            saacDesa.Font = new Font("Microsoft Sans Serif", 5.25F);
             saacDesa.ForeColor = Color.Black;
             saacDesa.Location = new Point(19, 22);
             saacDesa.Name = "saacDesa";
@@ -1534,7 +1549,7 @@
             servDesa.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
             servDesa.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             servDesa.FlatStyle = FlatStyle.Flat;
-            servDesa.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point);
+            servDesa.Font = new Font("Microsoft Sans Serif", 5.25F);
             servDesa.ForeColor = Color.Black;
             servDesa.Location = new Point(26, 22);
             servDesa.Name = "servDesa";
@@ -1547,26 +1562,20 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label29.Font = new Font("Microsoft Sans Serif", 8.25F);
             label29.Location = new Point(6, 76);
             label29.Name = "label29";
             label29.Size = new Size(57, 13);
             label29.TabIndex = 52;
             label29.Text = "Servidores";
             // 
-            // groupBox10
+            // flowLayoutPanel1
             // 
-            groupBox10.Controls.Add(btn_mcr);
-            groupBox10.Controls.Add(btn_saac);
-            groupBox10.Controls.Add(label26);
-            groupBox10.Controls.Add(label2);
-            groupBox10.ForeColor = Color.FromArgb(10, 94, 42);
-            groupBox10.Location = new Point(164, 22);
-            groupBox10.Name = "groupBox10";
-            groupBox10.Size = new Size(175, 127);
-            groupBox10.TabIndex = 55;
-            groupBox10.TabStop = false;
-            groupBox10.Text = "Oracle 12c";
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(399, 64);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(347, 401);
+            flowLayoutPanel1.TabIndex = 33;
             // 
             // LanzadorFrm
             // 
@@ -1574,8 +1583,9 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(379, 495);
+            ClientSize = new Size(831, 495);
             ControlBox = false;
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(tabControl1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -1609,6 +1619,8 @@
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
+            groupBox10.ResumeLayout(false);
+            groupBox10.PerformLayout();
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
             tabPage4.ResumeLayout(false);
@@ -1617,8 +1629,6 @@
             groupBox8.PerformLayout();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
-            groupBox10.ResumeLayout(false);
-            groupBox10.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1724,5 +1734,6 @@
         private Button btn_sisWeb;
         private Label label32;
         private GroupBox groupBox10;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

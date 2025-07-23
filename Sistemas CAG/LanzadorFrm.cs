@@ -1,6 +1,7 @@
 ﻿using Sistemas_CAG.Controlador;
 using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Servicios;
+using System.Data;
 
 namespace Sistemas_CAG
 {
@@ -13,6 +14,8 @@ namespace Sistemas_CAG
             InitializeComponent();
 
         }
+        ParametrosControl parametrosControl =new ParametrosControl();
+
         SistemaDTO sistema = new SistemaDTO();
         LanzadorControl lanzar = new LanzadorControl();
         NegocioDTO negocio = new NegocioDTO();
@@ -32,7 +35,7 @@ namespace Sistemas_CAG
             this.Location = new Point(deskWidth - this.Width, deskHeight - this.Height);
 
             //lblNotificacion.Text = "v" + sistema.Version;
-
+            CrearBotonesDinamicos();
             try
             {
                 //Carga de los negocios Openpos
@@ -507,5 +510,60 @@ namespace Sistemas_CAG
                 MessageBox.Show("Debe seleccionar un sistema web", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+
+
+
+
+        private void CrearBotonesDinamicos()
+        {
+            // Limpiar controles anteriores
+            flowLayoutPanel1.Controls.Clear();
+
+            // Obtener los registros desde la base de datos en un DataTable
+            DataTable registros = parametrosControl.CargaTablaSistema();
+
+            foreach (DataRow row in registros.Rows)
+            {
+                int id = Convert.ToInt32(row["Id"]);
+                string nombre = row["Nombre"].ToString();
+
+                Button btn = new Button();
+                btn.Text = nombre;
+                btn.Name = "btn_" + id;
+                btn.Tag = id; 
+                btn.Width = 48;
+                btn.Height = 48;
+                btn.Margin = new Padding(5);
+
+                btn.Click += BotonDinamico_Click;
+
+                flowLayoutPanel1.Controls.Add(btn);
+            }
+        }
+
+        private void BotonDinamico_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int id = (int)btn.Tag;
+
+            MessageBox.Show($"Haz hecho clic en el botón con ID: {id} y texto: {btn.Text}");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
