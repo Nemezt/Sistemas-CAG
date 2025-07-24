@@ -94,7 +94,7 @@ namespace Sistemas_CAG.Modelos.Servicios
         {
             bool respuesta = false;
 
-            string consulta = "INSERT INTO tb_sistemas (Nombre, Parametro1, Parametro2, Tipo, IniciarEn, CarpetaSistema) VALUES (@nombre, @parametro1, @parametro2, @tipo, @iniciarEn, @carpetaSistema)";
+            string consulta = "INSERT INTO tb_sistemas (Nombre, Parametro1, Parametro2, Tipo, IniciarEn, CarpetaSistema, Icono) VALUES (@nombre, @parametro1, @parametro2, @tipo, @iniciarEn, @carpetaSistema, @icono)";
             var parametros = new Dictionary<string, object>
             {
                 { "@nombre", sistema.NombreSistema },
@@ -102,6 +102,7 @@ namespace Sistemas_CAG.Modelos.Servicios
                 { "@parametro2", sistema.Parametro2 },
                 { "@tipo",  sistema.Tipo },
                 { "@iniciarEn", sistema.IniciarEn },
+                { "@icono", sistema.Icono },
                 { "@carpetaSistema",  sistema.CarpetaSistema }
             };
 
@@ -123,7 +124,7 @@ namespace Sistemas_CAG.Modelos.Servicios
         {
             bool respuesta = false;
 
-            string consulta = "UPDATE tb_sistemas SET Nombre = @nombre, Parametro1 = @parametro1, Parametro2 = @parametro2, Tipo = @tipo, IniciarEn = @iniciarEn, CarpetaSistema = @carpetaSistema WHERE ID = @id;";
+            string consulta = "UPDATE tb_sistemas SET Nombre = @nombre, Parametro1 = @parametro1, Parametro2 = @parametro2, Tipo = @tipo, IniciarEn = @iniciarEn, CarpetaSistema = @carpetaSistema, Icono = @icono WHERE ID = @id;";
             var parametros = new Dictionary<string, object>
             {
                 { "@id", sistema.Id },
@@ -132,6 +133,7 @@ namespace Sistemas_CAG.Modelos.Servicios
                 { "@parametro2", sistema.Parametro2 },
                 { "@tipo",  sistema.Tipo },
                 { "@iniciarEn", sistema.IniciarEn },
+                { "@icono", sistema.Icono },
                 { "@carpetaSistema",  sistema.CarpetaSistema }
             };
 

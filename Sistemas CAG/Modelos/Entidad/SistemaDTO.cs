@@ -36,6 +36,8 @@ namespace Sistemas_CAG.Modelos.Entidad
        
         private string estacion;
 
+        private string icono;
+
              
         public string NombreSistema { get => nombreSistema; set => nombreSistema = value; }
         public string Destino { get => destino; set => destino = value; }
@@ -47,6 +49,7 @@ namespace Sistemas_CAG.Modelos.Entidad
         public string Negocio { get => negocio; set => negocio = value; }
         public string Estacion { get => estacion; set => estacion = value; }
         public int Id { get => id; set => id = value; }
+        public string Icono { get => icono; set => icono = value; }
 
         #endregion
 

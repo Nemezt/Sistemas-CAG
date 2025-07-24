@@ -527,27 +527,67 @@ namespace Sistemas_CAG
             {
                 int id = Convert.ToInt32(row["Id"]);
                 string nombre = row["Nombre"].ToString();
+                string imagenNombre = row["Icono"].ToString();
+                string rutaImagen = Path.Combine(Application.StartupPath, "Resources", "Iconos", imagenNombre);
 
-                Button btn = new Button();
-                btn.Text = nombre;
+                SistemaButton btn = new SistemaButton();
+                btn.Id = Convert.ToInt32(row["Id"]);
+                btn.NombreSistema = row["Nombre"].ToString();
+                btn.Tipo = row["Tipo"].ToString();
+                btn.IniciarEn= row["IniciarEn"].ToString();
+                btn.CarpetaSistema = row["CarpetaSistema"].ToString();
+                btn.Parametro1 = row["Parametro1"].ToString();
+                btn.Parametro2 = row["Parametro2"].ToString();
+
+                //btn.Text = nombre;
                 btn.Name = "btn_" + id;
-                btn.Tag = id; 
-                btn.Width = 48;
-                btn.Height = 48;
+                btn.Tag = id;
+                btn.ToolTipText = nombre;
                 btn.Margin = new Padding(5);
+
+               
+                btn.BackColor = Color.Transparent;               
+                btn.BackgroundImageLayout = ImageLayout.Zoom;
+                btn.Cursor = Cursors.Hand;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.Font = new Font("Microsoft Sans Serif", 5.25F);
+                btn.ForeColor = Color.Black;
+                btn.Location = new Point(192, 32);
+                btn.Size = new Size(48, 48);
+                btn.TabIndex = 7;
+                btn.TextAlign = ContentAlignment.BottomCenter;
+                btn.UseVisualStyleBackColor = false;
+
+                if (File.Exists(rutaImagen))
+                {
+                    btn.BackgroundImage = Image.FromFile(rutaImagen);
+                }
+                else
+                {
+                    string rutaDefault = Path.Combine(Application.StartupPath, "Resources", "Iconos", "default.png");
+                    if (File.Exists(rutaDefault))
+                        btn.BackgroundImage = Image.FromFile(rutaDefault);
+                }
 
                 btn.Click += BotonDinamico_Click;
 
                 flowLayoutPanel1.Controls.Add(btn);
+
+
+                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(btn, btn.ToolTipText);
             }
         }
 
         private void BotonDinamico_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
+            SistemaButton btn = sender as SistemaButton;
             int id = (int)btn.Tag;
-
-            MessageBox.Show($"Haz hecho clic en el botón con ID: {id} y texto: {btn.Text}");
+            //lanzar.lanzarAplicacion(sistema);
+            MessageBox.Show($"Haz hecho clic en el botón con ID: {id} y texto: {btn.NombreSistema}");
         }
 
 

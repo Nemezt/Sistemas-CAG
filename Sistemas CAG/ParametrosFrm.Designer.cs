@@ -86,6 +86,8 @@
             textBox1 = new TextBox();
             label17 = new Label();
             textBox2 = new TextBox();
+            label18 = new Label();
+            iconoTxt = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSistemas).BeginInit();
             panelMenu.SuspendLayout();
@@ -187,7 +189,7 @@
             dgvSistemas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSistemas.EnableHeadersVisualStyles = false;
             dgvSistemas.GridColor = Color.FromArgb(10, 94, 42);
-            dgvSistemas.Location = new Point(6, 108);
+            dgvSistemas.Location = new Point(6, 140);
             dgvSistemas.Name = "dgvSistemas";
             dgvSistemas.ReadOnly = true;
             dgvSistemas.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -206,7 +208,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dgvSistemas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvSistemas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSistemas.Size = new Size(603, 226);
+            dgvSistemas.Size = new Size(603, 194);
             dgvSistemas.TabIndex = 0;
             dgvSistemas.MouseClick += dgvSistemas_MouseClick;
             // 
@@ -519,6 +521,8 @@
             // 
             // tabSistema
             // 
+            tabSistema.Controls.Add(label18);
+            tabSistema.Controls.Add(iconoTxt);
             tabSistema.Controls.Add(label15);
             tabSistema.Controls.Add(carpetaTxt);
             tabSistema.Controls.Add(label14);
@@ -547,9 +551,9 @@
             label15.AutoSize = true;
             label15.Location = new Point(367, 49);
             label15.Name = "label15";
-            label15.Size = new Size(115, 15);
+            label15.Size = new Size(107, 15);
             label15.TabIndex = 21;
-            label15.Text = "Carpeta de sistema *";
+            label15.Text = "Carpeta de sistema";
             // 
             // carpetaTxt
             // 
@@ -563,9 +567,9 @@
             label14.AutoSize = true;
             label14.Location = new Point(122, 49);
             label14.Name = "label14";
-            label14.Size = new Size(72, 15);
+            label14.Size = new Size(64, 15);
             label14.TabIndex = 19;
-            label14.Text = "Iniciar en... *";
+            label14.Text = "Iniciar en...";
             // 
             // inicioEnTxt
             // 
@@ -702,6 +706,22 @@
             textBox2.Size = new Size(42, 23);
             textBox2.TabIndex = 12;
             // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(6, 93);
+            label18.Name = "label18";
+            label18.Size = new Size(100, 15);
+            label18.TabIndex = 23;
+            label18.Text = "Nombre de Icono";
+            // 
+            // iconoTxt
+            // 
+            iconoTxt.Location = new Point(6, 111);
+            iconoTxt.Name = "iconoTxt";
+            iconoTxt.Size = new Size(139, 23);
+            iconoTxt.TabIndex = 22;
+            // 
             // ParametrosFrm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -794,5 +814,7 @@
         private TextBox textBox1;
         private Label label17;
         private TextBox textBox2;
+        private Label label18;
+        private TextBox iconoTxt;
     }
 }
