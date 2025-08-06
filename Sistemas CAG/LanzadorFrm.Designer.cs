@@ -130,7 +130,8 @@
             cb_ServAdmin = new ComboBox();
             servDesa = new Button();
             label29 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            fLPDesktop = new FlowLayoutPanel();
+            fLPWeb = new FlowLayoutPanel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupbox4.SuspendLayout();
@@ -1569,13 +1570,21 @@
             label29.TabIndex = 52;
             label29.Text = "Servidores";
             // 
-            // flowLayoutPanel1
+            // fLPDesktop
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(399, 64);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(347, 401);
-            flowLayoutPanel1.TabIndex = 33;
+            fLPDesktop.AutoScroll = true;
+            fLPDesktop.Location = new Point(399, 64);
+            fLPDesktop.Name = "fLPDesktop";
+            fLPDesktop.Size = new Size(347, 183);
+            fLPDesktop.TabIndex = 33;
+            // 
+            // fLPWeb
+            // 
+            fLPWeb.AutoScroll = true;
+            fLPWeb.Location = new Point(399, 260);
+            fLPWeb.Name = "fLPWeb";
+            fLPWeb.Size = new Size(347, 183);
+            fLPWeb.TabIndex = 34;
             // 
             // LanzadorFrm
             // 
@@ -1585,7 +1594,8 @@
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(831, 495);
             ControlBox = false;
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(fLPWeb);
+            Controls.Add(fLPDesktop);
             Controls.Add(tabControl1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -1734,6 +1744,7 @@
         private Button btn_sisWeb;
         private Label label32;
         private GroupBox groupBox10;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel fLPDesktop;
+        private FlowLayoutPanel fLPWeb;
     }
 }

@@ -36,6 +36,7 @@ namespace Sistemas_CAG
 
             //lblNotificacion.Text = "v" + sistema.Version;
             CrearBotonesDinamicos();
+            
             try
             {
                 //Carga de los negocios Openpos
@@ -518,7 +519,7 @@ namespace Sistemas_CAG
         private void CrearBotonesDinamicos()
         {
             // Limpiar controles anteriores
-            flowLayoutPanel1.Controls.Clear();
+            fLPDesktop.Controls.Clear();
 
             // Obtener los registros desde la base de datos en un DataTable
             DataTable registros = parametrosControl.CargaTablaSistema();
@@ -530,41 +531,30 @@ namespace Sistemas_CAG
                 string imagenNombre = row["Icono"].ToString();
                 string rutaImagen = Path.Combine(Application.StartupPath, "Resources", "Iconos", imagenNombre);
 
+                // Crear botón
                 SistemaButton btn = new SistemaButton();
-                btn.Id = Convert.ToInt32(row["Id"]);
-                btn.NombreSistema = row["Nombre"].ToString();
+                btn.Id = id;
+                btn.NombreSistema = nombre;
                 btn.Tipo = row["Tipo"].ToString();
-                btn.IniciarEn= row["IniciarEn"].ToString();
+                btn.IniciarEn = row["IniciarEn"].ToString();
                 btn.CarpetaSistema = row["CarpetaSistema"].ToString();
                 btn.Parametro1 = row["Parametro1"].ToString();
                 btn.Parametro2 = row["Parametro2"].ToString();
-
-                //btn.Text = nombre;
                 btn.Name = "btn_" + id;
                 btn.Tag = id;
                 btn.ToolTipText = nombre;
-                btn.Margin = new Padding(5);
-
-               
-                btn.BackColor = Color.Transparent;               
+                btn.Size = new Size(60, 60);
                 btn.BackgroundImageLayout = ImageLayout.Zoom;
-                btn.Cursor = Cursors.Hand;
                 btn.FlatAppearance.BorderSize = 0;
-                btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
-                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
                 btn.FlatStyle = FlatStyle.Flat;
-                btn.Font = new Font("Microsoft Sans Serif", 5.25F);
-                btn.ForeColor = Color.Black;
-                btn.Location = new Point(192, 32);
-                btn.Size = new Size(48, 48);
-                btn.TabIndex = 7;
-                btn.TextAlign = ContentAlignment.BottomCenter;
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+                btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
+                btn.Cursor = Cursors.Hand;
                 btn.UseVisualStyleBackColor = false;
 
+                // Cargar imagen
                 if (File.Exists(rutaImagen))
-                {
                     btn.BackgroundImage = Image.FromFile(rutaImagen);
-                }
                 else
                 {
                     string rutaDefault = Path.Combine(Application.StartupPath, "Resources", "Iconos", "default.png");
@@ -572,14 +562,42 @@ namespace Sistemas_CAG
                         btn.BackgroundImage = Image.FromFile(rutaDefault);
                 }
 
+                // Crear etiqueta debajo
+                Label etiqueta = new Label();
+                etiqueta.Text = nombre;
+                etiqueta.TextAlign = ContentAlignment.MiddleCenter;
+                etiqueta.Dock = DockStyle.Bottom;
+                etiqueta.Height = 20;
+                etiqueta.AutoSize = false;
+                etiqueta.Font = new Font("Microsoft Sans Serif", 7F);
+
+                // Crear panel contenedor
+                Panel contenedor = new Panel();
+                contenedor.Width = btn.Width;
+                contenedor.Height = btn.Height + etiqueta.Height + 5;
+                contenedor.Margin = new Padding(5);
+                contenedor.Controls.Add(btn);
+                contenedor.Controls.Add(etiqueta);
+
+                // Posicionar botón dentro del panel
+                btn.Dock = DockStyle.Top;
+
+                // Eventos y tooltip
                 btn.Click += BotonDinamico_Click;
-
-                flowLayoutPanel1.Controls.Add(btn);
-
-
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(btn, btn.ToolTipText);
+
+                // Agregar al contenedor correspondiente
+                if (btn.Tipo == "oracle" || btn.Tipo == "exe" || btn.Tipo == "java")
+                {
+                    fLPDesktop.Controls.Add(contenedor);
+                }
+                else if (btn.Tipo == "web" || btn.Tipo == "javaws")
+                {
+                    fLPWeb.Controls.Add(contenedor);
+                }
             }
+
         }
 
         private void BotonDinamico_Click(object sender, EventArgs e)

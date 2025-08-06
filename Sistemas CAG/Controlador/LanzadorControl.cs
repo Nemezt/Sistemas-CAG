@@ -71,6 +71,7 @@ namespace Sistemas_CAG.Controlador
         /// </summary>
         /// <param name="sistema"></param>
         public void lanzarAplicacion(SistemaDTO sistema )
+        //public void lanzarAplicacion(SistemaButton sistema, NegocioDTO negocio)
         {
             try
             {
@@ -482,6 +483,180 @@ namespace Sistemas_CAG.Controlador
 
         }
     }
+
+
+    public void lanzarAplicacion(SistemaButton sistema, NegocioDTO negocio)
+        {
+            try
+            {
+                parametros = ParametroRepository.ConsultaParametros();
+                funcDir.EliminarArchivo(parametros.LogSistema);
+                if (!(sistema.NombreSistema == null))
+                {
+                    negocioParam = conexionNegocioOpenPos(negocio.Negocio);
+                    if (negocio.Estacion != "" || negocio.Estacion == null)
+                    {
+                        negocioParam.Estacion = negocio.Estacion;
+                    }
+
+                    sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
+
+
+                    if (sistema.Tipo == "web")
+                    {
+                        if (parametros.DefNavegador == "S")
+                        {
+                            sistema.Destino = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
+                        }
+                        else
+                        {
+                            sistema.Destino = parametros.NavegadorWeb;
+                        }
+
+                    }
+                    if (sistema.Tipo == "servidor")
+                    {
+                        if (parametros.DefNavegador == "S")
+                        {
+                            sistema.Destino = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
+                        }
+                        else
+                        {
+                            sistema.Destino = parametros.NavegadorWeb;
+                        }
+
+                    }
+                    if (sistema.Tipo == "java")
+                    {
+                        if (parametros.DefJava == "S")
+                        {
+                            sistema.Destino = funcDir.GetJavaInstallationPath() + @"\bin\javaw.exe";
+                        }
+                        else
+                        {
+                            sistema.Destino = parametros.JavaHome + @"\bin\javaw.exe";
+                        }
+
+                    }
+                    if (sistema.Tipo == "javaws")
+                    {
+                        if (parametros.DefJava == "S")
+                        {
+                            sistema.Destino = funcDir.GetJavaInstallationPath() + @"\bin\javaws.exe";
+                        }
+                        else
+                        {
+                            sistema.Destino = parametros.JavaHome + @"\bin\javaws.exe";
+                        }
+
+                        //Se borra el webutil.properties si existe
+
+                        string webutil32 = @"C:\\users\\" + Environment.UserName + "\\webutil.32.properties";
+                        string webutil64 = @"C:\\users\\" + Environment.UserName + "\\webutil.64.properties";
+                        funcDir.EliminarArchivo(webutil32);
+                        funcDir.EliminarArchivo(webutil64);
+
+                    }
+                    if (sistema.Tipo == "oracle")
+                    {
+                        if (parametros.DefOracle == "S")
+                        {
+                            sistema.Destino = @"C:\orant\BIN\ifrun60.EXE";
+                        }
+                        else
+                        {
+                            sistema.Destino = parametros.OracleForms;
+                        }
+
+                    }
+                    if (sistema.Tipo == "exe")
+                    {
+                        sistema.Destino = sistema.CarpetaSistema + sistema.NombreSistema + ".exe";
+                    }
+
+                    if (sistema.Tipo == "exe" || sistema.Tipo == "java" || sistema.Tipo == "oracle")
+                    {
+                        //Se actualiza el sistema?
+                        if (parametros.Actualiza == "S")
+                        {
+                            sistema = actualizaAplicacion(sistema, parametros);
+                        }
+
+                    }
+                    //Se carga parametro para kisco de OpenPos
+                    if (sistema.NombreSistema == "kiosco")
+                    {
+                        sistema.Parametro2 = negocioRepository.ConsultaConfigKinf(negocioParam.Negocio);
+                        crearConfigKInf(negocioParam);
+                    }
+
+                    //Se carga parametro para facturacion de OpenPos
+                    if (sistema.NombreSistema == "facturacion")
+                    {
+                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
+                        crearConfigCaj(negocioParam);
+                    }
+
+                    //Se carga parametro para preventa de OpenPos
+                    if (sistema.NombreSistema == "preventa")
+                    {
+                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
+                        crearConfigVen(negocioParam);
+                    }
+
+                    //Se verifica el tipo de sistema
+                    if (funcDir.VerificaArchivo(sistema.Destino) == true)
+                    {
+                        if (sistema.Tipo == "web")
+                        {
+                            if (!ejecutarSistemaWeb(sistema))
+                            {
+                                MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else if (sistema.Tipo == "Servidor")
+                        {
+                            if (!ejecutarSistemaWeb(sistema))
+                            {
+                                MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            if (!ejecutarAplicacion(sistema))
+                            {
+                                MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede tener acceso a " + sistema.Destino, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    sistema = null;
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado un sistema o parámetro válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    sistema = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+
+
+        }
+
+
+
+
+
 
 
 }
