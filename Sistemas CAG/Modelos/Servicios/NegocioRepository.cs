@@ -19,7 +19,7 @@ namespace Sistemas_CAG.Modelos.Servicios
         {
             try
             {
-                string consulta = @"SELECT ConfigKinf, Usuario, PalPaso, Servidor, Inventario, Estacion 
+                string consulta = @"SELECT ConfigKinf, Usuario, PalPaso, Servidor, Inventario, Estacion, TipoEstacion 
                             FROM tb_negocios_pos 
                             WHERE Negocio = @Negocio";
 
@@ -39,6 +39,7 @@ namespace Sistemas_CAG.Modelos.Servicios
                     negocio.Servidor = row["Servidor"]?.ToString();
                     negocio.Inventario = row["Inventario"]?.ToString();
                     negocio.Estacion = row["Estacion"]?.ToString();
+                    negocio.TipoEstacion = row["TipoEstacion"]?.ToString();
                 }
             }
             catch (Exception ex)

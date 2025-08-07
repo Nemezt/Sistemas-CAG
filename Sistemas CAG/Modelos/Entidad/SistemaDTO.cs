@@ -5,7 +5,7 @@ namespace Sistemas_CAG.Modelos.Entidad
     /// <summary>
     /// 
     /// </summary>
-    internal class SistemaDTO
+    public class SistemaDTO
     {
 
         #region Atributos y Propiedades
@@ -46,8 +46,6 @@ namespace Sistemas_CAG.Modelos.Entidad
         public string Tipo { get => tipo; set => tipo = value; }
         public string IniciarEn { get => iniciarEn; set => iniciarEn = value; }
         public string CarpetaSistema { get => carpetaSistema; set => carpetaSistema = value; }
-        public string Negocio { get => negocio; set => negocio = value; }
-        public string Estacion { get => estacion; set => estacion = value; }
         public int Id { get => id; set => id = value; }
         public string Icono { get => icono; set => icono = value; }
 

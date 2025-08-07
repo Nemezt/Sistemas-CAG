@@ -8,7 +8,7 @@ namespace Sistemas_CAG.Controlador
     {
         private static FuncionesDirectorios funcDir = new FuncionesDirectorios();
         private static ParametrosDTO parametros = new ParametrosDTO();
-        private static NegocioDTO negocioParam = new NegocioDTO();
+        //private static NegocioDTO negocioParam = new NegocioDTO();
         private static NegocioRepository negocioRepository = new NegocioRepository();
         private static ParametroRepository parametroRepository = new ParametroRepository();
         private static SistemaRepository sistemaRepository = new SistemaRepository();
@@ -70,22 +70,19 @@ namespace Sistemas_CAG.Controlador
         /// Logica principal para determinar la aplicación a actualizar y ejecutar, asigna los parametros necesarios.
         /// </summary>
         /// <param name="sistema"></param>
-        public void lanzarAplicacion(SistemaDTO sistema )
-        //public void lanzarAplicacion(SistemaButton sistema, NegocioDTO negocio)
+        //public void lanzarAplicacion(SistemaDTO sistema )
+        public void lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
         {
             try
             {
                 parametros = ParametroRepository.ConsultaParametros();
                 funcDir.EliminarArchivo(parametros.LogSistema);
+
                 if (!(sistema.NombreSistema == null))
                 {
-                    negocioParam = conexionNegocioOpenPos(sistema.Negocio);
-                    if (sistema.Estacion != "" || sistema.Estacion == null)
-                    {
-                        negocioParam.Estacion = sistema.Estacion;
-                    }
-
-                    sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
+                    
+                    
+                    //sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
 
 
                     if (sistema.Tipo == "web")
@@ -172,22 +169,26 @@ namespace Sistemas_CAG.Controlador
                     //Se carga parametro para kisco de OpenPos
                     if (sistema.NombreSistema == "kiosco")
                     {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfigKinf(negocioParam.Negocio);
-                        crearConfigKInf(negocioParam);
+                        //TODO: controlar negocio null
+                        negocioPos = CargaNegocioPos(negocioPos);
+                        sistema.Parametro2 = negocioPos.ConfigKinf;
+                        crearConfigKInf(negocioPos);
                     }
 
                     //Se carga parametro para facturacion de OpenPos
                     if (sistema.NombreSistema == "facturacion")
                     {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
-                        crearConfigCaj(negocioParam);
+                        negocioPos = CargaNegocioPos(negocioPos);
+                        sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
+                        crearConfigCaj(negocioPos);
                     }
 
                     //Se carga parametro para preventa de OpenPos
                     if (sistema.NombreSistema == "preventa")
                     {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
-                        crearConfigVen(negocioParam);
+                        negocioPos = CargaNegocioPos(negocioPos);
+                        sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
+                        crearConfigVen(negocioPos);
                     }
 
                     //Se verifica el tipo de sistema
@@ -394,12 +395,11 @@ namespace Sistemas_CAG.Controlador
         /// </summary>
         /// <param name="nNegocio"></param>
         /// <returns></returns>
-        private NegocioDTO conexionNegocioOpenPos(string nNegocio)
+        private NegocioDTO CargaNegocioPos(NegocioDTO nNegocio)
         {
             try
-            {
-                negocioParam.Negocio = nNegocio;
-                negocioParam = negocioRepository.ConsultaNegocio(negocioParam);
+            {               
+                nNegocio = negocioRepository.ConsultaNegocio(nNegocio);
                 
             }
             catch (Exception ex)
@@ -407,7 +407,7 @@ namespace Sistemas_CAG.Controlador
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return negocioParam;
+            return nNegocio;
 
         }
 
@@ -420,14 +420,14 @@ namespace Sistemas_CAG.Controlador
         {
             try
             {
-                var file = new IniFile(configKInf + "ConfigKInf-" + negocioParam.Inventario + ".acc");
+                var file = new IniFile(configKInf + "ConfigKInf-" + negocio.Inventario + ".acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
-                file.Write("COD_INV", negocioParam.Inventario, "Negocio");
+                file.Write("COD_INV", negocio.Inventario, "Negocio");
                 file.Write("VER_EXISTENCIA", "S", "Negocio");
                 file.Write("VER_RETENIBLE", "S", "Negocio");
-                file.Write("USUARIO", negocioParam.Usuario, "Conexion");
-                file.Write("PALPASO", negocioParam.PalPaso, "Conexion");
-                file.Write("CONEXION", negocioParam.Servidor, "Conexion");
+                file.Write("USUARIO", negocio.Usuario, "Conexion");
+                file.Write("PALPASO", negocio.PalPaso, "Conexion");
+                file.Write("CONEXION", negocio.Servidor, "Conexion");
                 file.Write("TIMEOUT", "1", "Conexion");
                 file.Write("TIEMPO_ERROR", "5", "Mensajes");
                 file.Write("TIEMPO_MENSAJE", "2", "Mensajes");
@@ -446,12 +446,12 @@ namespace Sistemas_CAG.Controlador
             {
                 var file = new IniFile(configVen + "ConfigVen.acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
-                file.Write("COD_INV", negocioParam.Inventario, "Negocio");
-                file.Write("ID_ESTACION", negocioParam.Estacion, "Negocio");
+                file.Write("COD_INV", negocio.Inventario, "Negocio");
+                file.Write("ID_ESTACION", negocio.Estacion, "Negocio");
                 file.Write("COD_COO", "COOPEAGRI", "Negocio");
-                file.Write("USUARIO", negocioParam.Usuario, "Conexion");
-                file.Write("PALPASO", negocioParam.PalPaso, "Conexion");
-                file.Write("CONEXION", negocioParam.Servidor, "Conexion");
+                file.Write("USUARIO", negocio.Usuario, "Conexion");
+                file.Write("PALPASO", negocio.PalPaso, "Conexion");
+                file.Write("CONEXION", negocio.Servidor, "Conexion");
             }
             catch (Exception ex)
             {
@@ -468,11 +468,11 @@ namespace Sistemas_CAG.Controlador
             {
                 var file = new IniFile(configCaj + "ConfigCaj.acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
-                file.Write("COD_INV", negocioParam.Inventario, "Negocio");
-                file.Write("ID_CAJA", negocioParam.Estacion, "Negocio");
-                file.Write("USUARIO", negocioParam.Usuario, "Conexion");
-                file.Write("PALPASO", negocioParam.PalPaso, "Conexion");
-                file.Write("CONEXION", negocioParam.Servidor, "Conexion");
+                file.Write("COD_INV", negocio.Inventario, "Negocio");
+                file.Write("ID_CAJA", negocio.Estacion, "Negocio");
+                file.Write("USUARIO", negocio.Usuario, "Conexion");
+                file.Write("PALPASO", negocio.PalPaso, "Conexion");
+                file.Write("CONEXION", negocio.Servidor, "Conexion");
             }
             catch (Exception ex)
             {
@@ -485,178 +485,6 @@ namespace Sistemas_CAG.Controlador
     }
 
 
-    public void lanzarAplicacion(SistemaButton sistema, NegocioDTO negocio)
-        {
-            try
-            {
-                parametros = ParametroRepository.ConsultaParametros();
-                funcDir.EliminarArchivo(parametros.LogSistema);
-                if (!(sistema.NombreSistema == null))
-                {
-                    negocioParam = conexionNegocioOpenPos(negocio.Negocio);
-                    if (negocio.Estacion != "" || negocio.Estacion == null)
-                    {
-                        negocioParam.Estacion = negocio.Estacion;
-                    }
-
-                    sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
-
-
-                    if (sistema.Tipo == "web")
-                    {
-                        if (parametros.DefNavegador == "S")
-                        {
-                            sistema.Destino = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
-                        }
-                        else
-                        {
-                            sistema.Destino = parametros.NavegadorWeb;
-                        }
-
-                    }
-                    if (sistema.Tipo == "servidor")
-                    {
-                        if (parametros.DefNavegador == "S")
-                        {
-                            sistema.Destino = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
-                        }
-                        else
-                        {
-                            sistema.Destino = parametros.NavegadorWeb;
-                        }
-
-                    }
-                    if (sistema.Tipo == "java")
-                    {
-                        if (parametros.DefJava == "S")
-                        {
-                            sistema.Destino = funcDir.GetJavaInstallationPath() + @"\bin\javaw.exe";
-                        }
-                        else
-                        {
-                            sistema.Destino = parametros.JavaHome + @"\bin\javaw.exe";
-                        }
-
-                    }
-                    if (sistema.Tipo == "javaws")
-                    {
-                        if (parametros.DefJava == "S")
-                        {
-                            sistema.Destino = funcDir.GetJavaInstallationPath() + @"\bin\javaws.exe";
-                        }
-                        else
-                        {
-                            sistema.Destino = parametros.JavaHome + @"\bin\javaws.exe";
-                        }
-
-                        //Se borra el webutil.properties si existe
-
-                        string webutil32 = @"C:\\users\\" + Environment.UserName + "\\webutil.32.properties";
-                        string webutil64 = @"C:\\users\\" + Environment.UserName + "\\webutil.64.properties";
-                        funcDir.EliminarArchivo(webutil32);
-                        funcDir.EliminarArchivo(webutil64);
-
-                    }
-                    if (sistema.Tipo == "oracle")
-                    {
-                        if (parametros.DefOracle == "S")
-                        {
-                            sistema.Destino = @"C:\orant\BIN\ifrun60.EXE";
-                        }
-                        else
-                        {
-                            sistema.Destino = parametros.OracleForms;
-                        }
-
-                    }
-                    if (sistema.Tipo == "exe")
-                    {
-                        sistema.Destino = sistema.CarpetaSistema + sistema.NombreSistema + ".exe";
-                    }
-
-                    if (sistema.Tipo == "exe" || sistema.Tipo == "java" || sistema.Tipo == "oracle")
-                    {
-                        //Se actualiza el sistema?
-                        if (parametros.Actualiza == "S")
-                        {
-                            sistema = actualizaAplicacion(sistema, parametros);
-                        }
-
-                    }
-                    //Se carga parametro para kisco de OpenPos
-                    if (sistema.NombreSistema == "kiosco")
-                    {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfigKinf(negocioParam.Negocio);
-                        crearConfigKInf(negocioParam);
-                    }
-
-                    //Se carga parametro para facturacion de OpenPos
-                    if (sistema.NombreSistema == "facturacion")
-                    {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
-                        crearConfigCaj(negocioParam);
-                    }
-
-                    //Se carga parametro para preventa de OpenPos
-                    if (sistema.NombreSistema == "preventa")
-                    {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
-                        crearConfigVen(negocioParam);
-                    }
-
-                    //Se verifica el tipo de sistema
-                    if (funcDir.VerificaArchivo(sistema.Destino) == true)
-                    {
-                        if (sistema.Tipo == "web")
-                        {
-                            if (!ejecutarSistemaWeb(sistema))
-                            {
-                                MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        else if (sistema.Tipo == "Servidor")
-                        {
-                            if (!ejecutarSistemaWeb(sistema))
-                            {
-                                MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        else
-                        {
-                            if (!ejecutarAplicacion(sistema))
-                            {
-                                MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-
-                        }
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se puede tener acceso a " + sistema.Destino, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                    sistema = null;
-                }
-                else
-                {
-                    MessageBox.Show("No se ha seleccionado un sistema o parámetro válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    sistema = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-            }
-
-
-        }
-
-
-
-
-
-
+  
 
 }

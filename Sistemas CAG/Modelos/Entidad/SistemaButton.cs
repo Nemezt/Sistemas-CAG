@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-internal class SistemaButton : Button
+public class SistemaButton : Button
 {
     #region Atributos privados
     private int id;
