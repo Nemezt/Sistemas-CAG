@@ -169,8 +169,7 @@ namespace Sistemas_CAG.Controlador
                     //Se carga parametro para kisco de OpenPos
                     if (sistema.NombreSistema == "kiosco")
                     {
-                        //TODO: controlar negocio null
-                        negocioPos = CargaNegocioPos(negocioPos);
+
                         sistema.Parametro2 = negocioPos.ConfigKinf;
                         crearConfigKInf(negocioPos);
                     }
@@ -178,7 +177,7 @@ namespace Sistemas_CAG.Controlador
                     //Se carga parametro para facturacion de OpenPos
                     if (sistema.NombreSistema == "facturacion")
                     {
-                        negocioPos = CargaNegocioPos(negocioPos);
+
                         sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
                         crearConfigCaj(negocioPos);
                     }
@@ -186,7 +185,7 @@ namespace Sistemas_CAG.Controlador
                     //Se carga parametro para preventa de OpenPos
                     if (sistema.NombreSistema == "preventa")
                     {
-                        negocioPos = CargaNegocioPos(negocioPos);
+
                         sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
                         crearConfigVen(negocioPos);
                     }
@@ -387,27 +386,6 @@ namespace Sistemas_CAG.Controlador
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        /// <summary>
-        /// Consulta los negocios y parametros
-        /// </summary>
-        /// <param name="nNegocio"></param>
-        /// <returns></returns>
-        private NegocioDTO CargaNegocioPos(NegocioDTO nNegocio)
-        {
-            try
-            {               
-                nNegocio = negocioRepository.ConsultaNegocio(nNegocio);
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return nNegocio;
 
         }
 

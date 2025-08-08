@@ -30,8 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanzadorFrm));
-            label25 = new Label();
-            cb_OPos = new ComboBox();
             ck_tema = new CheckBox();
             panel1 = new Panel();
             label1 = new Label();
@@ -61,26 +59,6 @@
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             SuspendLayout();
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Microsoft Sans Serif", 5.25F);
-            label25.Location = new Point(134, 42);
-            label25.Name = "label25";
-            label25.Size = new Size(93, 7);
-            label25.TabIndex = 29;
-            label25.Text = "*DIR_CAJ=C:\\Openpos\\pos";
-            // 
-            // cb_OPos
-            // 
-            cb_OPos.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_OPos.FormattingEnabled = true;
-            cb_OPos.Items.AddRange(new object[] { "(No hay negocios)" });
-            cb_OPos.Location = new Point(233, 34);
-            cb_OPos.Name = "cb_OPos";
-            cb_OPos.Size = new Size(138, 23);
-            cb_OPos.TabIndex = 5;
             // 
             // ck_tema
             // 
@@ -240,10 +218,10 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(9, 59);
+            tabControl1.Location = new Point(9, 37);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(365, 403);
+            tabControl1.Size = new Size(365, 425);
             tabControl1.TabIndex = 35;
             // 
             // tabPage1
@@ -252,7 +230,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(357, 375);
+            tabPage1.Size = new Size(357, 397);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Desktop";
             tabPage1.UseVisualStyleBackColor = true;
@@ -263,7 +241,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(361, 375);
+            tabPage2.Size = new Size(357, 375);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Web";
             tabPage2.UseVisualStyleBackColor = true;
@@ -273,7 +251,7 @@
             tabPage3.Controls.Add(fLPServer);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(361, 375);
+            tabPage3.Size = new Size(357, 375);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Servidores";
             tabPage3.UseVisualStyleBackColor = true;
@@ -294,9 +272,7 @@
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(384, 495);
             ControlBox = false;
-            Controls.Add(label25);
             Controls.Add(tabControl1);
-            Controls.Add(cb_OPos);
             Controls.Add(panel2);
             Controls.Add(panel1);
             DoubleBuffered = true;
@@ -321,18 +297,15 @@
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private ComboBox cb_OPos;
         private Panel panel1;
         private Button btn_conf;
         private Button btn_minimizar;
         private Button btn_salir;
         private Panel panel2;
         private Label label1;
-        private Label label25;
         private NotifyIcon ntf_Lanzador;
         private ErrorProvider errorProvider1;
         public Label lblNotificacion;

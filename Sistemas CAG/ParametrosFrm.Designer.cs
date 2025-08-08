@@ -67,6 +67,8 @@
             navegadortxt = new TextBox();
             oracletxt = new TextBox();
             tabSistema = new TabPage();
+            label18 = new Label();
+            iconoTxt = new TextBox();
             label15 = new Label();
             carpetaTxt = new TextBox();
             label14 = new Label();
@@ -86,8 +88,6 @@
             textBox1 = new TextBox();
             label17 = new Label();
             textBox2 = new TextBox();
-            label18 = new Label();
-            iconoTxt = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSistemas).BeginInit();
             panelMenu.SuspendLayout();
@@ -546,6 +546,22 @@
             tabSistema.Text = "Sistemas";
             tabSistema.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(6, 93);
+            label18.Name = "label18";
+            label18.Size = new Size(100, 15);
+            label18.TabIndex = 23;
+            label18.Text = "Nombre de Icono";
+            // 
+            // iconoTxt
+            // 
+            iconoTxt.Location = new Point(6, 111);
+            iconoTxt.Name = "iconoTxt";
+            iconoTxt.Size = new Size(139, 23);
+            iconoTxt.TabIndex = 22;
+            // 
             // label15
             // 
             label15.AutoSize = true;
@@ -705,22 +721,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(42, 23);
             textBox2.TabIndex = 12;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(6, 93);
-            label18.Name = "label18";
-            label18.Size = new Size(100, 15);
-            label18.TabIndex = 23;
-            label18.Text = "Nombre de Icono";
-            // 
-            // iconoTxt
-            // 
-            iconoTxt.Location = new Point(6, 111);
-            iconoTxt.Name = "iconoTxt";
-            iconoTxt.Size = new Size(139, 23);
-            iconoTxt.TabIndex = 22;
             // 
             // ParametrosFrm
             // 

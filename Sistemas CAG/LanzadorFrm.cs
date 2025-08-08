@@ -18,9 +18,6 @@ namespace Sistemas_CAG
         ParametrosControl parametrosControl =new ParametrosControl();
 
         LanzadorControl lanzar = new LanzadorControl();
-        NegocioDTO negocio = new NegocioDTO();
-        NegocioRepository negocioRepository = new NegocioRepository();
-        SistemaRepository sistemaRepository = new SistemaRepository();
 
         private void LanzadorFrm_Load(object sender, EventArgs e)
         {
@@ -34,27 +31,9 @@ namespace Sistemas_CAG
             //lblNotificacion.Text = "v" + sistema.Version;
             CrearBotonesDinamicos();
             
-            try
-            {
-                //Carga de los negocios Openpos
-                cb_OPos.DataSource = negocioRepository.ConsultaNegocios();
-                cb_OPos.DisplayMember = "Negocio";
-                cb_OPos.ValueMember = "Negocio";
-                cb_OPos.SelectedIndex = -1;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
 
 
-
-
-
-        
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
@@ -169,15 +148,6 @@ namespace Sistemas_CAG
         }
 
         
-
-        private void txt_Estacion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                if ((sender as TextBox).Text.Count(Char.IsDigit) >= 2)
-                    e.Handled = true;
-            }
-        }
        
 
         private void CrearBotonesDinamicos()
@@ -272,13 +242,22 @@ namespace Sistemas_CAG
         {
             SistemaButton btn = sender as SistemaButton;
             SistemaDTO sistemaDto = btn.ToDTO();
-            NegocioDTO negocioDTO = new NegocioDTO();
-            negocioDTO.Negocio = cb_OPos.Text;
+            NegocioDTO negocioResult = new NegocioDTO();
 
-            int id = (int)btn.Tag;
-            MessageBox.Show($"Haz hecho clic en el botón con ID: {id} y texto: {btn.NombreSistema}");
+            if(btn.NombreSistema == "kiosco" || btn.NombreSistema == "facturacion" || btn.NombreSistema == "preventa")
+            {
+                NegocioFrm negocioFrm = new NegocioFrm();
+                if (negocioFrm.ShowDialog() == DialogResult.OK)
+                {
 
-            lanzar.lanzarAplicacion(sistemaDto, negocioDTO);
+                    negocioResult = negocioFrm.negocioResult;
+
+
+                }
+            }
+
+
+            lanzar.lanzarAplicacion(sistemaDto, negocioResult);
             
         }
 
