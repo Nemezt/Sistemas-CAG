@@ -1,14 +1,6 @@
 ﻿using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Servicios;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace Sistemas_CAG
 {
@@ -25,19 +17,16 @@ namespace Sistemas_CAG
         {
             InitializeComponent();
 
-
         }
 
         private void NegocioFrm_Load(object sender, EventArgs e)
         {
             try
             {
-                //Carga de los negocios Openpos
                 cb_OPos.DataSource = negocioRepository.ConsultaNegocios();
                 cb_OPos.DisplayMember = "Negocio";
                 cb_OPos.ValueMember = "Negocio";
                 cb_OPos.SelectedIndex = -1;
-
             }
             catch (Exception ex)
             {
@@ -59,6 +48,7 @@ namespace Sistemas_CAG
         }
         private void btn_salir_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -75,6 +65,7 @@ namespace Sistemas_CAG
                     e.Handled = true;
             }
         }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             negocioResult = new NegocioDTO();
@@ -82,6 +73,8 @@ namespace Sistemas_CAG
             negocioResult = CargaNegocioPos(negocioResult);
 
             negocioResult.Estacion = estacionTxt.Text;
+            negocioResult.TipoEstacion = tipoEstacionTxt.Text;
+
             if (cb_OPos.Text.Length > 0)
             {
                 this.DialogResult = DialogResult.OK;
@@ -114,13 +107,14 @@ namespace Sistemas_CAG
         private void cb_OPos_SelectedIndexChanged(object sender, EventArgs e)
         {
             NegocioDTO negocioDTO = new NegocioDTO();
-            negocioDTO.Negocio= cb_OPos.Text;
-            negocioDTO= CargaNegocioPos(negocioDTO);
+            negocioDTO.Negocio = cb_OPos.Text;
+            negocioDTO = CargaNegocioPos(negocioDTO);
             estacionTxt.Text = negocioDTO.Estacion;
-            //TODO: Agregar mas campos
-
+            tipoEstacionTxt.Text = negocioDTO.TipoEstacion;
+            inventarioTxt.Text = negocioDTO.Inventario;
+            servidorTxt.Text = negocioDTO.Servidor;
             
-
         }
+
     }
 }

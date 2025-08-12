@@ -70,7 +70,6 @@ namespace Sistemas_CAG.Controlador
         /// Logica principal para determinar la aplicación a actualizar y ejecutar, asigna los parametros necesarios.
         /// </summary>
         /// <param name="sistema"></param>
-        //public void lanzarAplicacion(SistemaDTO sistema )
         public void lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
         {
             try
@@ -366,6 +365,7 @@ namespace Sistemas_CAG.Controlador
 
 
         }
+
         /// <summary>
         /// Actualización de archivos fuentes necesarios para openpos
         /// </summary>
@@ -448,6 +448,7 @@ namespace Sistemas_CAG.Controlador
                 file.Write("COD_CIA", "CAG", "Compañia");
                 file.Write("COD_INV", negocio.Inventario, "Negocio");
                 file.Write("ID_CAJA", negocio.Estacion, "Negocio");
+                file.Write("ESTACION", negocio.TipoEstacion, "Negocio");
                 file.Write("USUARIO", negocio.Usuario, "Conexion");
                 file.Write("PALPASO", negocio.PalPaso, "Conexion");
                 file.Write("CONEXION", negocio.Servidor, "Conexion");

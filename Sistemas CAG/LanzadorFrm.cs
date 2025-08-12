@@ -1,8 +1,8 @@
 ﻿using Sistemas_CAG.Controlador;
 using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Entidad.Convertidores;
-using Sistemas_CAG.Modelos.Servicios;
 using System.Data;
+using System.Reflection;
 
 namespace Sistemas_CAG
 {
@@ -28,7 +28,8 @@ namespace Sistemas_CAG
 
             this.Location = new Point(deskWidth - this.Width, deskHeight - this.Height);
 
-            //lblNotificacion.Text = "v" + sistema.Version;
+            lblNotificacion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version; 
+
             CrearBotonesDinamicos();
             
         }
@@ -152,10 +153,9 @@ namespace Sistemas_CAG
 
         private void CrearBotonesDinamicos()
         {
-            // Limpiar controles anteriores
+
             fLPDesktop.Controls.Clear();
 
-            // Obtener los registros desde la base de datos en un DataTable
             DataTable registros = parametrosControl.CargaTablaSistema();
 
             foreach (DataRow row in registros.Rows)
@@ -165,7 +165,7 @@ namespace Sistemas_CAG
                 string imagenNombre = row["Icono"].ToString();
                 string rutaImagen = Path.Combine(Application.StartupPath, "Resources", "Iconos", imagenNombre);
 
-                // Crear botón
+                //Botones dinamicos
                 SistemaButton btn = new SistemaButton();
                 btn.Id = id;
                 btn.NombreSistema = nombre;
@@ -177,7 +177,7 @@ namespace Sistemas_CAG
                 btn.Name = "btn_" + id;
                 btn.Tag = id;
                 btn.ToolTipText = nombre;
-                btn.Size = new Size(70, 70);
+                btn.Size = new Size(65, 65);
                 btn.BackgroundImageLayout = ImageLayout.Zoom;
                 btn.FlatAppearance.BorderSize = 0;
                 btn.FlatStyle = FlatStyle.Flat;
@@ -186,7 +186,7 @@ namespace Sistemas_CAG
                 btn.Cursor = Cursors.Hand;
                 btn.UseVisualStyleBackColor = false;
 
-                // Cargar imagen
+
                 if (File.Exists(rutaImagen))
                     btn.BackgroundImage = Image.FromFile(rutaImagen);
                 else
@@ -196,7 +196,7 @@ namespace Sistemas_CAG
                         btn.BackgroundImage = Image.FromFile(rutaDefault);
                 }
 
-                // Crear etiqueta debajo
+                //Etiquetas dinamicas
                 Label etiqueta = new Label();
                 etiqueta.Text = nombre;
                 etiqueta.TextAlign = ContentAlignment.MiddleCenter;
@@ -205,7 +205,6 @@ namespace Sistemas_CAG
                 etiqueta.AutoSize = false;
                 etiqueta.Font = new Font("Microsoft Sans Serif", 7F);
 
-                // Crear panel contenedor
                 Panel contenedor = new Panel();
                 contenedor.Width = btn.Width;
                 contenedor.Height = btn.Height + etiqueta.Height + 5;
@@ -213,15 +212,14 @@ namespace Sistemas_CAG
                 contenedor.Controls.Add(btn);
                 contenedor.Controls.Add(etiqueta);
 
-                // Posicionar botón dentro del panel
                 btn.Dock = DockStyle.Top;
 
-                // Eventos y tooltip
+
                 btn.Click += BotonDinamico_Click;
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(btn, btn.ToolTipText);
 
-                // Agregar al contenedor correspondiente
+
                 if (btn.Tipo == "oracle" || btn.Tipo == "exe" || btn.Tipo == "java")
                 {
                     fLPDesktop.Controls.Add(contenedor);
@@ -253,6 +251,10 @@ namespace Sistemas_CAG
                     negocioResult = negocioFrm.negocioResult;
 
 
+                }
+                else
+                {
+                    return;
                 }
             }
 

@@ -31,11 +31,6 @@ namespace Sistemas_CAG.Modelos.Entidad
         //Parametro2, en caso de sistemas Java se envia el un parametro para el inicio de la aplicaicon, en sistemas Oracle, se envia contraseña/usuario@servidor del negocio de destino.
         private string parametro2;
 
-        //Se usa para almacenar el nombre del negocio
-        private string negocio;
-       
-        private string estacion;
-
         private string icono;
 
              

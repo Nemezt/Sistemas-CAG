@@ -33,6 +33,12 @@
             btn_ayuda = new Button();
             btn_salir = new Button();
             panel2 = new Panel();
+            label5 = new Label();
+            inventarioTxt = new TextBox();
+            label4 = new Label();
+            servidorTxt = new TextBox();
+            label3 = new Label();
+            tipoEstacionTxt = new TextBox();
             label2 = new Label();
             estacionTxt = new TextBox();
             label10 = new Label();
@@ -52,7 +58,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(395, 31);
+            panel1.Size = new Size(390, 31);
             panel1.TabIndex = 7;
             panel1.MouseMove += panel_MouseMove;
             // 
@@ -99,6 +105,12 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(inventarioTxt);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(servidorTxt);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(tipoEstacionTxt);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(estacionTxt);
             panel2.Controls.Add(label10);
@@ -107,13 +119,65 @@
             panel2.Controls.Add(btnAceptar);
             panel2.Location = new Point(5, 37);
             panel2.Name = "panel2";
-            panel2.Size = new Size(384, 137);
+            panel2.Size = new Size(384, 146);
             panel2.TabIndex = 8;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(8, 91);
+            label5.Name = "label5";
+            label5.Size = new Size(60, 15);
+            label5.TabIndex = 40;
+            label5.Text = "Inventario";
+            // 
+            // inventarioTxt
+            // 
+            inventarioTxt.Enabled = false;
+            inventarioTxt.Location = new Point(74, 88);
+            inventarioTxt.Name = "inventarioTxt";
+            inventarioTxt.ReadOnly = true;
+            inventarioTxt.Size = new Size(43, 23);
+            inventarioTxt.TabIndex = 39;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(133, 91);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 15);
+            label4.TabIndex = 38;
+            label4.Text = "Servidor";
+            // 
+            // servidorTxt
+            // 
+            servidorTxt.Enabled = false;
+            servidorTxt.Location = new Point(217, 88);
+            servidorTxt.Name = "servidorTxt";
+            servidorTxt.ReadOnly = true;
+            servidorTxt.Size = new Size(147, 23);
+            servidorTxt.TabIndex = 37;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(133, 54);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 15);
+            label3.TabIndex = 36;
+            label3.Text = "Tipo estación";
+            // 
+            // tipoEstacionTxt
+            // 
+            tipoEstacionTxt.Location = new Point(217, 51);
+            tipoEstacionTxt.Name = "tipoEstacionTxt";
+            tipoEstacionTxt.Size = new Size(147, 23);
+            tipoEstacionTxt.TabIndex = 35;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(8, 50);
+            label2.Location = new Point(8, 54);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
             label2.TabIndex = 34;
@@ -121,16 +185,16 @@
             // 
             // estacionTxt
             // 
-            estacionTxt.Location = new Point(62, 47);
+            estacionTxt.Location = new Point(74, 51);
             estacionTxt.Name = "estacionTxt";
-            estacionTxt.Size = new Size(35, 23);
+            estacionTxt.Size = new Size(43, 23);
             estacionTxt.TabIndex = 33;
             estacionTxt.KeyPress += txt_Estacion_KeyPress;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(7, 16);
+            label10.Location = new Point(8, 16);
             label10.Name = "label10";
             label10.Size = new Size(52, 15);
             label10.TabIndex = 32;
@@ -140,7 +204,7 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Microsoft Sans Serif", 5.25F);
-            label25.Location = new Point(8, 83);
+            label25.Location = new Point(3, 136);
             label25.Name = "label25";
             label25.Size = new Size(93, 7);
             label25.TabIndex = 31;
@@ -151,15 +215,15 @@
             cb_OPos.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_OPos.FormattingEnabled = true;
             cb_OPos.Items.AddRange(new object[] { "(No hay negocios)" });
-            cb_OPos.Location = new Point(60, 13);
+            cb_OPos.Location = new Point(74, 13);
             cb_OPos.Name = "cb_OPos";
-            cb_OPos.Size = new Size(138, 23);
+            cb_OPos.Size = new Size(137, 23);
             cb_OPos.TabIndex = 30;
             cb_OPos.SelectedIndexChanged += cb_OPos_SelectedIndexChanged;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(303, 111);
+            btnAceptar.Location = new Point(306, 120);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 23);
             btnAceptar.TabIndex = 0;
@@ -173,7 +237,7 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(395, 181);
+            ClientSize = new Size(390, 185);
             ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -206,5 +270,11 @@
         private Label label10;
         private Label label2;
         private TextBox estacionTxt;
+        private Label label3;
+        private TextBox tipoEstacionTxt;
+        private Label label4;
+        private TextBox servidorTxt;
+        private Label label5;
+        private TextBox inventarioTxt;
     }
 }
