@@ -9,11 +9,13 @@ namespace Sistemas_CAG.Modelos.Servicios
     internal class SistemaRepository
     {
         private static DAOSistema DAOS = new DAOSistema();
+
         /// <summary>
-        /// Consulta de parametros de sistema
+        /// 
         /// </summary>
-        /// <param name="sistema"></param>
+        /// <param name="nombreSistema"></param>
         /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public SistemaDTO ConsultaSistema(string nombreSistema)
         {
             var sistema = new SistemaDTO();
@@ -67,10 +69,11 @@ namespace Sistemas_CAG.Modelos.Servicios
         }
 
         /// <summary>
-        /// Consulta sistemas por tipo
+        /// 
         /// </summary>
-        /// <param name="tipoSistema">Tipo de sistema</param>
-        /// <returns>DataTable con sistemas filtrados por tipo</returns>
+        /// <param name="tipoSistema"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public DataTable ConsultaTipoSistemas(string tipoSistema)
         {
             try
@@ -89,7 +92,12 @@ namespace Sistemas_CAG.Modelos.Servicios
                 throw new Exception("Error al consultar sistemas por tipo", ex);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sistema"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool InsertarSistema(SistemaDTO sistema)
         {
             bool respuesta = false;
@@ -120,6 +128,12 @@ namespace Sistemas_CAG.Modelos.Servicios
             return respuesta;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sistema"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool ActualizarSistema(SistemaDTO sistema)
         {
             bool respuesta = false;
@@ -151,6 +165,12 @@ namespace Sistemas_CAG.Modelos.Servicios
             return respuesta;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool EliminarSistema(int id)
         {
             bool respuesta = false;

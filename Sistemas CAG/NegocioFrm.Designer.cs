@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NegocioFrm));
             panel1 = new Panel();
             label1 = new Label();
             btn_ayuda = new Button();
@@ -244,6 +245,7 @@
             DoubleBuffered = true;
             ForeColor = Color.FromArgb(10, 94, 42);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "NegocioFrm";

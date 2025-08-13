@@ -3,13 +3,20 @@ using System.Data.SQLite;
 
 
 namespace Sistemas_CAG.Modelos.DataAccess
-{/// <summary>
-/// Clase que gestiona la conexón a la BD SQLite
-/// </summary>
+{
+    /// <summary>
+    /// Clase que gestiona la conexón a la BD SQLite
+    /// </summary>
     internal class Conexion
     {
         private static string Basedatos = "Data Source=./bd_lanzador.db";
         SQLiteConnection conexion = null;
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public SQLiteConnection Conectar()
         {
             if (conexion == null)
@@ -34,7 +41,9 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return conexion;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void Desconectar()
         {
             if (conexion != null)

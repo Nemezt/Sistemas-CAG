@@ -8,6 +8,12 @@ namespace Sistemas_CAG.Modelos.Servicios
     internal class ParametroRepository
     {
         private static DAOSistema DAOSP = new DAOSistema();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static ParametrosDTO ConsultaParametros()
         {
             var parametrosDTO = new ParametrosDTO();
@@ -51,10 +57,11 @@ namespace Sistemas_CAG.Modelos.Servicios
         }
 
         /// <summary>
-        /// Actualiza los parámetros configurables del sistema.
+        /// 
         /// </summary>
-        /// <param name="parametros">DTO con los parámetros a actualizar</param>
-        /// <returns>true si la operación fue exitosa</returns>
+        /// <param name="parametros"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool ActualizaParametros(ParametrosDTO parametros)
         {
             string consulta = @"UPDATE tb_parametros SET 

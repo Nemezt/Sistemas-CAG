@@ -1,5 +1,4 @@
-﻿using Sistemas_CAG.Modelos.DataAccess;
-using System.Data;
+﻿using System.Data;
 using System.Data.SQLite;
 
 
@@ -13,6 +12,10 @@ namespace Sistemas_CAG.Modelos.DataAccess
         private SQLiteDataReader conexionDataReader;
         private DataTable datos;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static DAOSistema GetInstancia()
         {
 
@@ -23,6 +26,12 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return con;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="consulta"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public DataTable ConsultaDatos(string consulta)
         {
             Conectar();
@@ -50,6 +59,13 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return datos;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="consulta"></param>
+        /// <param name="parametros"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public DataTable ConsultaDatos(string consulta, Dictionary<string, object> parametros)
         {
             DataTable datos = new DataTable();
@@ -83,7 +99,13 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return datos;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="consulta"></param>
+        /// <param name="parametros"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public bool EjecutaSQL(string consulta, Dictionary<string, object> parametros)
         {
             bool result = false;

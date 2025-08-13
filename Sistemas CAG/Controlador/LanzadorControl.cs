@@ -8,10 +8,7 @@ namespace Sistemas_CAG.Controlador
     {
         private static FuncionesDirectorios funcDir = new FuncionesDirectorios();
         private static ParametrosDTO parametros = new ParametrosDTO();
-        //private static NegocioDTO negocioParam = new NegocioDTO();
-        private static NegocioRepository negocioRepository = new NegocioRepository();
-        private static ParametroRepository parametroRepository = new ParametroRepository();
-        private static SistemaRepository sistemaRepository = new SistemaRepository();
+
         public LanzadorControl()
         {
             try
@@ -67,9 +64,10 @@ namespace Sistemas_CAG.Controlador
         
 
         /// <summary>
-        /// Logica principal para determinar la aplicación a actualizar y ejecutar, asigna los parametros necesarios.
+        /// 
         /// </summary>
         /// <param name="sistema"></param>
+        /// <param name="negocioPos"></param>
         public void lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
         {
             try
@@ -166,7 +164,7 @@ namespace Sistemas_CAG.Controlador
 
                     }
                     //Se carga parametro para kisco de OpenPos
-                    if (sistema.NombreSistema == "kiosco")
+                    if (sistema.NombreSistema == "Kiosco")
                     {
 
                         sistema.Parametro2 = negocioPos.ConfigKinf;
@@ -174,7 +172,7 @@ namespace Sistemas_CAG.Controlador
                     }
 
                     //Se carga parametro para facturacion de OpenPos
-                    if (sistema.NombreSistema == "facturacion")
+                    if (sistema.NombreSistema == "Facturacion")
                     {
 
                         sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
@@ -182,7 +180,7 @@ namespace Sistemas_CAG.Controlador
                     }
 
                     //Se carga parametro para preventa de OpenPos
-                    if (sistema.NombreSistema == "preventa")
+                    if (sistema.NombreSistema == "Preventa")
                     {
 
                         sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
@@ -239,11 +237,6 @@ namespace Sistemas_CAG.Controlador
         }
 
 
-        /// <summary>
-        /// Se ejecuta la aplicación web llamando al navegador web, puede soportar parametros de navegador.
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <returns></returns>
         private bool ejecutarSistemaWeb(SistemaDTO sistema)
         {
             try
@@ -265,11 +258,7 @@ namespace Sistemas_CAG.Controlador
             }
 
         }
-        /// <summary>
-        /// Ejecutar una aplicación de escritorio
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <returns></returns>
+
         private bool ejecutarAplicacion(SistemaDTO sistema)
         {
             string parametros = "";
@@ -303,12 +292,6 @@ namespace Sistemas_CAG.Controlador
             }
         }
 
-        /// <summary>
-        /// Actualización de aplicación 
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <param name="parametros"></param>
-        /// <returns></returns>
         private SistemaDTO actualizaAplicacion(SistemaDTO sistema, ParametrosDTO parametros)
         {
             
@@ -366,10 +349,7 @@ namespace Sistemas_CAG.Controlador
 
         }
 
-        /// <summary>
-        /// Actualización de archivos fuentes necesarios para openpos
-        /// </summary>
-        /// <param name="rSistema"></param>
+
         private void actualizaPosFu(string rSistema)
         {
             try
@@ -390,10 +370,7 @@ namespace Sistemas_CAG.Controlador
         }
 
 
-        /// <summary>
-        /// Crea el archivo de configuraciones para el kiosco del OpenPos
-        /// </summary>
-        /// <param name="sistema"></param>        
+  
         private void crearConfigKInf(NegocioDTO negocio)
         {
             try

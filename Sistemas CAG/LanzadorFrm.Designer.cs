@@ -81,7 +81,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(384, 31);
+            panel1.Size = new Size(380, 31);
             panel1.TabIndex = 5;
             panel1.MouseMove += panel_MouseMove;
             // 
@@ -148,7 +148,7 @@
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 468);
             panel2.Name = "panel2";
-            panel2.Size = new Size(384, 27);
+            panel2.Size = new Size(380, 27);
             panel2.TabIndex = 6;
             // 
             // lblNotificacion
@@ -241,7 +241,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(357, 375);
+            tabPage2.Size = new Size(357, 397);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Web";
             tabPage2.UseVisualStyleBackColor = true;
@@ -251,7 +251,7 @@
             tabPage3.Controls.Add(fLPServer);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(357, 375);
+            tabPage3.Size = new Size(357, 397);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Servidores";
             tabPage3.UseVisualStyleBackColor = true;
@@ -270,7 +270,7 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(384, 495);
+            ClientSize = new Size(380, 495);
             ControlBox = false;
             Controls.Add(tabControl1);
             Controls.Add(panel2);

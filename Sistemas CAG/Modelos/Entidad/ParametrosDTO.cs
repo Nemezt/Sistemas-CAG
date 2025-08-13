@@ -1,13 +1,10 @@
-﻿
-using System.Reflection;
+﻿using System.Reflection;
+
 
 namespace Sistemas_CAG.Modelos.Entidad
 {
     internal class ParametrosDTO
     {
-        #region Propiedades y atributos
-
-
         private string oracleForms;
 
         private string javaHome;
@@ -47,8 +44,6 @@ namespace Sistemas_CAG.Modelos.Entidad
         public string Version { get => version; }
 
 
-
-        #endregion
 
     }
 }

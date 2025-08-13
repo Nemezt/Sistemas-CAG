@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("CoopeAgri R.L.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+995392259f12124181977078ab1451185b5397a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+610adee5662596ee4d883c7b8dac1c7bbdd636dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lanzador")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lanzador de Sistemas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("4.3.0.0")]

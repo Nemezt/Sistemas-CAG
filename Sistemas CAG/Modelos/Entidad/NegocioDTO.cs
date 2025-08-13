@@ -1,4 +1,5 @@
 ﻿
+
 namespace Sistemas_CAG.Modelos.Entidad
 {
     public class NegocioDTO

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "X:\\GitHub\\Sistemas CAG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\controlador\\lanzadorcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\controlador\\lanzadorcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\lanzadorfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\lanzadorfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +15,8 @@
       "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\lanzadorfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\controlador\\lanzadorcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\controlador\\lanzadorcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|X:\\GitHub\\Sistemas CAG\\sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\modelos\\entidad\\sistemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\modelos\\entidad\\sistemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,99 +30,52 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SistemaDTO.cs",
-              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\Modelos\\Entidad\\SistemaDTO.cs",
-              "RelativeDocumentMoniker": "Sistemas CAG\\Modelos\\Entidad\\SistemaDTO.cs",
-              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\Modelos\\Entidad\\SistemaDTO.cs",
-              "RelativeToolTip": "Sistemas CAG\\Modelos\\Entidad\\SistemaDTO.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwB8AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T03:29:12.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LanzadorControl.cs",
-              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\Controlador\\LanzadorControl.cs",
-              "RelativeDocumentMoniker": "Sistemas CAG\\Controlador\\LanzadorControl.cs",
-              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\Controlador\\LanzadorControl.cs",
-              "RelativeToolTip": "Sistemas CAG\\Controlador\\LanzadorControl.cs",
-              "ViewState": "AgIAALQBAAAAAAAAAAAuwEcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T03:34:46.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LanzadorFrm.cs",
               "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\LanzadorFrm.cs",
               "RelativeDocumentMoniker": "Sistemas CAG\\LanzadorFrm.cs",
               "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\LanzadorFrm.cs",
               "RelativeToolTip": "Sistemas CAG\\LanzadorFrm.cs",
-              "ViewState": "AgIAALIAAAAAAAAAAAAkwLMAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAABAAAAAAAAAAAswBMBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T03:29:31.831Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "9d18b55c-f0c9-4768-bfda-d25ad5c0107e",
-        "Display": 1,
-        "X": 650,
-        "Y": 532,
-        "Width": 1227,
-        "Height": 702,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ParametrosFrm.cs",
-              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs",
-              "RelativeDocumentMoniker": "Sistemas CAG\\ParametrosFrm.cs",
-              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs",
-              "RelativeToolTip": "Sistemas CAG\\ParametrosFrm.cs",
-              "ViewState": "AgIAAJkBAAAAAAAAAAAewEsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T03:26:06.117Z",
+              "WhenOpened": "2025-08-13T03:58:45.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ParametrosFrm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs",
-              "RelativeDocumentMoniker": "Sistemas CAG\\ParametrosFrm.cs",
-              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T03:20:09.969Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LanzadorFrm.cs [Dise\u00F1o]",
               "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\LanzadorFrm.cs",
               "RelativeDocumentMoniker": "Sistemas CAG\\LanzadorFrm.cs",
               "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\LanzadorFrm.cs [Dise\u00F1o]",
               "RelativeToolTip": "Sistemas CAG\\LanzadorFrm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T03:03:54.753Z",
+              "WhenOpened": "2025-08-13T03:58:41.778Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LanzadorControl.cs",
+              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\Controlador\\LanzadorControl.cs",
+              "RelativeDocumentMoniker": "Sistemas CAG\\Controlador\\LanzadorControl.cs",
+              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\Controlador\\LanzadorControl.cs",
+              "RelativeToolTip": "Sistemas CAG\\Controlador\\LanzadorControl.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAnwEcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T03:47:02.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ParametrosFrm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs",
+              "RelativeDocumentMoniker": "Sistemas CAG\\ParametrosFrm.cs",
+              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T03:43:34.199Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

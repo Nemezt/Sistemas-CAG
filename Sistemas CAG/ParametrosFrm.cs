@@ -41,6 +41,7 @@ namespace Sistemas_CAG
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

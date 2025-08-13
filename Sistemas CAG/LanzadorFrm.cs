@@ -47,7 +47,11 @@ namespace Sistemas_CAG
 
         }
 
-
+        /// <summary>
+        /// Evento para mover el formulario al arrastrar con el mouse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
@@ -62,26 +66,33 @@ namespace Sistemas_CAG
             }
         }
 
-
+        /// <summary>
+        /// Evento para mostrar icono en area de notificaciones de windows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LanzadorFrm_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
-            {
-                // Si está minimizándose se muestra la notificación
+            {          
                 this.ntf_Lanzador.Visible = true;
                 this.ShowInTaskbar = false;
             }
             else
             {
-                // Si no se está minimizando se esconde a notificación
                 this.ntf_Lanzador.Visible = true;
                 this.ShowInTaskbar = true;
             }
         }
 
+        /// <summary>
+        /// Evento para mostrar u ocultar la ventana al hacer doble clic en el icono del area de notificaciones
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            // Al hacer doble clic en el icono de la bandeja se muestra la ventana normalmente
+ 
             if (this.WindowState == FormWindowState.Minimized)
             {
                 this.WindowState = FormWindowState.Normal;
@@ -95,7 +106,11 @@ namespace Sistemas_CAG
 
         }
 
-        //Cambio de tema de color
+        /// <summary>
+        /// Manejo del color del fomulario principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ck_tema_CheckedChanged(object sender, EventArgs e)
         {
             if (ck_tema.Checked == true)
@@ -144,17 +159,31 @@ namespace Sistemas_CAG
         
         private void btn_config_Click(object sender, EventArgs e)
         {
-            ParametrosFrm frm = new ParametrosFrm();
-            frm.ShowDialog();
+            ParametrosFrm parametrosFrm = new ParametrosFrm();
+            if (parametrosFrm.ShowDialog() == DialogResult.OK)
+            {
+                CrearBotonesDinamicos();
+
+            }
+            else
+            {
+                return;
+            }
+            
+            
         }
 
         
        
-
+        /// <summary>
+        /// Creaión de botones dinamicos
+        /// </summary>
         private void CrearBotonesDinamicos()
         {
 
             fLPDesktop.Controls.Clear();
+            fLPWeb.Controls.Clear();
+            fLPServer.Controls.Clear();
 
             DataTable registros = parametrosControl.CargaTablaSistema();
 
@@ -202,11 +231,12 @@ namespace Sistemas_CAG
                 etiqueta.TextAlign = ContentAlignment.MiddleCenter;
                 etiqueta.Dock = DockStyle.Bottom;
                 etiqueta.Height = 20;
+                etiqueta.Width = 70;
                 etiqueta.AutoSize = false;
-                etiqueta.Font = new Font("Microsoft Sans Serif", 7F);
+                etiqueta.Font = new Font("Microsoft Sans Serif", 6.5F);
 
                 Panel contenedor = new Panel();
-                contenedor.Width = btn.Width;
+                contenedor.Width = etiqueta.Width;
                 contenedor.Height = btn.Height + etiqueta.Height + 5;
                 contenedor.Margin = new Padding(5);
                 contenedor.Controls.Add(btn);
@@ -242,7 +272,7 @@ namespace Sistemas_CAG
             SistemaDTO sistemaDto = btn.ToDTO();
             NegocioDTO negocioResult = new NegocioDTO();
 
-            if(btn.NombreSistema == "kiosco" || btn.NombreSistema == "facturacion" || btn.NombreSistema == "preventa")
+            if(btn.NombreSistema == "Kiosco" || btn.NombreSistema == "Facturacion" || btn.NombreSistema == "Preventa")
             {
                 NegocioFrm negocioFrm = new NegocioFrm();
                 if (negocioFrm.ShowDialog() == DialogResult.OK)
@@ -257,7 +287,6 @@ namespace Sistemas_CAG
                     return;
                 }
             }
-
 
             lanzar.lanzarAplicacion(sistemaDto, negocioResult);
             
