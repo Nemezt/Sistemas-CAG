@@ -1,3 +1,14 @@
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.AssemblyReference.cache
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.LanzadorFrm.resources
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.NegocioFrm.resources
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.ParametrosFrm.resources
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.Properties.Resources.resources
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.GenerateResource.cache
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfoInputs.cache
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfo.cs
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.sourcelink.json
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\bd_lanzador.db
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Agri_cli.png
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Agros.png
@@ -44,17 +55,6 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x64\na
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.AssemblyReference.cache
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.LanzadorFrm.resources
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.NegocioFrm.resources
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.ParametrosFrm.resources
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.Properties.Resources.resources
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.GenerateResource.cache
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfoInputs.cache
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfo.cs
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
-X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.sourcelink.json
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador.BC9B32AB.Up2Date
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\refint\Lanzador de Sistemas.dll

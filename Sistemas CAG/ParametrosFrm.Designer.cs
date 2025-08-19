@@ -89,6 +89,7 @@
             textBox1 = new TextBox();
             label17 = new Label();
             textBox2 = new TextBox();
+            autoInicioCb = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSistemas).BeginInit();
             panelMenu.SuspendLayout();
@@ -324,6 +325,7 @@
             // 
             // tabParmGen
             // 
+            tabParmGen.Controls.Add(autoInicioCb);
             tabParmGen.Controls.Add(defnavcb);
             tabParmGen.Controls.Add(defjavcb);
             tabParmGen.Controls.Add(deforacb);
@@ -723,6 +725,16 @@
             textBox2.Size = new Size(42, 23);
             textBox2.TabIndex = 12;
             // 
+            // autoInicioCb
+            // 
+            autoInicioCb.AutoSize = true;
+            autoInicioCb.Location = new Point(429, 35);
+            autoInicioCb.Name = "autoInicioCb";
+            autoInicioCb.Size = new Size(119, 19);
+            autoInicioCb.TabIndex = 20;
+            autoInicioCb.Text = "Inicio automático";
+            autoInicioCb.UseVisualStyleBackColor = true;
+            // 
             // ParametrosFrm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -818,5 +830,6 @@
         private TextBox textBox2;
         private Label label18;
         private TextBox iconoTxt;
+        private CheckBox autoInicioCb;
     }
 }

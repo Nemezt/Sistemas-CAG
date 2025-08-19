@@ -1,6 +1,7 @@
 ﻿using Sistemas_CAG.Controlador;
 using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Servicios;
+using Sistemas_CAG.Utils;
 
 
 namespace Sistemas_CAG
@@ -10,7 +11,7 @@ namespace Sistemas_CAG
         int pX = 0;
         int pY = 0;
 
-
+        InicioAutomatico InicioAuto = new InicioAutomatico();
         ParametrosDTO ParametrosGen = new ParametrosDTO();
         NegocioRepository negocioRepository = new NegocioRepository();
         ParametrosControl parametrosControl = new ParametrosControl();
@@ -113,7 +114,7 @@ namespace Sistemas_CAG
 
                 dgvNegociosPos.DataSource = negocioRepository.ConsultaNegocios();
 
-
+                VerificaInicioAutomatico();
 
             }
             catch (Exception ex)
@@ -230,6 +231,16 @@ namespace Sistemas_CAG
                     ParametrosGen.DefNavegador = "N";
                 }
 
+                if (autoInicioCb.Checked == true)
+                {
+                    InicioAuto.RegistrarInicioAutomatico();
+
+                }
+                else
+                {
+                    InicioAuto.EliminarInicioAutomatico();
+
+                }
 
                 if (parametrosControl.ActualizaParametros(ParametrosGen))
                 {
@@ -304,6 +315,37 @@ namespace Sistemas_CAG
                 groupBox1.Enabled = false;
             }
         }
+
+
+
+
+        public void VerificaInicioAutomatico()
+        {
+            if (InicioAuto.ExisteInicioAutomatico())
+            {
+                autoInicioCb.Checked = true;
+            }
+            else
+            {
+                autoInicioCb.Checked = false;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         #endregion
 
