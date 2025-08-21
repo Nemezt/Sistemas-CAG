@@ -1,6 +1,7 @@
 ﻿using Sistemas_CAG.Controlador;
 using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Servicios;
+using Sistemas_CAG.Utils;
 
 
 namespace Sistemas_CAG
@@ -10,7 +11,7 @@ namespace Sistemas_CAG
         int pX = 0;
         int pY = 0;
 
-
+        InicioAutomatico InicioAuto = new InicioAutomatico();
         ParametrosDTO ParametrosGen = new ParametrosDTO();
         NegocioRepository negocioRepository = new NegocioRepository();
         ParametrosControl parametrosControl = new ParametrosControl();
@@ -41,6 +42,7 @@ namespace Sistemas_CAG
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -112,7 +114,7 @@ namespace Sistemas_CAG
 
                 dgvNegociosPos.DataSource = negocioRepository.ConsultaNegocios();
 
-
+                VerificaInicioAutomatico();
 
             }
             catch (Exception ex)
@@ -229,6 +231,16 @@ namespace Sistemas_CAG
                     ParametrosGen.DefNavegador = "N";
                 }
 
+                if (autoInicioCb.Checked == true)
+                {
+                    InicioAuto.RegistrarInicioAutomatico();
+
+                }
+                else
+                {
+                    InicioAuto.EliminarInicioAutomatico();
+
+                }
 
                 if (parametrosControl.ActualizaParametros(ParametrosGen))
                 {
@@ -304,6 +316,37 @@ namespace Sistemas_CAG
             }
         }
 
+
+
+
+        public void VerificaInicioAutomatico()
+        {
+            if (InicioAuto.ExisteInicioAutomatico())
+            {
+                autoInicioCb.Checked = true;
+            }
+            else
+            {
+                autoInicioCb.Checked = false;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
 
         #region Sistemas
@@ -352,7 +395,7 @@ namespace Sistemas_CAG
 
         private void GuardarSistemas()
         {
-            if (string.IsNullOrEmpty(nombreTxt.Text) || string.IsNullOrEmpty(tipoTxt.Text) || string.IsNullOrEmpty(inicioEnTxt.Text) || string.IsNullOrEmpty(carpetaTxt.Text))
+            if (string.IsNullOrEmpty(nombreTxt.Text) || string.IsNullOrEmpty(tipoTxt.Text))
             {
 
                 MessageBox.Show("Ingrese los datos requeridos *", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -370,6 +413,7 @@ namespace Sistemas_CAG
                 sistema.Tipo = tipoTxt.Text;
                 sistema.IniciarEn = inicioEnTxt.Text;
                 sistema.CarpetaSistema = carpetaTxt.Text;
+                sistema.Icono = iconoTxt.Text;
 
                 bool accion = false;
                 if (string.IsNullOrEmpty(idTxt.Text))
@@ -430,6 +474,7 @@ namespace Sistemas_CAG
                 tipoTxt.Text = dgvSistemas.CurrentRow.Cells["TIPO"].Value.ToString();
                 inicioEnTxt.Text = dgvSistemas.CurrentRow.Cells["INICIAREN"].Value.ToString();
                 carpetaTxt.Text = dgvSistemas.CurrentRow.Cells["CARPETASISTEMA"].Value.ToString();
+                iconoTxt.Text = dgvSistemas.CurrentRow.Cells["ICONO"].Value.ToString();
 
             }
         }
@@ -443,6 +488,7 @@ namespace Sistemas_CAG
             tipoTxt.Clear();
             inicioEnTxt.Clear();
             carpetaTxt.Clear();
+            iconoTxt.Clear();
             CargarTablaSistemas();
 
         }

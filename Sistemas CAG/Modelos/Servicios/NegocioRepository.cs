@@ -11,19 +11,19 @@ namespace Sistemas_CAG.Modelos.Servicios
 
 
         /// <summary>
-        /// Consulta negocio en la tabla de negocios
+        /// 
         /// </summary>
         /// <param name="negocio"></param>
         /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public NegocioDTO ConsultaNegocio(NegocioDTO negocio)
         {
             try
             {
-                string consulta = @"SELECT ConfigKinf, Usuario, PalPaso, Servidor, Inventario, Estacion 
+                string consulta = @"SELECT ConfigKinf, Usuario, PalPaso, Servidor, Inventario, Estacion, TipoEstacion 
                             FROM tb_negocios_pos 
                             WHERE Negocio = @Negocio";
 
-                // Preparar los parámetros de forma segura
                 var parametros = new Dictionary<string, object>
                 {
                     { "@Negocio", negocio.Negocio }
@@ -39,11 +39,12 @@ namespace Sistemas_CAG.Modelos.Servicios
                     negocio.Servidor = row["Servidor"]?.ToString();
                     negocio.Inventario = row["Inventario"]?.ToString();
                     negocio.Estacion = row["Estacion"]?.ToString();
+                    negocio.TipoEstacion = row["TipoEstacion"]?.ToString();
                 }
             }
             catch (Exception ex)
             {
-                // Aquí podrías registrar el error con un logger si tienes uno disponible
+
                 throw new Exception("Error al consultar negocio: ", ex);
             }
 
@@ -51,10 +52,11 @@ namespace Sistemas_CAG.Modelos.Servicios
         }
 
         /// <summary>
-        /// Select para cargar el nombre del archivo de Kiosco (ConfigKinf)
+        /// 
         /// </summary>
-        /// <param name="negocio">Código del negocio</param>
-        /// <returns>Valor de ConfigKinf</returns>
+        /// <param name="negocio"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public string ConsultaConfigKinf(string negocio)
         {
             try
@@ -79,11 +81,13 @@ namespace Sistemas_CAG.Modelos.Servicios
             }
         }
 
+
         /// <summary>
-        /// Select para cargar Usuario/PalPaso@Servidor del negocio
+        /// 
         /// </summary>
-        /// <param name="negocio">Código del negocio</param>
-        /// <returns>Cadena combinada de configuración</returns>
+        /// <param name="negocio"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public string ConsultaConfig(string negocio)
         {
             try
@@ -112,10 +116,12 @@ namespace Sistemas_CAG.Modelos.Servicios
                 throw new Exception("Error al consultar configuraciones", ex);
             }
         }
+
         /// <summary>
-        /// Consulta todos los negocios registrados
+        /// 
         /// </summary>
-        /// <returns>DataTable con los negocios</returns>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public DataTable ConsultaNegocios()
         {
             try

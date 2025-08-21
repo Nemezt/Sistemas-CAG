@@ -7,10 +7,7 @@ namespace Sistemas_CAG.Controlador
 {
     internal class ParametrosControl
     {
-        /// <summary>
-        /// Negocios
-        /// </summary>
-        /// <returns></returns>
+
         public DataTable CargaTablaSistema()
         {
 
@@ -44,12 +41,6 @@ namespace Sistemas_CAG.Controlador
             return respuesta;
         }
 
-
-
-        /// <summary>
-        /// Parametros generales del sistema
-        /// </summary>
-        /// <returns></returns>
         public ParametrosDTO ConsultaParametros()
         {
             ParametrosDTO respuesta = new ParametrosDTO();

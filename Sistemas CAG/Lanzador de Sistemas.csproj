@@ -37,6 +37,56 @@
     <None Remove="Resources\fondo.jpg" />
     <None Remove="Resources\fondo1.jpg" />
     <None Remove="Resources\fondo2.jpg" />
+    <None Remove="Resources\Iconos\agri-cli.png" />
+    <None Remove="Resources\Iconos\Agri_cli.png" />
+    <None Remove="Resources\Iconos\Agros.png" />
+    <None Remove="Resources\Iconos\agros1.png" />
+    <None Remove="Resources\Iconos\ajax-loader.gif" />
+    <None Remove="Resources\Iconos\default.png" />
+    <None Remove="Resources\Iconos\Desazu.png" />
+    <None Remove="Resources\Iconos\E-CO.png" />
+    <None Remove="Resources\Iconos\E-CO1.png" />
+    <None Remove="Resources\Iconos\eliminar.png" />
+    <None Remove="Resources\Iconos\Entrega.png" />
+    <None Remove="Resources\Iconos\entrega3.png" />
+    <None Remove="Resources\Iconos\Indicadores.png" />
+    <None Remove="Resources\Iconos\indicadores1.png" />
+    <None Remove="Resources\Iconos\MCR.png" />
+    <None Remove="Resources\Iconos\Notificaciones.png" />
+    <None Remove="Resources\Iconos\Notificaciones1.png" />
+    <None Remove="Resources\Iconos\nueva.png" />
+    <None Remove="Resources\Iconos\Openpos.png" />
+    <None Remove="Resources\Iconos\Openside.png" />
+    <None Remove="Resources\Iconos\OpenTouch.png" />
+    <None Remove="Resources\Iconos\otro.png" />
+    <None Remove="Resources\Iconos\Parqueo.png" />
+    <None Remove="Resources\Iconos\parqueo1.png" />
+    <None Remove="Resources\Iconos\Password.png" />
+    <None Remove="Resources\Iconos\Recibidor.png" />
+    <None Remove="Resources\Iconos\recibidor1.png" />
+    <None Remove="Resources\Iconos\recibidor2.png" />
+    <None Remove="Resources\Iconos\SAAC.png" />
+    <None Remove="Resources\Iconos\salvar.png" />
+    <None Remove="Resources\Iconos\Scre.png" />
+    <None Remove="Resources\Iconos\scre1.png" />
+    <None Remove="Resources\Iconos\Seem.png" />
+    <None Remove="Resources\Iconos\seem1.png" />
+    <None Remove="Resources\Iconos\Sica.png" />
+    <None Remove="Resources\Iconos\sica2.png" />
+    <None Remove="Resources\Iconos\Sicagen.png" />
+    <None Remove="Resources\Iconos\Siceca.png" />
+    <None Remove="Resources\Iconos\Sicofe.png" />
+    <None Remove="Resources\Iconos\sicofe1.png" />
+    <None Remove="Resources\Iconos\Side.png" />
+    <None Remove="Resources\Iconos\Sirpe.png" />
+    <None Remove="Resources\Iconos\sirpe1.png" />
+    <None Remove="Resources\Iconos\Sitra.png" />
+    <None Remove="Resources\Iconos\sitra1.png" />
+    <None Remove="Resources\Iconos\sitra2.png" />
+    <None Remove="Resources\Iconos\SRM.png" />
+    <None Remove="Resources\Iconos\SRM2.png" />
+    <None Remove="Resources\Iconos\SRM3.png" />
+    <None Remove="Resources\Iconos\touch1.png" />
     <None Remove="Resources\indicadores.png" />
     <None Remove="Resources\indicadores1.png" />
     <None Remove="Resources\mcr.png" />
@@ -81,6 +131,84 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CA_G.ico" />
+    <Content Include="Resources\Iconos\Agri_cli.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Agros.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Desazu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\E-CO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Entrega.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Indicadores.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\MCR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Notificaciones.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Openpos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\OpenTouch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\otro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Parqueo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Password.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Recibidor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\SAAC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Scre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Seem.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Sica.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Sicagen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Siceca.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Sicofe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Side.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Sirpe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Sitra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\SRM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -107,17 +235,6 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\CA_W2.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 

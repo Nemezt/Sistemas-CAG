@@ -8,10 +8,7 @@ namespace Sistemas_CAG.Controlador
     {
         private static FuncionesDirectorios funcDir = new FuncionesDirectorios();
         private static ParametrosDTO parametros = new ParametrosDTO();
-        private static NegocioDTO negocioParam = new NegocioDTO();
-        private static NegocioRepository negocioRepository = new NegocioRepository();
-        private static ParametroRepository parametroRepository = new ParametroRepository();
-        private static SistemaRepository sistemaRepository = new SistemaRepository();
+
         public LanzadorControl()
         {
             try
@@ -67,24 +64,22 @@ namespace Sistemas_CAG.Controlador
         
 
         /// <summary>
-        /// Logica principal para determinar la aplicación a actualizar y ejecutar, asigna los parametros necesarios.
+        /// 
         /// </summary>
         /// <param name="sistema"></param>
-        public void lanzarAplicacion(SistemaDTO sistema )
+        /// <param name="negocioPos"></param>
+        public void lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
         {
             try
             {
                 parametros = ParametroRepository.ConsultaParametros();
                 funcDir.EliminarArchivo(parametros.LogSistema);
+
                 if (!(sistema.NombreSistema == null))
                 {
-                    negocioParam = conexionNegocioOpenPos(sistema.Negocio);
-                    if (sistema.Estacion != "" || sistema.Estacion == null)
-                    {
-                        negocioParam.Estacion = sistema.Estacion;
-                    }
-
-                    sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
+                    
+                    
+                    //sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
 
 
                     if (sistema.Tipo == "web")
@@ -169,24 +164,27 @@ namespace Sistemas_CAG.Controlador
 
                     }
                     //Se carga parametro para kisco de OpenPos
-                    if (sistema.NombreSistema == "kiosco")
+                    if (sistema.NombreSistema == "Kiosco")
                     {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfigKinf(negocioParam.Negocio);
-                        crearConfigKInf(negocioParam);
+
+                        sistema.Parametro2 = negocioPos.ConfigKinf;
+                        crearConfigKInf(negocioPos);
                     }
 
                     //Se carga parametro para facturacion de OpenPos
-                    if (sistema.NombreSistema == "facturacion")
+                    if (sistema.NombreSistema == "Facturacion")
                     {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
-                        crearConfigCaj(negocioParam);
+
+                        sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
+                        crearConfigCaj(negocioPos);
                     }
 
                     //Se carga parametro para preventa de OpenPos
-                    if (sistema.NombreSistema == "preventa")
+                    if (sistema.NombreSistema == "Preventa")
                     {
-                        sistema.Parametro2 = negocioRepository.ConsultaConfig(negocioParam.Negocio);
-                        crearConfigVen(negocioParam);
+
+                        sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
+                        crearConfigVen(negocioPos);
                     }
 
                     //Se verifica el tipo de sistema
@@ -239,11 +237,6 @@ namespace Sistemas_CAG.Controlador
         }
 
 
-        /// <summary>
-        /// Se ejecuta la aplicación web llamando al navegador web, puede soportar parametros de navegador.
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <returns></returns>
         private bool ejecutarSistemaWeb(SistemaDTO sistema)
         {
             try
@@ -265,11 +258,7 @@ namespace Sistemas_CAG.Controlador
             }
 
         }
-        /// <summary>
-        /// Ejecutar una aplicación de escritorio
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <returns></returns>
+
         private bool ejecutarAplicacion(SistemaDTO sistema)
         {
             string parametros = "";
@@ -303,12 +292,6 @@ namespace Sistemas_CAG.Controlador
             }
         }
 
-        /// <summary>
-        /// Actualización de aplicación 
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <param name="parametros"></param>
-        /// <returns></returns>
         private SistemaDTO actualizaAplicacion(SistemaDTO sistema, ParametrosDTO parametros)
         {
             
@@ -365,10 +348,8 @@ namespace Sistemas_CAG.Controlador
 
 
         }
-        /// <summary>
-        /// Actualización de archivos fuentes necesarios para openpos
-        /// </summary>
-        /// <param name="rSistema"></param>
+
+
         private void actualizaPosFu(string rSistema)
         {
             try
@@ -388,45 +369,20 @@ namespace Sistemas_CAG.Controlador
 
         }
 
-        /// <summary>
-        /// Consulta los negocios y parametros
-        /// </summary>
-        /// <param name="nNegocio"></param>
-        /// <returns></returns>
-        private NegocioDTO conexionNegocioOpenPos(string nNegocio)
-        {
-            try
-            {
-                negocioParam.Negocio = nNegocio;
-                negocioParam = negocioRepository.ConsultaNegocio(negocioParam);
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
-            return negocioParam;
-
-        }
-
-
-        /// <summary>
-        /// Crea el archivo de configuraciones para el kiosco del OpenPos
-        /// </summary>
-        /// <param name="sistema"></param>        
+  
         private void crearConfigKInf(NegocioDTO negocio)
         {
             try
             {
-                var file = new IniFile(configKInf + "ConfigKInf-" + negocioParam.Inventario + ".acc");
+                var file = new IniFile(configKInf + "ConfigKInf-" + negocio.Inventario + ".acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
-                file.Write("COD_INV", negocioParam.Inventario, "Negocio");
+                file.Write("COD_INV", negocio.Inventario, "Negocio");
                 file.Write("VER_EXISTENCIA", "S", "Negocio");
                 file.Write("VER_RETENIBLE", "S", "Negocio");
-                file.Write("USUARIO", negocioParam.Usuario, "Conexion");
-                file.Write("PALPASO", negocioParam.PalPaso, "Conexion");
-                file.Write("CONEXION", negocioParam.Servidor, "Conexion");
+                file.Write("USUARIO", negocio.Usuario, "Conexion");
+                file.Write("PALPASO", negocio.PalPaso, "Conexion");
+                file.Write("CONEXION", negocio.Servidor, "Conexion");
                 file.Write("TIMEOUT", "1", "Conexion");
                 file.Write("TIEMPO_ERROR", "5", "Mensajes");
                 file.Write("TIEMPO_MENSAJE", "2", "Mensajes");
@@ -445,12 +401,12 @@ namespace Sistemas_CAG.Controlador
             {
                 var file = new IniFile(configVen + "ConfigVen.acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
-                file.Write("COD_INV", negocioParam.Inventario, "Negocio");
-                file.Write("ID_ESTACION", negocioParam.Estacion, "Negocio");
+                file.Write("COD_INV", negocio.Inventario, "Negocio");
+                file.Write("ID_ESTACION", negocio.Estacion, "Negocio");
                 file.Write("COD_COO", "COOPEAGRI", "Negocio");
-                file.Write("USUARIO", negocioParam.Usuario, "Conexion");
-                file.Write("PALPASO", negocioParam.PalPaso, "Conexion");
-                file.Write("CONEXION", negocioParam.Servidor, "Conexion");
+                file.Write("USUARIO", negocio.Usuario, "Conexion");
+                file.Write("PALPASO", negocio.PalPaso, "Conexion");
+                file.Write("CONEXION", negocio.Servidor, "Conexion");
             }
             catch (Exception ex)
             {
@@ -467,11 +423,12 @@ namespace Sistemas_CAG.Controlador
             {
                 var file = new IniFile(configCaj + "ConfigCaj.acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
-                file.Write("COD_INV", negocioParam.Inventario, "Negocio");
-                file.Write("ID_CAJA", negocioParam.Estacion, "Negocio");
-                file.Write("USUARIO", negocioParam.Usuario, "Conexion");
-                file.Write("PALPASO", negocioParam.PalPaso, "Conexion");
-                file.Write("CONEXION", negocioParam.Servidor, "Conexion");
+                file.Write("COD_INV", negocio.Inventario, "Negocio");
+                file.Write("ID_CAJA", negocio.Estacion, "Negocio");
+                file.Write("ESTACION", negocio.TipoEstacion, "Negocio");
+                file.Write("USUARIO", negocio.Usuario, "Conexion");
+                file.Write("PALPASO", negocio.PalPaso, "Conexion");
+                file.Write("CONEXION", negocio.Servidor, "Conexion");
             }
             catch (Exception ex)
             {
@@ -483,5 +440,7 @@ namespace Sistemas_CAG.Controlador
         }
     }
 
+
+  
 
 }

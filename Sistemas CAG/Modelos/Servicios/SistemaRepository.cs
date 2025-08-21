@@ -9,11 +9,13 @@ namespace Sistemas_CAG.Modelos.Servicios
     internal class SistemaRepository
     {
         private static DAOSistema DAOS = new DAOSistema();
+
         /// <summary>
-        /// Consulta de parametros de sistema
+        /// 
         /// </summary>
-        /// <param name="sistema"></param>
+        /// <param name="nombreSistema"></param>
         /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public SistemaDTO ConsultaSistema(string nombreSistema)
         {
             var sistema = new SistemaDTO();
@@ -67,10 +69,11 @@ namespace Sistemas_CAG.Modelos.Servicios
         }
 
         /// <summary>
-        /// Consulta sistemas por tipo
+        /// 
         /// </summary>
-        /// <param name="tipoSistema">Tipo de sistema</param>
-        /// <returns>DataTable con sistemas filtrados por tipo</returns>
+        /// <param name="tipoSistema"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public DataTable ConsultaTipoSistemas(string tipoSistema)
         {
             try
@@ -89,12 +92,17 @@ namespace Sistemas_CAG.Modelos.Servicios
                 throw new Exception("Error al consultar sistemas por tipo", ex);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sistema"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool InsertarSistema(SistemaDTO sistema)
         {
             bool respuesta = false;
 
-            string consulta = "INSERT INTO tb_sistemas (Nombre, Parametro1, Parametro2, Tipo, IniciarEn, CarpetaSistema) VALUES (@nombre, @parametro1, @parametro2, @tipo, @iniciarEn, @carpetaSistema)";
+            string consulta = "INSERT INTO tb_sistemas (Nombre, Parametro1, Parametro2, Tipo, IniciarEn, CarpetaSistema, Icono) VALUES (@nombre, @parametro1, @parametro2, @tipo, @iniciarEn, @carpetaSistema, @icono)";
             var parametros = new Dictionary<string, object>
             {
                 { "@nombre", sistema.NombreSistema },
@@ -102,6 +110,7 @@ namespace Sistemas_CAG.Modelos.Servicios
                 { "@parametro2", sistema.Parametro2 },
                 { "@tipo",  sistema.Tipo },
                 { "@iniciarEn", sistema.IniciarEn },
+                { "@icono", sistema.Icono },
                 { "@carpetaSistema",  sistema.CarpetaSistema }
             };
 
@@ -119,11 +128,17 @@ namespace Sistemas_CAG.Modelos.Servicios
             return respuesta;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sistema"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool ActualizarSistema(SistemaDTO sistema)
         {
             bool respuesta = false;
 
-            string consulta = "UPDATE tb_sistemas SET Nombre = @nombre, Parametro1 = @parametro1, Parametro2 = @parametro2, Tipo = @tipo, IniciarEn = @iniciarEn, CarpetaSistema = @carpetaSistema WHERE ID = @id;";
+            string consulta = "UPDATE tb_sistemas SET Nombre = @nombre, Parametro1 = @parametro1, Parametro2 = @parametro2, Tipo = @tipo, IniciarEn = @iniciarEn, CarpetaSistema = @carpetaSistema, Icono = @icono WHERE ID = @id;";
             var parametros = new Dictionary<string, object>
             {
                 { "@id", sistema.Id },
@@ -132,6 +147,7 @@ namespace Sistemas_CAG.Modelos.Servicios
                 { "@parametro2", sistema.Parametro2 },
                 { "@tipo",  sistema.Tipo },
                 { "@iniciarEn", sistema.IniciarEn },
+                { "@icono", sistema.Icono },
                 { "@carpetaSistema",  sistema.CarpetaSistema }
             };
 
@@ -149,6 +165,12 @@ namespace Sistemas_CAG.Modelos.Servicios
             return respuesta;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static bool EliminarSistema(int id)
         {
             bool respuesta = false;

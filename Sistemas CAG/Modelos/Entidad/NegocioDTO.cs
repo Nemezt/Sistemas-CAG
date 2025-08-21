@@ -1,7 +1,8 @@
 ﻿
+
 namespace Sistemas_CAG.Modelos.Entidad
 {
-    internal class NegocioDTO
+    public class NegocioDTO
     {
 
 
