@@ -13,11 +13,12 @@
     <Authors>Yedier Arias Picado</Authors>
     <Title>Lanzador de sistemas</Title>
     <Copyright>CoopeAgri R.L.</Copyright>
-    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageIcon>CA_W2.png</PackageIcon>
     <NeutralLanguage>es-CR</NeutralLanguage>
+    <StartupObject>Sistemas_CAG.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -71,6 +72,7 @@
     <None Remove="Resources\Iconos\scre1.png" />
     <None Remove="Resources\Iconos\Seem.png" />
     <None Remove="Resources\Iconos\seem1.png" />
+    <None Remove="Resources\Iconos\Servidor.png" />
     <None Remove="Resources\Iconos\Sica.png" />
     <None Remove="Resources\Iconos\sica2.png" />
     <None Remove="Resources\Iconos\Sicagen.png" />
@@ -183,6 +185,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Iconos\Seem.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iconos\Servidor.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Iconos\Sica.png">

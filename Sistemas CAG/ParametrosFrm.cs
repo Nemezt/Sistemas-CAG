@@ -395,7 +395,7 @@ namespace Sistemas_CAG
 
         private void GuardarSistemas()
         {
-            if (string.IsNullOrEmpty(nombreTxt.Text) || string.IsNullOrEmpty(tipoTxt.Text))
+            if (string.IsNullOrEmpty(nombreTxt.Text) || string.IsNullOrEmpty(tipoCbx.Text))
             {
 
                 MessageBox.Show("Ingrese los datos requeridos *", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -410,7 +410,7 @@ namespace Sistemas_CAG
                 sistema.NombreSistema = nombreTxt.Text;
                 sistema.Parametro1 = param1Txt.Text;
                 sistema.Parametro2 = param2Txt.Text;
-                sistema.Tipo = tipoTxt.Text;
+                sistema.Tipo = tipoCbx.Text;
                 sistema.IniciarEn = inicioEnTxt.Text;
                 sistema.CarpetaSistema = carpetaTxt.Text;
                 sistema.Icono = iconoTxt.Text;
@@ -470,11 +470,11 @@ namespace Sistemas_CAG
                 idTxt.Text = dgvSistemas.CurrentRow.Cells["ID"].Value.ToString();
                 nombreTxt.Text = dgvSistemas.CurrentRow.Cells["NOMBRE"].Value.ToString();
                 param1Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO1"].Value.ToString();
-                param2Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO2"].Value.ToString();
-                tipoTxt.Text = dgvSistemas.CurrentRow.Cells["TIPO"].Value.ToString();
+                param2Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO2"].Value.ToString();              
                 inicioEnTxt.Text = dgvSistemas.CurrentRow.Cells["INICIAREN"].Value.ToString();
                 carpetaTxt.Text = dgvSistemas.CurrentRow.Cells["CARPETASISTEMA"].Value.ToString();
                 iconoTxt.Text = dgvSistemas.CurrentRow.Cells["ICONO"].Value.ToString();
+                tipoCbx.Text = dgvSistemas.CurrentRow.Cells["TIPO"].Value.ToString();
 
             }
         }
@@ -485,10 +485,10 @@ namespace Sistemas_CAG
             nombreTxt.Clear();
             param1Txt.Clear();
             param2Txt.Clear();
-            tipoTxt.Clear();
             inicioEnTxt.Clear();
             carpetaTxt.Clear();
             iconoTxt.Clear();
+            tipoCbx.SelectedIndex = 0;
             CargarTablaSistemas();
 
         }

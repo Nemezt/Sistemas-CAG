@@ -69,6 +69,7 @@
             ck_tema.TabIndex = 31;
             ck_tema.Text = "Dark";
             ck_tema.UseVisualStyleBackColor = true;
+            ck_tema.Visible = false;
             ck_tema.CheckedChanged += ck_tema_CheckedChanged;
             // 
             // panel1

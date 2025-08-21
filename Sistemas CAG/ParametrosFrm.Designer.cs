@@ -48,6 +48,7 @@
             dgvNegociosPos = new DataGridView();
             tabControl1 = new TabControl();
             tabParmGen = new TabPage();
+            autoInicioCb = new CheckBox();
             defnavcb = new CheckBox();
             defjavcb = new CheckBox();
             deforacb = new CheckBox();
@@ -68,6 +69,7 @@
             navegadortxt = new TextBox();
             oracletxt = new TextBox();
             tabSistema = new TabPage();
+            tipoCbx = new ComboBox();
             label18 = new Label();
             iconoTxt = new TextBox();
             label15 = new Label();
@@ -75,7 +77,6 @@
             label14 = new Label();
             inicioEnTxt = new TextBox();
             label13 = new Label();
-            tipoTxt = new TextBox();
             label12 = new Label();
             param2Txt = new TextBox();
             label11 = new Label();
@@ -89,7 +90,6 @@
             textBox1 = new TextBox();
             label17 = new Label();
             textBox2 = new TextBox();
-            autoInicioCb = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSistemas).BeginInit();
             panelMenu.SuspendLayout();
@@ -348,6 +348,16 @@
             tabParmGen.Text = "Parametros Generales";
             tabParmGen.UseVisualStyleBackColor = true;
             // 
+            // autoInicioCb
+            // 
+            autoInicioCb.AutoSize = true;
+            autoInicioCb.Location = new Point(429, 35);
+            autoInicioCb.Name = "autoInicioCb";
+            autoInicioCb.Size = new Size(119, 19);
+            autoInicioCb.TabIndex = 20;
+            autoInicioCb.Text = "Inicio automático";
+            autoInicioCb.UseVisualStyleBackColor = true;
+            // 
             // defnavcb
             // 
             defnavcb.AutoSize = true;
@@ -524,6 +534,7 @@
             // 
             // tabSistema
             // 
+            tabSistema.Controls.Add(tipoCbx);
             tabSistema.Controls.Add(label18);
             tabSistema.Controls.Add(iconoTxt);
             tabSistema.Controls.Add(label15);
@@ -531,7 +542,6 @@
             tabSistema.Controls.Add(label14);
             tabSistema.Controls.Add(inicioEnTxt);
             tabSistema.Controls.Add(label13);
-            tabSistema.Controls.Add(tipoTxt);
             tabSistema.Controls.Add(label12);
             tabSistema.Controls.Add(param2Txt);
             tabSistema.Controls.Add(label11);
@@ -548,6 +558,16 @@
             tabSistema.TabIndex = 0;
             tabSistema.Text = "Sistemas";
             tabSistema.UseVisualStyleBackColor = true;
+            // 
+            // tipoCbx
+            // 
+            tipoCbx.DropDownStyle = ComboBoxStyle.DropDownList;
+            tipoCbx.FormattingEnabled = true;
+            tipoCbx.Items.AddRange(new object[] { "", "exe", "web", "oracle", "java", "javaws", "servidor" });
+            tipoCbx.Location = new Point(6, 67);
+            tipoCbx.Name = "tipoCbx";
+            tipoCbx.Size = new Size(110, 23);
+            tipoCbx.TabIndex = 15;
             // 
             // label18
             // 
@@ -605,13 +625,6 @@
             label13.Size = new Size(39, 15);
             label13.TabIndex = 17;
             label13.Text = "Tipo *";
-            // 
-            // tipoTxt
-            // 
-            tipoTxt.Location = new Point(6, 67);
-            tipoTxt.Name = "tipoTxt";
-            tipoTxt.Size = new Size(110, 23);
-            tipoTxt.TabIndex = 16;
             // 
             // label12
             // 
@@ -725,16 +738,6 @@
             textBox2.Size = new Size(42, 23);
             textBox2.TabIndex = 12;
             // 
-            // autoInicioCb
-            // 
-            autoInicioCb.AutoSize = true;
-            autoInicioCb.Location = new Point(429, 35);
-            autoInicioCb.Name = "autoInicioCb";
-            autoInicioCb.Size = new Size(119, 19);
-            autoInicioCb.TabIndex = 20;
-            autoInicioCb.Text = "Inicio automático";
-            autoInicioCb.UseVisualStyleBackColor = true;
-            // 
             // ParametrosFrm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -815,7 +818,6 @@
         private Label label14;
         private TextBox inicioEnTxt;
         private Label label13;
-        private TextBox tipoTxt;
         private Label label12;
         private TextBox param2Txt;
         private Label label11;
@@ -831,5 +833,6 @@
         private Label label18;
         private TextBox iconoTxt;
         private CheckBox autoInicioCb;
+        private ComboBox tipoCbx;
     }
 }
