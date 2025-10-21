@@ -46,6 +46,7 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x86\na
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.AssemblyReference.cache
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\ConsultaServiciosPublicos.Utils.AboutBox.resources
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.LanzadorFrm.resources
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.NegocioFrm.resources
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.ParametrosFrm.resources

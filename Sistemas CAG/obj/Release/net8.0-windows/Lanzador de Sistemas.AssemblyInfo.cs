@@ -11,12 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CoopeAgri R.L.")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CoopeAgri R.L. - Yedier Arias Picado")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyCopyrightAttribute("CoopeAgri R.L.")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("© 2025 CoopeAgri R.L. Todos los derechos reservados.")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Aplicación lanzadora de sistemas, actualiza los sistemas antes de ejecutarlos.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab1865bb16779d2cf9c6be39140802cf62188667")]
-[assembly: System.Reflection.AssemblyProductAttribute("Lanzador")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f7d7965ee4aaa5e4f2b71747423a3d999cc4ac")]
+[assembly: System.Reflection.AssemblyProductAttribute("Lanzador de Sistemas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lanzador de Sistemas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("5.0.0.0")]
 [assembly: System.Resources.NeutralResourcesLanguageAttribute("es-CR")]

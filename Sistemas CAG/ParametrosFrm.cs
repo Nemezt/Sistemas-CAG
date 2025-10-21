@@ -1,4 +1,5 @@
-﻿using Sistemas_CAG.Controlador;
+﻿using ConsultaServiciosPublicos.Utils;
+using Sistemas_CAG.Controlador;
 using Sistemas_CAG.Modelos.Entidad;
 using Sistemas_CAG.Modelos.Servicios;
 using Sistemas_CAG.Utils;
@@ -53,7 +54,10 @@ namespace Sistemas_CAG
 
         private void btn_ayuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("(●'◡'●) []~(￣▽￣)~* Invitame a un café", "Acerca de...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            AboutBox aboutBox1 = new AboutBox();
+            aboutBox1.ShowDialog();
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -101,7 +105,7 @@ namespace Sistemas_CAG
             }
             else if (tabParmGen.Focus() == true)
             {
-                
+
             }
         }
         private void cargaDatos()
@@ -116,7 +120,7 @@ namespace Sistemas_CAG
 
                 VerificaInicioAutomatico();
 
-                
+
 
             }
             catch (Exception ex)
@@ -235,16 +239,16 @@ namespace Sistemas_CAG
 
                 if (autoInicioCb.Checked == true)
                 {
-                    if(!InicioAuto.RegistrarInicioAutomatico(out string error))
+                    if (!InicioAuto.RegistrarInicioAutomatico(out string error))
                     {
                         MessageBox.Show("Error: " + error, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
+
 
                 }
                 else
                 {
-                    if(!InicioAuto.EliminarInicioAutomatico(out string error))
+                    if (!InicioAuto.EliminarInicioAutomatico(out string error))
                     {
                         MessageBox.Show("Error: " + error, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -279,7 +283,7 @@ namespace Sistemas_CAG
                 navegadortxt.Text = ParametrosGen.NavegadorWeb;
                 servidortxt.Text = ParametrosGen.ServidorActualizacion;
                 logtxt.Text = ParametrosGen.LogSistema;
-                lblVersion.Text = "v"+ParametrosGen.Version;
+                lblVersion.Text = "v" + ParametrosGen.Version;
 
 
                 if (ParametrosGen.Actualiza == "S")
@@ -332,7 +336,7 @@ namespace Sistemas_CAG
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
 
@@ -362,42 +366,42 @@ namespace Sistemas_CAG
         {
 
 
-                bool accion = false;
-                if (!string.IsNullOrEmpty(idTxt.Text))
+            bool accion = false;
+            if (!string.IsNullOrEmpty(idTxt.Text))
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "¿Estás seguro de que deseas eliminar este registro?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button2
+                    );
+
+                if (resultado == DialogResult.Yes)
                 {
-                    DialogResult resultado = MessageBox.Show(
-                        "¿Estás seguro de que deseas eliminar este registro?",
-                        "Confirmar eliminación",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning,
-                        MessageBoxDefaultButton.Button2
-                        );
-
-                    if (resultado == DialogResult.Yes)
+                    try
                     {
-                        try
-                        {
-                            accion = parametrosControl.BorrarSistema(Convert.ToInt32(idTxt.Text));
-                        }
-                        catch (Exception ex)
-                        {
+                        accion = parametrosControl.BorrarSistema(Convert.ToInt32(idTxt.Text));
+                    }
+                    catch (Exception ex)
+                    {
 
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Debe seleccionar un sistema", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un sistema", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                }
-                if (accion)
-                {
-                    MessageBox.Show("Se eliminaron los datos", "ELiminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    LimpiarSistema();
-                }
-            
+            }
+            if (accion)
+            {
+                MessageBox.Show("Se eliminaron los datos", "ELiminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LimpiarSistema();
+            }
+
         }
 
         private void GuardarSistemas()
@@ -467,11 +471,12 @@ namespace Sistemas_CAG
             {
                 dgvSistemas.DataSource = parametrosControl.CargaTablaSistema();
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
 
@@ -485,7 +490,7 @@ namespace Sistemas_CAG
                 idTxt.Text = dgvSistemas.CurrentRow.Cells["ID"].Value.ToString();
                 nombreTxt.Text = dgvSistemas.CurrentRow.Cells["NOMBRE"].Value.ToString();
                 param1Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO1"].Value.ToString();
-                param2Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO2"].Value.ToString();              
+                param2Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO2"].Value.ToString();
                 inicioEnTxt.Text = dgvSistemas.CurrentRow.Cells["INICIAREN"].Value.ToString();
                 carpetaTxt.Text = dgvSistemas.CurrentRow.Cells["CARPETASISTEMA"].Value.ToString();
                 iconoTxt.Text = dgvSistemas.CurrentRow.Cells["ICONO"].Value.ToString();
@@ -510,5 +515,9 @@ namespace Sistemas_CAG
 
         #endregion
 
+        private void lblVersion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("(●'◡'●) []~(￣▽￣)~* Invitame a un café", "Acerca de...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
     }
 }

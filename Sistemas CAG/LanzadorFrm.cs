@@ -26,7 +26,8 @@ namespace Sistemas_CAG
 
             int deskWidth = Screen.PrimaryScreen.Bounds.Width;
 
-            this.Location = new Point(deskWidth - this.Width, deskHeight - this.Height);
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Location = new Point(workingArea.Right - this.Width, workingArea.Bottom - this.Height);
 
 
             CrearBotonesDinamicos();
@@ -112,7 +113,7 @@ namespace Sistemas_CAG
         /// <param name="e"></param>
         private void ck_tema_CheckedChanged(object sender, EventArgs e)
         {
-            if (ck_tema.Checked == true)
+            if ( true)
             {
                 //Modo blanco
                 this.BackColor = Color.FromArgb(27, 27, 27);
@@ -148,11 +149,6 @@ namespace Sistemas_CAG
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-        }
-
-        private void lblNotificacion_Click(object sender, EventArgs e)
-        {
-
         }
 
         
@@ -274,30 +270,43 @@ namespace Sistemas_CAG
 
         }
 
-        private void BotonDinamico_Click(object sender, EventArgs e)
+        private async void BotonDinamico_Click(object sender, EventArgs e)
         {
             SistemaButton btn = sender as SistemaButton;
             SistemaDTO sistemaDto = btn.ToDTO();
             NegocioDTO negocioResult = new NegocioDTO();
+            progressBarLoader.Visible = true;
+            tabControl1.Enabled = false;
 
-            if(btn.NombreSistema == "Kiosco" || btn.NombreSistema == "Facturacion" || btn.NombreSistema == "Preventa")
+
+
+            try
             {
-                NegocioFrm negocioFrm = new NegocioFrm();
-                if (negocioFrm.ShowDialog() == DialogResult.OK)
+                if (btn.NombreSistema == "Kiosco" || btn.NombreSistema == "Facturacion" || btn.NombreSistema == "Preventa")
                 {
+                    NegocioFrm negocioFrm = new NegocioFrm();
+                    if (negocioFrm.ShowDialog() == DialogResult.OK)
+                    {
 
-                    negocioResult = negocioFrm.negocioResult;
+                        negocioResult = negocioFrm.negocioResult;
 
 
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
-                else
-                {
-                    return;
-                }
+
+                await lanzar.lanzarAplicacion(sistemaDto, negocioResult);
+            }
+            finally
+            {
+                progressBarLoader.Visible = false;
+                tabControl1.Enabled = true;
+
             }
 
-            lanzar.lanzarAplicacion(sistemaDto, negocioResult);
-            
         }
 
 

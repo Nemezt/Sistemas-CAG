@@ -62,3 +62,4 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Release\net8.0-windows\Resources\Iconos\
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Release\net8.0-windows\Resources\Iconos\SRM.png
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\Sistemas_CAG.NegocioFrm.resources
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Release\net8.0-windows\Resources\Iconos\Servidor.png
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\ConsultaServiciosPublicos.Utils.AboutBox.resources

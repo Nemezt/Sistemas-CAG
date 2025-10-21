@@ -59,7 +59,7 @@ namespace Sistemas_CAG.Controlador
         };
         
 
-        public void lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
+        public async Task lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
         {
             try
             {

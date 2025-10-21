@@ -55,3 +55,4 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador 
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\ref\Lanzador de Sistemas.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Servidor.png
+X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\ConsultaServiciosPublicos.Utils.AboutBox.resources

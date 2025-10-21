@@ -8,17 +8,18 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>CA_G.ico</ApplicationIcon>
-    <Company>CoopeAgri R.L.</Company>
-    <Product>Lanzador</Product>
+    <Company>CoopeAgri R.L. - Yedier Arias Picado</Company>
+    <Product>Lanzador de Sistemas</Product>
     <Authors>Yedier Arias Picado</Authors>
     <Title>Lanzador de sistemas</Title>
-    <Copyright>CoopeAgri R.L.</Copyright>
+    <Copyright>© 2025 CoopeAgri R.L. Todos los derechos reservados.</Copyright>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageIcon>CA_W2.png</PackageIcon>
     <NeutralLanguage>es-CR</NeutralLanguage>
     <StartupObject></StartupObject>
+    <Description>Aplicación lanzadora de sistemas, actualiza los sistemas antes de ejecutarlos.</Description>
   </PropertyGroup>
 
   <ItemGroup>
