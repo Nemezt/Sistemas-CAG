@@ -10,12 +10,6 @@ namespace Sistemas_CAG.Modelos.Servicios
     {
         private static DAOSistema DAOS = new DAOSistema();
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="nombreSistema"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public SistemaDTO ConsultaSistema(string nombreSistema)
         {
             var sistema = new SistemaDTO();
@@ -51,10 +45,6 @@ namespace Sistemas_CAG.Modelos.Servicios
             }
         }
 
-        /// <summary>
-        /// Consulta todos los sistemas registrados
-        /// </summary>
-        /// <returns>DataTable con todos los sistemas</returns>
         public static DataTable ConsultaSistemas()
         {
             try
@@ -63,17 +53,11 @@ namespace Sistemas_CAG.Modelos.Servicios
                 return DAOS.ConsultaDatos(consulta);
             }
             catch (Exception ex)
-            {
+            {               
                 throw new Exception("Error al consultar sistemas", ex);
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="tipoSistema"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public DataTable ConsultaTipoSistemas(string tipoSistema)
         {
             try
@@ -92,12 +76,7 @@ namespace Sistemas_CAG.Modelos.Servicios
                 throw new Exception("Error al consultar sistemas por tipo", ex);
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
+
         public static bool InsertarSistema(SistemaDTO sistema)
         {
             bool respuesta = false;
@@ -128,12 +107,6 @@ namespace Sistemas_CAG.Modelos.Servicios
             return respuesta;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public static bool ActualizarSistema(SistemaDTO sistema)
         {
             bool respuesta = false;
@@ -165,12 +138,6 @@ namespace Sistemas_CAG.Modelos.Servicios
             return respuesta;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public static bool EliminarSistema(int id)
         {
             bool respuesta = false;

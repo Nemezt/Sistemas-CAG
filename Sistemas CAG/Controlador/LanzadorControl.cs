@@ -24,10 +24,6 @@ namespace Sistemas_CAG.Controlador
 
         }
 
-        //private string logSistema = Directory.GetCurrentDirectory() + "\\logLanzador.txt";
-
-
-
         const string configKInf = @"C:\OpenPos60\pos\";
         const string configVen = @"C:\OpenPos60\pos\";
         const string configCaj = @"C:\OpenPos60\pos\";
@@ -63,11 +59,6 @@ namespace Sistemas_CAG.Controlador
         };
         
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sistema"></param>
-        /// <param name="negocioPos"></param>
         public void lanzarAplicacion(SistemaDTO sistema, NegocioDTO negocioPos)
         {
             try
@@ -78,9 +69,6 @@ namespace Sistemas_CAG.Controlador
                 if (!(sistema.NombreSistema == null))
                 {
                     
-                    
-                    //sistema = sistemaRepository.ConsultaSistema(sistema.NombreSistema);
-
 
                     if (sistema.Tipo == "web")
                     {
@@ -324,12 +312,8 @@ namespace Sistemas_CAG.Controlador
 
        
 
-        /// <summary>
-        /// Actualizacion de algun complemento para un sistema
-        /// </summary>
-        /// <param name="complemento"></param>
-        /// <param name="nombre"></param>
-        // No funciona si las rutas contienen espacios en blanco
+
+        //TODO: No funciona si las rutas contienen espacios en blanco
         private void actualizaComplemento(string complemento, string nombre)
         {
             try

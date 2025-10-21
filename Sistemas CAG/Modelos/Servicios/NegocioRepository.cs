@@ -9,13 +9,6 @@ namespace Sistemas_CAG.Modelos.Servicios
     {
         private static DAOSistema DAOSP = DAOSistema.GetInstancia();
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="negocio"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public NegocioDTO ConsultaNegocio(NegocioDTO negocio)
         {
             try
@@ -51,12 +44,6 @@ namespace Sistemas_CAG.Modelos.Servicios
             return negocio;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="negocio"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public string ConsultaConfigKinf(string negocio)
         {
             try
@@ -81,13 +68,6 @@ namespace Sistemas_CAG.Modelos.Servicios
             }
         }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="negocio"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public string ConsultaConfig(string negocio)
         {
             try
@@ -117,11 +97,7 @@ namespace Sistemas_CAG.Modelos.Servicios
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
+
         public DataTable ConsultaNegocios()
         {
             try

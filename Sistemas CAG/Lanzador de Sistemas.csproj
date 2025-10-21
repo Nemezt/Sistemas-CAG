@@ -18,7 +18,7 @@
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageIcon>CA_W2.png</PackageIcon>
     <NeutralLanguage>es-CR</NeutralLanguage>
-    <StartupObject>Sistemas_CAG.Program</StartupObject>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

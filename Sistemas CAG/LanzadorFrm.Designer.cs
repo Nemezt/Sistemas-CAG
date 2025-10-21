@@ -159,9 +159,9 @@
             lblNotificacion.ForeColor = Color.FromArgb(166, 211, 12);
             lblNotificacion.Location = new Point(3, 8);
             lblNotificacion.Name = "lblNotificacion";
-            lblNotificacion.Size = new Size(21, 13);
+            lblNotificacion.Size = new Size(11, 13);
             lblNotificacion.TabIndex = 8;
-            lblNotificacion.Text = "v0";
+            lblNotificacion.Text = ".";
             lblNotificacion.Click += lblNotificacion_Click;
             // 
             // errorProvider1

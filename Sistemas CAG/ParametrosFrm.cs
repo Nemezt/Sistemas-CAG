@@ -116,6 +116,8 @@ namespace Sistemas_CAG
 
                 VerificaInicioAutomatico();
 
+                
+
             }
             catch (Exception ex)
             {
@@ -233,12 +235,19 @@ namespace Sistemas_CAG
 
                 if (autoInicioCb.Checked == true)
                 {
-                    InicioAuto.RegistrarInicioAutomatico();
+                    if(!InicioAuto.RegistrarInicioAutomatico(out string error))
+                    {
+                        MessageBox.Show("Error: " + error, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
 
                 }
                 else
                 {
-                    InicioAuto.EliminarInicioAutomatico();
+                    if(!InicioAuto.EliminarInicioAutomatico(out string error))
+                    {
+                        MessageBox.Show("Error: " + error, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                 }
 
@@ -260,60 +269,70 @@ namespace Sistemas_CAG
 
         private void CargarParametrosGenerales()
         {
-            ParametrosGen = parametrosControl.ConsultaParametros();
-            codciatxt.Text = ParametrosGen.COD_CIA;
-            sisttxt.Text = ParametrosGen.Sistema;
-            oracletxt.Text = ParametrosGen.OracleForms;
-            javatxt.Text = ParametrosGen.JavaHome;
-            navegadortxt.Text = ParametrosGen.NavegadorWeb;
-            servidortxt.Text = ParametrosGen.ServidorActualizacion;
-            logtxt.Text = ParametrosGen.LogSistema;
+            try
+            {
+                ParametrosGen = parametrosControl.ConsultaParametros();
+                codciatxt.Text = ParametrosGen.COD_CIA;
+                sisttxt.Text = ParametrosGen.Sistema;
+                oracletxt.Text = ParametrosGen.OracleForms;
+                javatxt.Text = ParametrosGen.JavaHome;
+                navegadortxt.Text = ParametrosGen.NavegadorWeb;
+                servidortxt.Text = ParametrosGen.ServidorActualizacion;
+                logtxt.Text = ParametrosGen.LogSistema;
+                lblVersion.Text = "v"+ParametrosGen.Version;
 
-            if (ParametrosGen.Actualiza == "S")
-            {
-                ActuScb.Checked = true;
-            }
-            else
-            {
-                ActuScb.Checked = false;
-            }
 
-            if (ParametrosGen.DefOracle == "S")
-            {
-                deforacb.Checked = true;
-            }
-            else
-            {
-                deforacb.Checked = false;
-            }
+                if (ParametrosGen.Actualiza == "S")
+                {
+                    ActuScb.Checked = true;
+                }
+                else
+                {
+                    ActuScb.Checked = false;
+                }
 
-            if (ParametrosGen.DefJava == "S")
-            {
-                defjavcb.Checked = true;
-            }
-            else
-            {
-                defjavcb.Checked = false;
-            }
+                if (ParametrosGen.DefOracle == "S")
+                {
+                    deforacb.Checked = true;
+                }
+                else
+                {
+                    deforacb.Checked = false;
+                }
 
-            if (ParametrosGen.DefNavegador == "S")
-            {
-                defnavcb.Checked = true;
-            }
-            else
-            {
-                defnavcb.Checked = false;
-            }
+                if (ParametrosGen.DefJava == "S")
+                {
+                    defjavcb.Checked = true;
+                }
+                else
+                {
+                    defjavcb.Checked = false;
+                }
 
-            if (ActuScb.Checked == true)
-            {
+                if (ParametrosGen.DefNavegador == "S")
+                {
+                    defnavcb.Checked = true;
+                }
+                else
+                {
+                    defnavcb.Checked = false;
+                }
 
-                groupBox1.Enabled = true;
+                if (ActuScb.Checked == true)
+                {
+
+                    groupBox1.Enabled = true;
+                }
+                else
+                {
+                    groupBox1.Enabled = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                groupBox1.Enabled = false;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
 
@@ -330,18 +349,6 @@ namespace Sistemas_CAG
                 autoInicioCb.Checked = false;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -456,7 +463,15 @@ namespace Sistemas_CAG
 
         private void CargarTablaSistemas()
         {
-            dgvSistemas.DataSource = parametrosControl.CargaTablaSistema();
+            try
+            {
+                dgvSistemas.DataSource = parametrosControl.CargaTablaSistema();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
 

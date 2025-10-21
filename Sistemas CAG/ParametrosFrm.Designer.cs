@@ -42,6 +42,7 @@
             btn_salir = new Button();
             dgvSistemas = new DataGridView();
             panelMenu = new Panel();
+            lblVersion = new Label();
             btnEliminar = new Button();
             btnGuardar = new Button();
             btnNuevo = new Button();
@@ -223,6 +224,17 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(625, 34);
             panelMenu.TabIndex = 7;
+            // 
+            // lblVersion
+            // 
+            lblVersion.AutoSize = true;
+            lblVersion.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
+            lblVersion.ForeColor = Color.FromArgb(166, 211, 12);
+            lblVersion.Location = new Point(0, 437);
+            lblVersion.Name = "lblVersion";
+            lblVersion.Size = new Size(21, 13);
+            lblVersion.TabIndex = 9;
+            lblVersion.Text = "v0";
             // 
             // btnEliminar
             // 
@@ -746,6 +758,7 @@
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(631, 450);
             ControlBox = false;
+            Controls.Add(lblVersion);
             Controls.Add(tabControl1);
             Controls.Add(panelMenu);
             Controls.Add(panel1);
@@ -774,6 +787,7 @@
             tabNegPos.ResumeLayout(false);
             tabNegPos.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -834,5 +848,6 @@
         private TextBox iconoTxt;
         private CheckBox autoInicioCb;
         private ComboBox tipoCbx;
+        public Label lblVersion;
     }
 }

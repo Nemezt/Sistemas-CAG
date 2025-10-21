@@ -2,9 +2,6 @@
 
 namespace Sistemas_CAG.Modelos.Entidad
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class SistemaDTO
     {
 

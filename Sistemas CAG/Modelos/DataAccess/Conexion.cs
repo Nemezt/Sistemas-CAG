@@ -9,14 +9,10 @@ namespace Sistemas_CAG.Modelos.DataAccess
     /// </summary>
     internal class Conexion
     {
-        private static string Basedatos = "Data Source=./bd_lanzador.db";
+        static string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+        private static string Basedatos = $"Data Source={Path.Combine(baseDir, "bd_lanzador.db")}";
         SQLiteConnection conexion = null;
         
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public SQLiteConnection Conectar()
         {
             if (conexion == null)
@@ -32,6 +28,7 @@ namespace Sistemas_CAG.Modelos.DataAccess
                 }
                 catch (SQLiteException ex)
                 {
+                    File.AppendAllText("C:\\temp\\logErrorLanzador.txt", $"[{DateTime.Now}] ERROR: {ex.Message}\n");
                     throw new Exception("Error al conectarse a la base de datos:", ex);
 
                 }
@@ -41,9 +38,6 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return conexion;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public void Desconectar()
         {
             if (conexion != null)

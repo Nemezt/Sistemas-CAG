@@ -28,7 +28,6 @@ namespace Sistemas_CAG
 
             this.Location = new Point(deskWidth - this.Width, deskHeight - this.Height);
 
-            lblNotificacion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version; 
 
             CrearBotonesDinamicos();
             
@@ -184,85 +183,94 @@ namespace Sistemas_CAG
             fLPDesktop.Controls.Clear();
             fLPWeb.Controls.Clear();
             fLPServer.Controls.Clear();
-
-            DataTable registros = parametrosControl.CargaTablaSistema();
-
-            foreach (DataRow row in registros.Rows)
+            try
             {
-                int id = Convert.ToInt32(row["Id"]);
-                string nombre = row["Nombre"].ToString();
-                string imagenNombre = row["Icono"].ToString();
-                string rutaImagen = Path.Combine(Application.StartupPath, "Resources", "Iconos", imagenNombre);
+                DataTable registros = parametrosControl.CargaTablaSistema();
 
-                //Botones dinamicos
-                SistemaButton btn = new SistemaButton();
-                btn.Id = id;
-                btn.NombreSistema = nombre;
-                btn.Tipo = row["Tipo"].ToString();
-                btn.IniciarEn = row["IniciarEn"].ToString();
-                btn.CarpetaSistema = row["CarpetaSistema"].ToString();
-                btn.Parametro1 = row["Parametro1"].ToString();
-                btn.Parametro2 = row["Parametro2"].ToString();
-                btn.Name = "btn_" + id;
-                btn.Tag = id;
-                btn.ToolTipText = nombre;
-                btn.Size = new Size(65, 65);
-                btn.BackgroundImageLayout = ImageLayout.Zoom;
-                btn.FlatAppearance.BorderSize = 0;
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
-                btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
-                btn.Cursor = Cursors.Hand;
-                btn.UseVisualStyleBackColor = false;
-
-
-                if (File.Exists(rutaImagen))
-                    btn.BackgroundImage = Image.FromFile(rutaImagen);
-                else
+                foreach (DataRow row in registros.Rows)
                 {
-                    string rutaDefault = Path.Combine(Application.StartupPath, "Resources", "Iconos", "default.png");
-                    if (File.Exists(rutaDefault))
-                        btn.BackgroundImage = Image.FromFile(rutaDefault);
-                }
+                    int id = Convert.ToInt32(row["Id"]);
+                    string nombre = row["Nombre"].ToString();
+                    string imagenNombre = row["Icono"].ToString();
+                    string rutaImagen = Path.Combine(Application.StartupPath, "Resources", "Iconos", imagenNombre);
 
-                //Etiquetas dinamicas
-                Label etiqueta = new Label();
-                etiqueta.Text = nombre;
-                etiqueta.TextAlign = ContentAlignment.MiddleCenter;
-                etiqueta.Dock = DockStyle.Bottom;
-                etiqueta.Height = 20;
-                etiqueta.Width = 70;
-                etiqueta.AutoSize = false;
-                etiqueta.Font = new Font("Microsoft Sans Serif", 6.5F);
-
-                Panel contenedor = new Panel();
-                contenedor.Width = etiqueta.Width;
-                contenedor.Height = btn.Height + etiqueta.Height + 5;
-                contenedor.Margin = new Padding(5);
-                contenedor.Controls.Add(btn);
-                contenedor.Controls.Add(etiqueta);
-
-                btn.Dock = DockStyle.Top;
-
-
-                btn.Click += BotonDinamico_Click;
-                ToolTip toolTip = new ToolTip();
-                toolTip.SetToolTip(btn, btn.ToolTipText);
+                    //Botones dinamicos
+                    SistemaButton btn = new SistemaButton();
+                    btn.Id = id;
+                    btn.NombreSistema = nombre;
+                    btn.Tipo = row["Tipo"].ToString();
+                    btn.IniciarEn = row["IniciarEn"].ToString();
+                    btn.CarpetaSistema = row["CarpetaSistema"].ToString();
+                    btn.Parametro1 = row["Parametro1"].ToString();
+                    btn.Parametro2 = row["Parametro2"].ToString();
+                    btn.Name = "btn_" + id;
+                    btn.Tag = id;
+                    btn.ToolTipText = nombre;
+                    btn.Size = new Size(65, 65);
+                    btn.BackgroundImageLayout = ImageLayout.Zoom;
+                    btn.FlatAppearance.BorderSize = 0;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+                    btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(166, 211, 12);
+                    btn.Cursor = Cursors.Hand;
+                    btn.UseVisualStyleBackColor = false;
 
 
-                if (btn.Tipo == "oracle" || btn.Tipo == "exe" || btn.Tipo == "java")
-                {
-                    fLPDesktop.Controls.Add(contenedor);
-                }
-                else if (btn.Tipo == "web" || btn.Tipo == "javaws")
-                {
-                    fLPWeb.Controls.Add(contenedor);
-                }
-                else if (btn.Tipo == "servidor")
-                {
-                    fLPServer.Controls.Add(contenedor);
+                    if (File.Exists(rutaImagen))
+                        btn.BackgroundImage = Image.FromFile(rutaImagen);
+                    else
+                    {
+                        string rutaDefault = Path.Combine(Application.StartupPath, "Resources", "Iconos", "default.png");
+                        if (File.Exists(rutaDefault))
+                            btn.BackgroundImage = Image.FromFile(rutaDefault);
+                    }
+
+                    //Etiquetas dinamicas
+                    Label etiqueta = new Label();
+                    etiqueta.Text = nombre;
+                    etiqueta.TextAlign = ContentAlignment.MiddleCenter;
+                    etiqueta.Dock = DockStyle.Bottom;
+                    etiqueta.Height = 20;
+                    etiqueta.Width = 70;
+                    etiqueta.AutoSize = false;
+                    etiqueta.Font = new Font("Microsoft Sans Serif", 6.5F);
+
+                    Panel contenedor = new Panel();
+                    contenedor.Width = etiqueta.Width;
+                    contenedor.Height = btn.Height + etiqueta.Height + 5;
+                    contenedor.Margin = new Padding(5);
+                    contenedor.Controls.Add(btn);
+                    contenedor.Controls.Add(etiqueta);
+
+                    btn.Dock = DockStyle.Top;
+
+
+                    btn.Click += BotonDinamico_Click;
+                    ToolTip toolTip = new ToolTip();
+                    toolTip.SetToolTip(btn, btn.ToolTipText);
+
+
+                    if (btn.Tipo == "oracle" || btn.Tipo == "exe" || btn.Tipo == "java")
+                    {
+                        fLPDesktop.Controls.Add(contenedor);
+                    }
+                    else if (btn.Tipo == "web" || btn.Tipo == "javaws")
+                    {
+                        fLPWeb.Controls.Add(contenedor);
+                    }
+                    else if (btn.Tipo == "servidor")
+                    {
+                        fLPServer.Controls.Add(contenedor);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
+            
 
         }
 
