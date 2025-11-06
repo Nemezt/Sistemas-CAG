@@ -250,7 +250,7 @@ namespace Sistemas_CAG
                     {
                         fLPDesktop.Controls.Add(contenedor);
                     }
-                    else if (btn.Tipo == "web" || btn.Tipo == "javaws")
+                    else if (btn.Tipo == "web" || btn.Tipo == "Javaws")
                     {
                         fLPWeb.Controls.Add(contenedor);
                     }

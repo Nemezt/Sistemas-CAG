@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2025 CoopeAgri R.L. Todos los derechos reservados.")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Aplicación lanzadora de sistemas, actualiza los sistemas antes de ejecutarlos.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f7d7965ee4aaa5e4f2b71747423a3d999cc4ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7072f4c4016ccf4791457527defd71908a3f5c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lanzador de Sistemas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lanzador de Sistemas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("5.0.0.0")]

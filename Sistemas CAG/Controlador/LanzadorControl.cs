@@ -24,9 +24,16 @@ namespace Sistemas_CAG.Controlador
 
         }
 
-        const string configKInf = @"C:\OpenPos60\pos\";
-        const string configVen = @"C:\OpenPos60\pos\";
-        const string configCaj = @"C:\OpenPos60\pos\";
+
+        private string Webutil32 = @"C:\\users\\" + Environment.UserName + "\\webutil.32.properties";
+        private string Webutil64 = @"C:\\users\\" + Environment.UserName + "\\webutil.64.properties";
+        private const string Javaw= @"\bin\Javaw.exe";
+        private const string Javaws = @"\bin\Javaws.exe";
+        private const string Oracle6= @"C:\orant\BIN\ifrun60.EXE";
+        private const string NavegadorEdge = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
+        const string ConfigKInf = @"C:\OpenPos60\pos\";
+        const string ConfigVen = @"C:\OpenPos60\pos\";
+        const string ConfigCaj = @"C:\OpenPos60\pos\";
         // const string dirHuella = @"C:\Integracion Huella\";
         // const string dirBac = @"C:\Integracion Bac";
 
@@ -74,7 +81,7 @@ namespace Sistemas_CAG.Controlador
                     {
                         if (parametros.DefNavegador == "S")
                         {
-                            sistema.Destino = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
+                            sistema.Destino = NavegadorEdge;
                         }
                         else
                         {
@@ -86,7 +93,7 @@ namespace Sistemas_CAG.Controlador
                     {
                         if (parametros.DefNavegador == "S")
                         {
-                            sistema.Destino = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
+                            sistema.Destino = NavegadorEdge;
                         }
                         else
                         {
@@ -98,11 +105,11 @@ namespace Sistemas_CAG.Controlador
                     {
                         if (parametros.DefJava == "S")
                         {
-                            sistema.Destino = funcDir.GetJavaInstallationPath() + @"\bin\javaw.exe";
+                            sistema.Destino = funcDir.GetJavaInstallationPath() + Javaw;
                         }
                         else
                         {
-                            sistema.Destino = parametros.JavaHome + @"\bin\javaw.exe";
+                            sistema.Destino = parametros.JavaHome + Javaw;
                         }
 
                     }
@@ -110,26 +117,24 @@ namespace Sistemas_CAG.Controlador
                     {
                         if (parametros.DefJava == "S")
                         {
-                            sistema.Destino = funcDir.GetJavaInstallationPath() + @"\bin\javaws.exe";
+                            sistema.Destino = funcDir.GetJavaInstallationPath() + Javaws;
                         }
                         else
                         {
-                            sistema.Destino = parametros.JavaHome + @"\bin\javaws.exe";
+                            sistema.Destino = parametros.JavaHome + Javaws;
                         }
 
                         //Se borra el webutil.properties si existe
 
-                        string webutil32 = @"C:\\users\\" + Environment.UserName + "\\webutil.32.properties";
-                        string webutil64 = @"C:\\users\\" + Environment.UserName + "\\webutil.64.properties";
-                        funcDir.EliminarArchivo(webutil32);
-                        funcDir.EliminarArchivo(webutil64);
+                        funcDir.EliminarArchivo(Webutil32);
+                        funcDir.EliminarArchivo(Webutil64);
 
                     }
                     if (sistema.Tipo == "oracle")
                     {
                         if (parametros.DefOracle == "S")
                         {
-                            sistema.Destino = @"C:\orant\BIN\ifrun60.EXE";
+                            sistema.Destino = Oracle6;
                         }
                         else
                         {
@@ -139,7 +144,7 @@ namespace Sistemas_CAG.Controlador
                     }
                     if (sistema.Tipo == "exe")
                     {
-                        sistema.Destino = sistema.CarpetaSistema + sistema.NombreSistema + ".exe";
+                        sistema.Destino = sistema.CarpetaSistema;
                     }
 
                     if (sistema.Tipo == "exe" || sistema.Tipo == "java" || sistema.Tipo == "oracle")
@@ -185,7 +190,7 @@ namespace Sistemas_CAG.Controlador
                                 MessageBox.Show("No se puede ejecutar el sistema ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        else if (sistema.Tipo == "Servidor")
+                        else if (sistema.Tipo == "servidor")
                         {
                             if (!ejecutarSistemaWeb(sistema))
                             {
@@ -359,7 +364,7 @@ namespace Sistemas_CAG.Controlador
         {
             try
             {
-                var file = new IniFile(configKInf + "ConfigKInf-" + negocio.Inventario + ".acc");
+                var file = new IniFile(ConfigKInf + "ConfigKInf-" + negocio.Inventario + ".acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
                 file.Write("COD_INV", negocio.Inventario, "Negocio");
                 file.Write("VER_EXISTENCIA", "S", "Negocio");
@@ -383,7 +388,7 @@ namespace Sistemas_CAG.Controlador
         {
             try
             {
-                var file = new IniFile(configVen + "ConfigVen.acc");
+                var file = new IniFile(ConfigVen + "ConfigVen.acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
                 file.Write("COD_INV", negocio.Inventario, "Negocio");
                 file.Write("ID_ESTACION", negocio.Estacion, "Negocio");
@@ -405,7 +410,7 @@ namespace Sistemas_CAG.Controlador
         {
             try
             {
-                var file = new IniFile(configCaj + "ConfigCaj.acc");
+                var file = new IniFile(ConfigCaj + "ConfigCaj.acc");
                 file.Write("COD_CIA", "CAG", "Compañia");
                 file.Write("COD_INV", negocio.Inventario, "Negocio");
                 file.Write("ID_CAJA", negocio.Estacion, "Negocio");
