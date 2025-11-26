@@ -49,6 +49,8 @@ namespace Sistemas_CAG
                         ShowWindow(hWnd, SW_RESTORE);
                     }
                 }
+                //File.WriteAllText("C:\\temp\\logErrorLanzador.txt", $"StartupPath: {Application.StartupPath}\nCurrentDir: {Environment.CurrentDirectory}");
+
             }
 
 

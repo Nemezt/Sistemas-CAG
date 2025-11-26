@@ -9,11 +9,6 @@ namespace Sistemas_CAG.Modelos.Servicios
     {
         private static DAOSistema DAOSP = new DAOSistema();
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public static ParametrosDTO ConsultaParametros()
         {
             var parametrosDTO = new ParametrosDTO();
@@ -56,12 +51,7 @@ namespace Sistemas_CAG.Modelos.Servicios
             return parametrosDTO;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="parametros"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
+
         public static bool ActualizaParametros(ParametrosDTO parametros)
         {
             string consulta = @"UPDATE tb_parametros SET 

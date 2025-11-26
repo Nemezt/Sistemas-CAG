@@ -11,11 +11,6 @@ namespace Sistemas_CAG.Modelos.DataAccess
         private SQLiteCommand conexionCommand;
         private SQLiteDataReader conexionDataReader;
         private DataTable datos;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public static DAOSistema GetInstancia()
         {
 
@@ -26,12 +21,6 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return con;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="consulta"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public DataTable ConsultaDatos(string consulta)
         {
             Conectar();
@@ -48,6 +37,7 @@ namespace Sistemas_CAG.Modelos.DataAccess
             }
             catch (SQLiteException ex)
             {
+                File.AppendAllText("C:\\temp\\logErrorLanzador.txt", $"[{DateTime.Now}] ERROR: {ex.Message}\n");
                 datos = null;
                 throw new Exception("Error al realizar consulta SQL", ex);
 
@@ -59,13 +49,6 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return datos;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="consulta"></param>
-        /// <param name="parametros"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         public DataTable ConsultaDatos(string consulta, Dictionary<string, object> parametros)
         {
             DataTable datos = new DataTable();
@@ -88,6 +71,7 @@ namespace Sistemas_CAG.Modelos.DataAccess
             }
             catch (SQLiteException ex)
             {
+                File.AppendAllText("C:\\temp\\logErrorLanzador.txt", $"[{DateTime.Now}] ERROR: {ex.Message}\n");
                 datos = null;
                 throw new Exception("Error al realizar consulta SQL", ex);
             }
@@ -99,13 +83,7 @@ namespace Sistemas_CAG.Modelos.DataAccess
             return datos;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="consulta"></param>
-        /// <param name="parametros"></param>
-        /// <returns></returns>
-        /// <exception cref="Exception"></exception>
+
         public bool EjecutaSQL(string consulta, Dictionary<string, object> parametros)
         {
             bool result = false;
@@ -126,6 +104,7 @@ namespace Sistemas_CAG.Modelos.DataAccess
             }
             catch (SQLiteException ex)
             {
+                File.AppendAllText("C:\\temp\\logErrorLanzador.txt", $"[{DateTime.Now}] ERROR: {ex.Message}\n");
                 result = false;
 
                 throw new Exception("Error al realizar consulta SQL", ex);

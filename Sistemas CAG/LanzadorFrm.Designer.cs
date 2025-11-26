@@ -30,14 +30,13 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanzadorFrm));
-            ck_tema = new CheckBox();
             panel1 = new Panel();
             label1 = new Label();
             btn_conf = new Button();
             btn_minimizar = new Button();
             btn_salir = new Button();
             panel2 = new Panel();
-            lblNotificacion = new Label();
+            progressBarLoader = new ProgressBar();
             errorProvider1 = new ErrorProvider(components);
             ntf_Lanzador = new NotifyIcon(components);
             CM_notificacion = new ContextMenuStrip(components);
@@ -59,17 +58,6 @@
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             SuspendLayout();
-            // 
-            // ck_tema
-            // 
-            ck_tema.AutoSize = true;
-            ck_tema.Location = new Point(325, 6);
-            ck_tema.Name = "ck_tema";
-            ck_tema.Size = new Size(50, 19);
-            ck_tema.TabIndex = 31;
-            ck_tema.Text = "Dark";
-            ck_tema.UseVisualStyleBackColor = true;
-            ck_tema.CheckedChanged += ck_tema_CheckedChanged;
             // 
             // panel1
             // 
@@ -143,25 +131,22 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(ck_tema);
-            panel2.Controls.Add(lblNotificacion);
+            panel2.Controls.Add(progressBarLoader);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 468);
             panel2.Name = "panel2";
             panel2.Size = new Size(380, 27);
             panel2.TabIndex = 6;
             // 
-            // lblNotificacion
+            // progressBarLoader
             // 
-            lblNotificacion.AutoSize = true;
-            lblNotificacion.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
-            lblNotificacion.ForeColor = Color.FromArgb(166, 211, 12);
-            lblNotificacion.Location = new Point(3, 8);
-            lblNotificacion.Name = "lblNotificacion";
-            lblNotificacion.Size = new Size(21, 13);
-            lblNotificacion.TabIndex = 8;
-            lblNotificacion.Text = "v0";
-            lblNotificacion.Click += lblNotificacion_Click;
+            progressBarLoader.Location = new Point(3, 14);
+            progressBarLoader.MarqueeAnimationSpeed = 25;
+            progressBarLoader.Name = "progressBarLoader";
+            progressBarLoader.Size = new Size(375, 10);
+            progressBarLoader.Style = ProgressBarStyle.Marquee;
+            progressBarLoader.TabIndex = 33;
+            progressBarLoader.Visible = false;
             // 
             // errorProvider1
             // 
@@ -202,7 +187,7 @@
             fLPDesktop.AutoScroll = true;
             fLPDesktop.Location = new Point(6, 6);
             fLPDesktop.Name = "fLPDesktop";
-            fLPDesktop.Size = new Size(345, 360);
+            fLPDesktop.Size = new Size(345, 395);
             fLPDesktop.TabIndex = 33;
             // 
             // fLPWeb
@@ -210,7 +195,7 @@
             fLPWeb.AutoScroll = true;
             fLPWeb.Location = new Point(6, 6);
             fLPWeb.Name = "fLPWeb";
-            fLPWeb.Size = new Size(345, 360);
+            fLPWeb.Size = new Size(345, 395);
             fLPWeb.TabIndex = 34;
             // 
             // tabControl1
@@ -221,7 +206,7 @@
             tabControl1.Location = new Point(9, 37);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(365, 425);
+            tabControl1.Size = new Size(365, 439);
             tabControl1.TabIndex = 35;
             // 
             // tabPage1
@@ -230,7 +215,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(357, 397);
+            tabPage1.Size = new Size(357, 411);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Desktop";
             tabPage1.UseVisualStyleBackColor = true;
@@ -241,7 +226,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(357, 397);
+            tabPage2.Size = new Size(357, 411);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Web";
             tabPage2.UseVisualStyleBackColor = true;
@@ -251,7 +236,7 @@
             tabPage3.Controls.Add(fLPServer);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(357, 397);
+            tabPage3.Size = new Size(357, 411);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Servidores";
             tabPage3.UseVisualStyleBackColor = true;
@@ -261,7 +246,7 @@
             fLPServer.AutoScroll = true;
             fLPServer.Location = new Point(6, 7);
             fLPServer.Name = "fLPServer";
-            fLPServer.Size = new Size(345, 360);
+            fLPServer.Size = new Size(345, 394);
             fLPServer.TabIndex = 35;
             // 
             // LanzadorFrm
@@ -289,7 +274,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             CM_notificacion.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
@@ -308,8 +292,6 @@
         private Label label1;
         private NotifyIcon ntf_Lanzador;
         private ErrorProvider errorProvider1;
-        public Label lblNotificacion;
-        private CheckBox ck_tema;
         private ContextMenuStrip CM_notificacion;
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripMenuItem mostrarToolStripMenuItem;
@@ -320,5 +302,6 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private FlowLayoutPanel fLPServer;
+        private ProgressBar progressBarLoader;
     }
 }

@@ -11,14 +11,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CoopeAgri R.L.")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CoopeAgri R.L. - Yedier Arias Picado")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyCopyrightAttribute("CoopeAgri R.L.")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("© 2025 CoopeAgri R.L. Todos los derechos reservados.")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Aplicación lanzadora de sistemas, actualiza los sistemas antes de ejecutarlos.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a99b6c63d01534a8f3a5a2886cd30e8fef3ecb96")]
-[assembly: System.Reflection.AssemblyProductAttribute("Lanzador")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b10e72194f9ae18ad5321127d6d154a78604855")]
+[assembly: System.Reflection.AssemblyProductAttribute("Lanzador de Sistemas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lanzador de Sistemas")]
-[assembly: System.Reflection.AssemblyVersionAttribute("4.3.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("5.0.0.0")]
 [assembly: System.Resources.NeutralResourcesLanguageAttribute("es-CR")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

@@ -5,41 +5,50 @@ namespace Sistemas_CAG.Utils
 {
     public class InicioAutomatico
     {
-        public bool RegistrarInicioAutomatico()
+        public bool RegistrarInicioAutomatico(out string error)
         {
+            error = null;
             try
-            {
-                RegistryKey clave = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-                clave.SetValue(Application.ProductName, $"\"{Application.ExecutablePath}\"");
-
+            {                
+                using (RegistryKey clave = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
+                {
+                        clave.SetValue(Application.ProductName, $"\"{Application.ExecutablePath}\"");
+                }
+                
                 return true;
                 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                error = ex.Message;
+                return false;
             }
-            return false;
+
         }
 
-        public bool EliminarInicioAutomatico()
+        public bool EliminarInicioAutomatico(out string error)
         {
+            error = null;
             try
             {
-                RegistryKey clave = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-
-                if (clave.GetValue(Application.ProductName) != null)
+                using (RegistryKey clave = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
                 {
-                    clave.DeleteValue(Application.ProductName);
+                    if (clave.GetValue(Application.ProductName) != null)
+                    {
+                        clave.DeleteValue(Application.ProductName);
+                    }
                 }
+
+
                 return true;
                 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                error = ex.Message;
+                return false;
             }
-            return false;
+
         }
 
         public bool ExisteInicioAutomatico()

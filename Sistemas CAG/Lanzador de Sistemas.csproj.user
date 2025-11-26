@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>X:\GitHub\Sistemas CAG\Sistemas CAG\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LanzadorFrm.cs">
       <SubType>Form</SubType>
     </Compile>
