@@ -282,7 +282,7 @@ namespace Sistemas_CAG
 
             try
             {
-                if (btn.NombreSistema == "Kiosco" || btn.NombreSistema == "Facturacion" || btn.NombreSistema == "Preventa")
+                if (btn.NombreSistema == "V-Kiosco" || btn.NombreSistema == "V-Facturacion" || btn.NombreSistema == "V-Preventa")
                 {
                     NegocioFrm negocioFrm = new NegocioFrm();
                     if (negocioFrm.ShowDialog() == DialogResult.OK)
