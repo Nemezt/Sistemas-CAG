@@ -56,3 +56,61 @@ X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador 
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\ref\Lanzador de Sistemas.dll
 X:\GitHub\Sistemas CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Servidor.png
 X:\GitHub\Sistemas CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\ConsultaServiciosPublicos.Utils.AboutBox.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\bd_lanzador.db
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Agri_cli.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Agros.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\default.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Desazu.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\E-CO.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Entrega.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Indicadores.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\MCR.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Notificaciones.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Openpos.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\OpenTouch.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\otro.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Parqueo.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Password.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Recibidor.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\SAAC.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Scre.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Seem.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Servidor.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Sica.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Sicagen.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Siceca.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Sicofe.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Side.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Sirpe.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\Sitra.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Resources\Iconos\SRM.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Lanzador de Sistemas.exe
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Lanzador de Sistemas.deps.json
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Lanzador de Sistemas.runtimeconfig.json
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Lanzador de Sistemas.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\Lanzador de Sistemas.pdb
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\EntityFramework.SqlServer.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\EntityFramework.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\System.Data.SQLite.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\System.Data.SqlClient.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\System.Data.SQLite.EF6.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\sni.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Release\net8.0-windows\win-x86\SQLite.Interop.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.csproj.AssemblyReference.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\ConsultaServiciosPublicos.Utils.AboutBox.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Sistemas_CAG.LanzadorFrm.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Sistemas_CAG.NegocioFrm.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Sistemas_CAG.ParametrosFrm.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Sistemas_CAG.Properties.Resources.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.csproj.GenerateResource.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfoInputs.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.AssemblyInfo.cs
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.sourcelink.json
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador.BC9B32AB.Up2Date
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\refint\Lanzador de Sistemas.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.pdb
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\Lanzador de Sistemas.genruntimeconfig.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Release\net8.0-windows\win-x86\ref\Lanzador de Sistemas.dll
