@@ -13,8 +13,8 @@ namespace Sistemas_CAG.Modelos.Entidad.Convertidores
                 Destino = button.Destino,
                 IniciarEn = button.IniciarEn,
                 CarpetaSistema = button.CarpetaSistema,
-                Parametro1 = button.Parametro1,
-                Parametro2 = button.Parametro2,
+                Parametros = button.Parametros,
+                Ejecutable = button.Ejecutable,
 
             };
         }

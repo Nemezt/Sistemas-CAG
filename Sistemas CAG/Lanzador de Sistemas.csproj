@@ -13,7 +13,7 @@
     <Authors>Yedier Arias Picado</Authors>
     <Title>Lanzador de sistemas</Title>
     <Copyright>© 2025 CoopeAgri R.L. Todos los derechos reservados.</Copyright>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageIcon>CA_W2.png</PackageIcon>

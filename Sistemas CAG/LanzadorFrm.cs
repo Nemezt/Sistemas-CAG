@@ -197,8 +197,8 @@ namespace Sistemas_CAG
                     btn.Tipo = row["Tipo"].ToString();
                     btn.IniciarEn = row["IniciarEn"].ToString();
                     btn.CarpetaSistema = row["CarpetaSistema"].ToString();
-                    btn.Parametro1 = row["Parametro1"].ToString();
-                    btn.Parametro2 = row["Parametro2"].ToString();
+                    btn.Parametros = row["Parametros"].ToString();
+                    btn.Ejecutable = row["Ejecutable"].ToString();
                     btn.Name = "btn_" + id;
                     btn.Tag = id;
                     btn.ToolTipText = nombre;

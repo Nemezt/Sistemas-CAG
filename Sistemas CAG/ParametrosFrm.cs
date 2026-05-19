@@ -419,8 +419,8 @@ namespace Sistemas_CAG
                 SistemaDTO sistema = new SistemaDTO();
 
                 sistema.NombreSistema = nombreTxt.Text;
-                sistema.Parametro1 = param1Txt.Text;
-                sistema.Parametro2 = param2Txt.Text;
+                sistema.Parametros = param1Txt.Text;
+                sistema.Ejecutable = ejecutTxt.Text;
                 sistema.Tipo = tipoCbx.Text;
                 sistema.IniciarEn = inicioEnTxt.Text;
                 sistema.CarpetaSistema = carpetaTxt.Text;
@@ -489,8 +489,8 @@ namespace Sistemas_CAG
 
                 idTxt.Text = dgvSistemas.CurrentRow.Cells["ID"].Value.ToString();
                 nombreTxt.Text = dgvSistemas.CurrentRow.Cells["NOMBRE"].Value.ToString();
-                param1Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO1"].Value.ToString();
-                param2Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETRO2"].Value.ToString();
+                param1Txt.Text = dgvSistemas.CurrentRow.Cells["PARAMETROS"].Value.ToString();
+                ejecutTxt.Text = dgvSistemas.CurrentRow.Cells["EJECUTABLE"].Value.ToString();
                 inicioEnTxt.Text = dgvSistemas.CurrentRow.Cells["INICIAREN"].Value.ToString();
                 carpetaTxt.Text = dgvSistemas.CurrentRow.Cells["CARPETASISTEMA"].Value.ToString();
                 iconoTxt.Text = dgvSistemas.CurrentRow.Cells["ICONO"].Value.ToString();
@@ -504,7 +504,7 @@ namespace Sistemas_CAG
             idTxt.Clear();
             nombreTxt.Clear();
             param1Txt.Clear();
-            param2Txt.Clear();
+            ejecutTxt.Clear();
             inicioEnTxt.Clear();
             carpetaTxt.Clear();
             iconoTxt.Clear();
@@ -518,6 +518,34 @@ namespace Sistemas_CAG
         private void lblVersion_Click(object sender, EventArgs e)
         {
             MessageBox.Show("(●'◡'●) []~(￣▽￣)~* Invitame a un café", "Acerca de...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoCbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tipoCbx.Text == "exe")
+            {
+                ejecutTxt.Enabled = true;
+            }
+            else
+            {
+                ejecutTxt.Enabled=false;
+            }
+
+            if (tipoCbx.Text == "web" || tipoCbx.Text == "javaws" || tipoCbx.Text == "servidor")
+            {
+                inicioEnTxt.Enabled = false;
+                carpetaTxt.Enabled = false;
+            }
+            else
+            {
+                inicioEnTxt.Enabled = true;
+                carpetaTxt.Enabled = true;
+            }
         }
     }
 }

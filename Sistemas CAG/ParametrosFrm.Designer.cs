@@ -79,7 +79,7 @@
             inicioEnTxt = new TextBox();
             label13 = new Label();
             label12 = new Label();
-            param2Txt = new TextBox();
+            ejecutTxt = new TextBox();
             label11 = new Label();
             param1Txt = new TextBox();
             label10 = new Label();
@@ -556,7 +556,7 @@
             tabSistema.Controls.Add(inicioEnTxt);
             tabSistema.Controls.Add(label13);
             tabSistema.Controls.Add(label12);
-            tabSistema.Controls.Add(param2Txt);
+            tabSistema.Controls.Add(ejecutTxt);
             tabSistema.Controls.Add(label11);
             tabSistema.Controls.Add(param1Txt);
             tabSistema.Controls.Add(label10);
@@ -577,15 +577,16 @@
             tipoCbx.DropDownStyle = ComboBoxStyle.DropDownList;
             tipoCbx.FormattingEnabled = true;
             tipoCbx.Items.AddRange(new object[] { "", "exe", "web", "oracle", "java", "javaws", "servidor" });
-            tipoCbx.Location = new Point(6, 67);
+            tipoCbx.Location = new Point(240, 21);
             tipoCbx.Name = "tipoCbx";
-            tipoCbx.Size = new Size(110, 23);
-            tipoCbx.TabIndex = 15;
+            tipoCbx.Size = new Size(135, 23);
+            tipoCbx.TabIndex = 11;
+            tipoCbx.SelectedIndexChanged += tipoCbx_SelectedIndexChanged;
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(6, 93);
+            label18.Location = new Point(470, 93);
             label18.Name = "label18";
             label18.Size = new Size(100, 15);
             label18.TabIndex = 23;
@@ -593,15 +594,15 @@
             // 
             // iconoTxt
             // 
-            iconoTxt.Location = new Point(6, 111);
+            iconoTxt.Location = new Point(470, 111);
             iconoTxt.Name = "iconoTxt";
             iconoTxt.Size = new Size(139, 23);
-            iconoTxt.TabIndex = 22;
+            iconoTxt.TabIndex = 16;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(367, 49);
+            label15.Location = new Point(305, 49);
             label15.Name = "label15";
             label15.Size = new Size(107, 15);
             label15.TabIndex = 21;
@@ -609,15 +610,15 @@
             // 
             // carpetaTxt
             // 
-            carpetaTxt.Location = new Point(367, 67);
+            carpetaTxt.Location = new Point(305, 67);
             carpetaTxt.Name = "carpetaTxt";
-            carpetaTxt.Size = new Size(242, 23);
-            carpetaTxt.TabIndex = 20;
+            carpetaTxt.Size = new Size(304, 23);
+            carpetaTxt.TabIndex = 14;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(122, 49);
+            label14.Location = new Point(6, 49);
             label14.Name = "label14";
             label14.Size = new Size(64, 15);
             label14.TabIndex = 19;
@@ -625,15 +626,15 @@
             // 
             // inicioEnTxt
             // 
-            inicioEnTxt.Location = new Point(122, 67);
+            inicioEnTxt.Location = new Point(6, 67);
             inicioEnTxt.Name = "inicioEnTxt";
-            inicioEnTxt.Size = new Size(239, 23);
-            inicioEnTxt.TabIndex = 18;
+            inicioEnTxt.Size = new Size(293, 23);
+            inicioEnTxt.TabIndex = 13;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(6, 49);
+            label13.Location = new Point(240, 3);
             label13.Name = "label13";
             label13.Size = new Size(39, 15);
             label13.TabIndex = 17;
@@ -642,34 +643,36 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(413, 3);
+            label12.Location = new Point(381, 3);
             label12.Name = "label12";
-            label12.Size = new Size(71, 15);
+            label12.Size = new Size(61, 15);
             label12.TabIndex = 15;
-            label12.Text = "Parámetro 2";
+            label12.Text = "Ejecutable";
             // 
-            // param2Txt
+            // ejecutTxt
             // 
-            param2Txt.Location = new Point(413, 21);
-            param2Txt.Name = "param2Txt";
-            param2Txt.Size = new Size(196, 23);
-            param2Txt.TabIndex = 14;
+            ejecutTxt.Enabled = false;
+            ejecutTxt.Location = new Point(381, 21);
+            ejecutTxt.Name = "ejecutTxt";
+            ejecutTxt.Size = new Size(228, 23);
+            ejecutTxt.TabIndex = 12;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(201, 3);
+            label11.Location = new Point(6, 93);
             label11.Name = "label11";
-            label11.Size = new Size(71, 15);
+            label11.Size = new Size(67, 15);
             label11.TabIndex = 13;
-            label11.Text = "Parámetro 1";
+            label11.Text = "Parámetros";
+            label11.Click += label11_Click;
             // 
             // param1Txt
             // 
-            param1Txt.Location = new Point(201, 21);
+            param1Txt.Location = new Point(6, 111);
             param1Txt.Name = "param1Txt";
-            param1Txt.Size = new Size(206, 23);
-            param1Txt.TabIndex = 12;
+            param1Txt.Size = new Size(458, 23);
+            param1Txt.TabIndex = 15;
             // 
             // label10
             // 
@@ -684,7 +687,7 @@
             // 
             nombreTxt.Location = new Point(54, 21);
             nombreTxt.Name = "nombreTxt";
-            nombreTxt.Size = new Size(141, 23);
+            nombreTxt.Size = new Size(180, 23);
             nombreTxt.TabIndex = 10;
             // 
             // label9
@@ -834,7 +837,7 @@
         private TextBox inicioEnTxt;
         private Label label13;
         private Label label12;
-        private TextBox param2Txt;
+        private TextBox ejecutTxt;
         private Label label11;
         private TextBox param1Txt;
         private Label label10;

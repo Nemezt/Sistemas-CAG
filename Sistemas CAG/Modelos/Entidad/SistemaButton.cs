@@ -14,9 +14,9 @@ public class SistemaButton : Button
 
     private string carpetaSistema;
 
-    private string parametro1;
+    private string parametros;
 
-    private string parametro2;
+    private string ejecutable;
 
 
     public int Id { get => id; set => id = value; }
@@ -25,8 +25,8 @@ public class SistemaButton : Button
     public string Destino { get => destino; set => destino = value; }
     public string IniciarEn { get => iniciarEn; set => iniciarEn = value; }
     public string CarpetaSistema { get => carpetaSistema; set => carpetaSistema = value; }
-    public string Parametro1 { get => parametro1; set => parametro1 = value; }
-    public string Parametro2 { get => parametro2; set => parametro2 = value; }
+    public string Parametros { get => parametros; set => parametros = value; }
+    public string Ejecutable { get => ejecutable; set => ejecutable = value; }
     public string ToolTipText { get; set; }
     
 }
