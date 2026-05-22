@@ -144,7 +144,7 @@ namespace Sistemas_CAG.Controlador
                     }
                     if (sistema.Tipo == "exe")
                     {
-                        sistema.Destino = sistema.CarpetaSistema;
+                        sistema.Destino = sistema.CarpetaSistema + sistema.Ejecutable;
                     }
 
                     if (sistema.Tipo == "exe" || sistema.Tipo == "java" || sistema.Tipo == "oracle")
@@ -157,26 +157,26 @@ namespace Sistemas_CAG.Controlador
 
                     }
                     //Se carga parametro para kisco de OpenPos
-                    if (sistema.NombreSistema == "Kiosco")
+                    if (sistema.NombreSistema == "V-Kiosco")
                     {
 
-                        sistema.Parametro2 = negocioPos.ConfigKinf;
+                        sistema.Parametros = sistema.Parametros +$" {negocioPos.ConfigKinf}";
                         crearConfigKInf(negocioPos);
                     }
 
                     //Se carga parametro para facturacion de OpenPos
-                    if (sistema.NombreSistema == "Facturacion")
+                    if (sistema.NombreSistema == "V-Facturacion")
                     {
 
-                        sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
+                        sistema.Parametros = sistema.Parametros + $" {negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
                         crearConfigCaj(negocioPos);
                     }
 
                     //Se carga parametro para preventa de OpenPos
-                    if (sistema.NombreSistema == "Preventa")
+                    if (sistema.NombreSistema == "V-Preventa")
                     {
 
-                        sistema.Parametro2 = $"{negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
+                        sistema.Parametros = sistema.Parametros + $" {negocioPos.Usuario}/{negocioPos.PalPaso}@{negocioPos.Servidor}";
                         crearConfigVen(negocioPos);
                     }
 
@@ -234,7 +234,7 @@ namespace Sistemas_CAG.Controlador
         {
             try
             {
-                if (!funcDir.EjecutarAplicacion(sistema.Destino, sistema.Parametro1, ""))
+                if (!funcDir.EjecutarAplicacion(sistema.Destino, sistema.Parametros, ""))
                 {
                     return false;
                 }
@@ -254,22 +254,9 @@ namespace Sistemas_CAG.Controlador
 
         private bool ejecutarAplicacion(SistemaDTO sistema)
         {
-            string parametros = "";
-
-            if (sistema.Parametro2 == null)
-            {
-                //En el caso de solo requerir 1 parametro
-                parametros = sistema.Parametro1;
-            }
-            else
-            {
-                //En el caso de requerir 2 parametros
-                parametros = sistema.Parametro1 + " " + sistema.Parametro2;
-               
-            }
             try
             {
-                if (!funcDir.EjecutarAplicacion(sistema.Destino, parametros, sistema.IniciarEn))
+                if (!funcDir.EjecutarAplicacion(sistema.Destino, sistema.Parametros, sistema.IniciarEn))
                 {
                     return false;
                 }
@@ -295,7 +282,7 @@ namespace Sistemas_CAG.Controlador
                 {
 
 
-                    if (sistema.NombreSistema == "openpos60" || sistema.NombreSistema == "facturacion" || sistema.NombreSistema == "preventa" || sistema.NombreSistema == "kiosco")
+                    if (sistema.NombreSistema == "V-Openpos60" || sistema.NombreSistema == "V-Facturacion" || sistema.NombreSistema == "V-Preventa" || sistema.NombreSistema == "V-Kiosco")
                     {
                         actualizaPosFu(sistema.IniciarEn);
                     }

@@ -17,17 +17,17 @@ namespace Sistemas_CAG.Modelos.Entidad
 
         private string carpetaSistema;
 
-        private string parametro1;
+        private string parametros;
      
-        private string parametro2;
+        private string ejecutable;
 
         private string icono;
 
              
         public string NombreSistema { get => nombreSistema; set => nombreSistema = value; }
         public string Destino { get => destino; set => destino = value; }
-        public string Parametro1 { get => parametro1; set => parametro1 = value; }
-        public string Parametro2 { get => parametro2; set => parametro2 = value; }
+        public string Parametros { get => parametros; set => parametros = value; }
+        public string Ejecutable { get => ejecutable; set => ejecutable = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public string IniciarEn { get => iniciarEn; set => iniciarEn = value; }
         public string CarpetaSistema { get => carpetaSistema; set => carpetaSistema = value; }

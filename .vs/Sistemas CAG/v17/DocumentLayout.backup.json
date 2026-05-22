@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\GitHub\\Sistemas CAG\\",
+  "WorkspaceRootPath": "D:\\gitLab\\Sistemas-CAG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|x:\\github\\sistemas cag\\sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|d:\\gitlab\\sistemas-cag\\sistemas cag\\lanzador de sistemas.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\lanzador de sistemas.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|D:\\gitLab\\Sistemas-CAG\\sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E7D9F39A-B3C5-4103-BA25-880949507E9D}|Sistemas CAG\\Lanzador de Sistemas.csproj|solutionrelative:sistemas cag\\parametrosfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,20 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ParametrosFrm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs",
+              "DocumentMoniker": "D:\\gitLab\\Sistemas-CAG\\Sistemas CAG\\ParametrosFrm.cs",
               "RelativeDocumentMoniker": "Sistemas CAG\\ParametrosFrm.cs",
-              "ToolTip": "X:\\GitHub\\Sistemas CAG\\Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\gitLab\\Sistemas-CAG\\Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
               "RelativeToolTip": "Sistemas CAG\\ParametrosFrm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T03:42:07.484Z",
               "IsPinned": true,
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lanzador de Sistemas",
+              "DocumentMoniker": "D:\\gitLab\\Sistemas-CAG\\Sistemas CAG\\Lanzador de Sistemas.csproj",
+              "RelativeDocumentMoniker": "Sistemas CAG\\Lanzador de Sistemas.csproj",
+              "ToolTip": "D:\\gitLab\\Sistemas-CAG\\Sistemas CAG\\Lanzador de Sistemas.csproj",
+              "RelativeToolTip": "Sistemas CAG\\Lanzador de Sistemas.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-19T21:23:20.094Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -197,8 +197,8 @@ namespace Sistemas_CAG
                     btn.Tipo = row["Tipo"].ToString();
                     btn.IniciarEn = row["IniciarEn"].ToString();
                     btn.CarpetaSistema = row["CarpetaSistema"].ToString();
-                    btn.Parametro1 = row["Parametro1"].ToString();
-                    btn.Parametro2 = row["Parametro2"].ToString();
+                    btn.Parametros = row["Parametros"].ToString();
+                    btn.Ejecutable = row["Ejecutable"].ToString();
                     btn.Name = "btn_" + id;
                     btn.Tag = id;
                     btn.ToolTipText = nombre;
@@ -250,7 +250,7 @@ namespace Sistemas_CAG
                     {
                         fLPDesktop.Controls.Add(contenedor);
                     }
-                    else if (btn.Tipo == "web" || btn.Tipo == "Javaws")
+                    else if (btn.Tipo == "web" || btn.Tipo == "javaws")
                     {
                         fLPWeb.Controls.Add(contenedor);
                     }
@@ -282,7 +282,7 @@ namespace Sistemas_CAG
 
             try
             {
-                if (btn.NombreSistema == "Kiosco" || btn.NombreSistema == "Facturacion" || btn.NombreSistema == "Preventa")
+                if (btn.NombreSistema == "V-Kiosco" || btn.NombreSistema == "V-Facturacion" || btn.NombreSistema == "V-Preventa")
                 {
                     NegocioFrm negocioFrm = new NegocioFrm();
                     if (negocioFrm.ShowDialog() == DialogResult.OK)

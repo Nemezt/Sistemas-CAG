@@ -1,0 +1,65 @@
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\bd_lanzador.db
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Agri_cli.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Agros.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\default.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Desazu.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\E-CO.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Entrega.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Indicadores.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\MCR.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Notificaciones.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Openpos.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\OpenTouch.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\otro.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Parqueo.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Password.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Recibidor.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\SAAC.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Scre.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Seem.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Servidor.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Sica.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Sicagen.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Siceca.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Sicofe.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Side.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Sirpe.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\Sitra.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Resources\Iconos\SRM.png
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Lanzador de Sistemas.exe
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Lanzador de Sistemas.deps.json
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Lanzador de Sistemas.runtimeconfig.json
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Lanzador de Sistemas.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\Lanzador de Sistemas.pdb
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\EntityFramework.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\System.Data.SQLite.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\System.Data.SQLite.EF6.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.AssemblyReference.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\ConsultaServiciosPublicos.Utils.AboutBox.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.LanzadorFrm.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.NegocioFrm.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.ParametrosFrm.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Sistemas_CAG.Properties.Resources.resources
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.GenerateResource.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.GeneratedMSBuildEditorConfig.editorconfig
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfoInputs.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.AssemblyInfo.cs
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.csproj.CoreCompileInputs.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.sourcelink.json
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador.BC9B32AB.Up2Date
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\refint\Lanzador de Sistemas.dll
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.pdb
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\Lanzador de Sistemas.genruntimeconfig.cache
+D:\gitLab\Sistemas-CAG\Sistemas CAG\obj\Debug\net8.0-windows\ref\Lanzador de Sistemas.dll
